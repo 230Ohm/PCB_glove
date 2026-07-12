@@ -1,0 +1,269 @@
+ERC report (2026-07-12T00:19:45-0400, Encoding UTF8)
+
+***** Sheet /
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 96.82 mm): Symbol J1 Pin 1 [Pin_1, Passive, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 96.82 mm): Horizontal Wire, length 5.08 mm
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(40.16 mm, 96.82 mm): Global Label 'DK_5V_ACCESS_TBD'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 101.90 mm): Horizontal Wire, length 5.08 mm
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(40.16 mm, 101.90 mm): Global Label 'DK_3V3_ACCESS_TBD'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 106.98 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 112.06 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 117.14 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 122.22 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 127.30 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 132.38 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 137.46 mm): Horizontal Wire, length 5.08 mm
+[lib_symbol_mismatch]: Symbol 'Conn_01x18' doesn't match copy in library 'Connector_Generic'
+    ; warning
+    @(30.00 mm, 140.00 mm): Symbol J1 [Conn_01x18]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 142.54 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 147.62 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 152.70 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 157.78 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 162.86 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 167.94 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 173.02 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 178.10 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(150.08 mm, 109.68 mm): Symbol J2 Pin 1 [Pin_1, Passive, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(150.08 mm, 109.68 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 183.18 mm): Horizontal Wire, length 5.08 mm
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(40.16 mm, 183.18 mm): Global Label 'DK_SPARE_TBD'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(150.08 mm, 114.76 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(150.08 mm, 119.84 mm): Horizontal Wire, length 5.08 mm
+[lib_symbol_mismatch]: Symbol 'Conn_01x09' doesn't match copy in library 'Connector_Generic'
+    ; warning
+    @(145.00 mm, 130.00 mm): Symbol J2 [Conn_01x09]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(150.08 mm, 124.92 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(150.08 mm, 130.00 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(150.08 mm, 135.08 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(150.08 mm, 140.16 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(150.08 mm, 145.24 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(150.08 mm, 150.32 mm): Horizontal Wire, length 5.08 mm
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(155.16 mm, 150.32 mm): Global Label 'IMU_THUMB_INT2_TBD'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 222.46 mm): Symbol J7 Pin 1 [Pin_1, Passive, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 222.46 mm): Horizontal Wire, length 5.08 mm
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(40.16 mm, 222.46 mm): Global Label 'VIN_5V_PROVISIONAL'
+[lib_symbol_mismatch]: Symbol 'Conn_01x02' doesn't match copy in library 'Connector_Generic'
+    ; warning
+    @(30.00 mm, 225.00 mm): Symbol J7 [Conn_01x02]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(35.08 mm, 227.54 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(205.08 mm, 109.68 mm): Symbol J3 Pin 1 [Pin_1, Passive, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(205.08 mm, 109.68 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(205.08 mm, 114.76 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(205.08 mm, 119.84 mm): Horizontal Wire, length 5.08 mm
+[lib_symbol_mismatch]: Symbol 'Conn_01x09' doesn't match copy in library 'Connector_Generic'
+    ; warning
+    @(200.00 mm, 130.00 mm): Symbol J3 [Conn_01x09]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(205.08 mm, 124.92 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(205.08 mm, 130.00 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(205.08 mm, 135.08 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(205.08 mm, 140.16 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(205.08 mm, 145.24 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(205.08 mm, 150.32 mm): Horizontal Wire, length 5.08 mm
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(210.16 mm, 150.32 mm): Global Label 'IMU_INDEX_INT2_TBD'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(260.08 mm, 109.68 mm): Symbol J4 Pin 1 [Pin_1, Passive, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(260.08 mm, 109.68 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(260.08 mm, 114.76 mm): Horizontal Wire, length 5.08 mm
+[lib_symbol_mismatch]: Symbol 'Conn_01x09' doesn't match copy in library 'Connector_Generic'
+    ; warning
+    @(255.00 mm, 130.00 mm): Symbol J4 [Conn_01x09]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(260.08 mm, 119.84 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(260.08 mm, 124.92 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(260.08 mm, 130.00 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(260.08 mm, 135.08 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(260.08 mm, 140.16 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(260.08 mm, 145.24 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(260.08 mm, 150.32 mm): Horizontal Wire, length 5.08 mm
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(265.16 mm, 150.32 mm): Global Label 'IMU_MIDDLE_INT2_TBD'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(315.08 mm, 109.68 mm): Symbol J5 Pin 1 [Pin_1, Passive, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(315.08 mm, 109.68 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(315.08 mm, 114.76 mm): Horizontal Wire, length 5.08 mm
+[lib_symbol_mismatch]: Symbol 'Conn_01x09' doesn't match copy in library 'Connector_Generic'
+    ; warning
+    @(310.00 mm, 130.00 mm): Symbol J5 [Conn_01x09]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(315.08 mm, 119.84 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(315.08 mm, 124.92 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(315.08 mm, 130.00 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(315.08 mm, 135.08 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(315.08 mm, 140.16 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(315.08 mm, 145.24 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(315.08 mm, 150.32 mm): Horizontal Wire, length 5.08 mm
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(320.16 mm, 150.32 mm): Global Label 'IMU_RING_INT2_TBD'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(370.08 mm, 109.68 mm): Symbol J6 Pin 1 [Pin_1, Passive, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(370.08 mm, 109.68 mm): Horizontal Wire, length 5.08 mm
+[lib_symbol_mismatch]: Symbol 'Conn_01x09' doesn't match copy in library 'Connector_Generic'
+    ; warning
+    @(365.00 mm, 130.00 mm): Symbol J6 [Conn_01x09]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(370.08 mm, 114.76 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(370.08 mm, 119.84 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(370.08 mm, 124.92 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(370.08 mm, 130.00 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(370.08 mm, 135.08 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(370.08 mm, 140.16 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(370.08 mm, 145.24 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(370.08 mm, 150.32 mm): Horizontal Wire, length 5.08 mm
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(375.16 mm, 150.32 mm): Global Label 'IMU_PINKY_INT2_TBD'
+
+ ** ERC messages: 88  Errors 0  Warnings 88
