@@ -2,6 +2,78 @@
 
 Updated: 2026-07-12
 
+## Latest checkpoint — schematic audit and ERC cleanup
+
+- All six child sheets were inspected. DK, central IMU distribution, finger IMU reference, and power/test contain electrical draft content. Camera placeholders and notes/TODOs are intentionally text-only but contain substantive blockers and review gates.
+- KiCad 9 parses and exports the complete seven-page hierarchy.
+- ERC improved from 54 findings (2 errors, 52 warnings) to 2 findings (2 errors, 0 warnings).
+- The 52 original warnings were grouped and addressed: 48 cached-symbol/library mismatches plus 4 dangling labels are recorded in the audit report; no warning was suppressed.
+- Simplified embedded symbols are now honestly registered as project-local `PCB_glove_Draft` symbols through `PCB_glove/lib/symbols/PCB_glove_Draft.kicad_sym` and `PCB_glove/sym-lib-table`.
+- DK-side SCK/MOSI nets now connect through R1/R2 using `DK_IMU_SPI_SCK_TBD` and `DK_IMU_SPI_MOSI_TBD`; physical DK pins remain TBD.
+- Unused `+3V3_DK_TBD` and `DK_SPARE_TBD` slots have explicit no-connect markers and visible explanations.
+- The two remaining ERC errors are intentional and unsuppressed: U1 RES/GND and VDDIO have no proven power-output source because the input/ground context and +3V3_IMU source/regulator remain unselected.
+- No PWR_FLAG, fake regulator source, or ERC exclusion was added.
+- Camera circuitry remains placeholder/TBD only.
+- Detailed result: `.kicad_agent/proposals/schematic_audit_and_erc_cleanup_report.md`.
+- New ERC result: `.kicad_agent/reports/schematic_audit_erc.rpt`.
+
+### Audit files changed or created
+
+- `PCB_glove/dk_adapter_headers.kicad_sch`
+- `PCB_glove/imu_central_distribution.kicad_sch`
+- `PCB_glove/finger_imu_module_reference.kicad_sch`
+- `PCB_glove/power_and_test.kicad_sch`
+- `PCB_glove/lib/symbols/PCB_glove_Draft.kicad_sym`
+- `PCB_glove/sym-lib-table`
+- `.kicad_agent/reports/schematic_audit_erc.rpt`
+- `.kicad_agent/proposals/schematic_audit_and_erc_cleanup_report.md`
+- `.kicad_agent/HANDOFF_CURRENT.md`
+
+### Next safe task after audit
+
+Select and document the real +3V3_IMU source and external power/ground entry, then resolve the two power errors with actual source symbols. Continue with official local DK/MB1939/ISM330DHCX/camera document review and exact connector selection. **PCB layout remains unauthorized.**
+
+## Current authorization — detailed schematic and footprint preparation
+
+- The user authorized conversion of the rough schematic into a detailed draft plus a footprint preparation package.
+- This authorization supersedes the older rough-draft-only library restrictions below only to this extent: project-local draft footprints may be created under `PCB_glove/lib/footprints/PCB_glove.pretty/`; global libraries, KiCad project settings, and the PCB remain prohibited.
+- The detailed package is now a seven-page hierarchy: root overview, DK adapter headers, central IMU distribution, reusable finger-IMU module reference, power/test, camera placeholders, and notes/TODOs.
+- Required warnings remain visible. DK physical mapping and all camera circuitry remain blocked/TBD.
+- Two project-local preparation footprints exist: `DRAFT_TestPoint_Pad_1.5mm_VERIFY` and `DRAFT_0R_Jumper_0603_VERIFY`. Both contain visible `DRAFT / VERIFY BEFORE LAYOUT` text on fabrication and silkscreen layers. They are not production-approved.
+- The exact footprint status and risks are in `.kicad_agent/proposals/footprint_decision_table.md`.
+- The full work record is `.kicad_agent/proposals/detailed_schematic_footprint_report.md`.
+- ERC is saved at `.kicad_agent/reports/detailed_schematic_erc.rpt`: 2 documented unresolved-power errors and 52 warnings. No finding was suppressed; this is not verification.
+
+### Detailed package files
+
+- `PCB_glove/PCB_glove.kicad_sch`
+- `PCB_glove/dk_adapter_headers.kicad_sch`
+- `PCB_glove/imu_central_distribution.kicad_sch`
+- `PCB_glove/finger_imu_module_reference.kicad_sch`
+- `PCB_glove/power_and_test.kicad_sch`
+- `PCB_glove/camera_placeholders.kicad_sch`
+- `PCB_glove/notes_and_todos.kicad_sch`
+- `PCB_glove/lib/footprints/PCB_glove.pretty/DRAFT_TestPoint_Pad_1.5mm_VERIFY.kicad_mod`
+- `PCB_glove/lib/footprints/PCB_glove.pretty/DRAFT_0R_Jumper_0603_VERIFY.kicad_mod`
+- `.kicad_agent/proposals/footprint_decision_table.md`
+- `.kicad_agent/proposals/detailed_schematic_footprint_report.md`
+- `.kicad_agent/reports/detailed_schematic_erc.rpt`
+- `.kicad_agent/HANDOFF_CURRENT.md`
+
+### Remaining blockers
+
+- Local UM3300 and MB1939 review and exact Arduino/STMod+/DK mapping.
+- Exact finger/power connector and cable MPNs, pin order, footprints, mechanics, ESD, and strain relief.
+- Five-IMU power/transient budget and DK 3.3 V headroom versus a dedicated regulator.
+- Current local ISM330DHCX datasheet, symbol/pad-map/land-pattern/orientation verification, and exact order code.
+- Harness topology, maximum length, signal-integrity measurements, and final optional resistor values.
+- Camera connector, rails, sequencing, MIPI, I2C, clock, reset, GPIO, software, and dual-camera feasibility.
+- Cached-symbol refresh and resolution of the two ERC undriven-power errors after power architecture selection.
+
+### Next safe task
+
+Obtain and review the official local DK/MB1939/ISM330DHCX/camera documents, then perform a document-backed pin-map, power, connector, symbol, footprint, and ERC review. **PCB layout is still not authorized.**
+
 ## 0. Current user authorization — rough schematic draft
 
 - The user explicitly authorizes a **rough first KiCad schematic draft** for `PCB_glove` as a draft-only STM32N6570-DK adapter/interface/sensor schematic.
@@ -107,18 +179,18 @@ Relevant files:
 
 ## 9. Exact next safe task
 
-The rough schematic draft is complete. The next safe task is:
+The detailed schematic and footprint preparation package is complete. The next safe task is:
 
-**Review the rough schematic and resolve documentation-backed DK mapping, connector selection, power architecture, remote-IMU implementation details, and camera compatibility before any PCB layout work.**
+**Obtain the official local documents, then resolve documentation-backed DK mapping, connector selection, power architecture, remote-IMU symbol/footprint details, harness signal integrity, and camera compatibility.**
 
-No PCB layout or fabrication work is authorized by the draft.
+No PCB layout or fabrication work is authorized by this package.
 
 ## 10. What not to do next
 
 - Do not edit schematic files other than `PCB_glove/PCB_glove.kicad_sch` and new child schematic sheets under `PCB_glove/` needed for this rough draft.
 - Do not edit `.kicad_pcb` files.
 - Do not edit `.kicad_pro` files.
-- Do not edit any KiCad symbol or footprint library.
+- Do not edit global KiCad symbol or footprint libraries. Any future project-local library work must stay under specifically authorized `PCB_glove/lib/` paths and remain draft-marked until verified.
 - Do not edit anything in `reference_designs/imu_pcb/`.
 - Do not edit anything in `../kicad-happy` or `C:/Users/ohmdd/Downloads/kicad-happy`.
 - Do not invent pinouts, rails, currents, camera compatibility, connector order codes, or connector footprints.
