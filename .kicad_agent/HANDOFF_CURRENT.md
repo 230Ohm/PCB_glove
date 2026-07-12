@@ -2,6 +2,36 @@
 
 Updated: 2026-07-12
 
+## Latest checkpoint — approved +3V3_IMU power schematic update
+
+- The user approved `proposal_006_POWER_SCHEMATIC_UPDATE`; the authorized schematic-only update is complete.
+- Prototype-v1 architecture is now: external protected/current-limited bench `+5V_EXT` → provisional fuse/PTC placeholder → removable 5 V measurement link → documented local `TLV75533PDBVR` 3.3 V LDO → `+3V3_IMU`.
+- U2 is exact MPN `TLV75533PDBVR`, TI DBV SOT-23-5, fixed 3.3 V, 1.45–5.5 V recommended input and 500 mA capability. EN is tied to IN. C4/C5 are 1 µF X5R/X7R per the TI datasheet; their exact MPNs/footprints remain TBD.
+- The project-local `TLV75533PDBV_DOCUMENTED` symbol copies the KiCad 9 pin model and was checked against TI SBVS320D. Its `Package_TO_SOT_SMD:SOT-23-5` footprint assignment remains provisional pending independent land-pattern/assembly review.
+- J9 is visibly named `J_PWR_IN`; connector MPN/footprint, keying, retention, strain relief and polarity remain TBD.
+- F1 fuse/PTC, reverse-polarity and ESD/transient protection remain honest marked placeholders; no undocumented protection component was selected.
+- R17 is now a removable current-measurement link after protection and before U2. TP1/TP2/TP3 expose `+5V_EXT`, `+5V_REG_IN` and `+3V3_IMU`; TP4/TP5 provide nearby GND.
+- DK +5 V is explicitly no-connected from `+5V_EXT`. DK +3.3 V is explicitly no-connected from `+3V3_IMU`. DK and PCB_glove share GND only through the logical signal interface.
+- One GND source flag represents the real external bench return at J_PWR_IN. One `+5V_REG_IN` source flag represents the same external source through F1 and closed R17. The real U2 power-output pin directly drives `+3V3_IMU`; no flag was placed on the IMU rail.
+- ERC improved from 2 errors / 0 warnings to **0 errors / 0 warnings**. Result: `.kicad_agent/reports/power_schematic_update_erc.rpt`. No exclusion or dishonest suppression was added.
+- Camera circuitry remains placeholder/TBD only. All root draft/not-for-fabrication/DK/camera/connector/layout warnings remain visible.
+- Detailed record: `.kicad_agent/proposals/proposal_007_power_schematic_update_report.md`.
+- `PCB_glove/PCB_glove.kicad_pcb`, `reference_designs/imu_pcb/`, and `C:/Users/ohmdd/Downloads/kicad-happy` were not modified. The pre-existing `.kicad_pro` working-tree modification was not touched.
+
+### Remaining blockers after power update
+
+- Exact J_PWR_IN connector and cable system.
+- Exact fuse/PTC, reverse-polarity, ESD/transient, C4/C5 and measurement-link components/footprints.
+- Independent U2 footprint/pin-1/assembly verification and reverse-current review.
+- Startup, fault, current-limit, thermal/skin, cable-drop, ground-return and harness measurements.
+- Final DK physical connector map and all remaining IMU connector/footprint/document checks.
+- Camera connector, rails, sequencing, interface, software and dual-camera feasibility.
+- Independent full schematic review.
+
+### Next safe task after power update
+
+Perform a schematic-only independent power-path/component review and bench bring-up plan using exact authoritative connector, protection, capacitor and measurement-link documents. **PCB layout is still not authorized.**
+
 ## Latest checkpoint — schematic audit and ERC cleanup
 
 - All six child sheets were inspected. DK, central IMU distribution, finger IMU reference, and power/test contain electrical draft content. Camera placeholders and notes/TODOs are intentionally text-only but contain substantive blockers and review gates.
