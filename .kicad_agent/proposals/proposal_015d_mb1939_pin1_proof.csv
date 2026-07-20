@@ -1,0 +1,5 @@
+reference,native_pad1_global_x_mil,native_pad1_global_y_mil,native_pad1_datum_x_mm,native_pad1_datum_y_mm,board_source,independent_schematic_pin1,schematic_source,proof_result,caveat
+CN7,15336.5945,9581.2991,136.461500,56.769000,MB1939.PcbDoc Pads6/Data pad name 1,A0,Arduino_UNO_R3_SMD.SchDoc CN7 pin designator 1,PASS,No visible silkscreen-mark proof is claimed
+CN8,15336.5945,10481.2991,136.461500,79.629000,MB1939.PcbDoc Pads6/Data pad name 1,NC,Arduino_UNO_R3_SMD.SchDoc CN8 pin designator 1,PASS,No visible silkscreen-mark proof is claimed
+CN11,13301.5945,9081.2991,84.772500,44.069000,MB1939.PcbDoc Pads6/Data pad name 1,RX/D0,Arduino_UNO_R3_SMD.SchDoc CN11 pin designator 1,PASS,No visible silkscreen-mark proof is claimed
+CN12,13301.5945,9941.2991,84.772500,65.913000,MB1939.PcbDoc Pads6/Data pad name 1,D8,Arduino_UNO_R3_SMD.SchDoc CN12 pin designator 1,PASS,No visible silkscreen-mark proof is claimed

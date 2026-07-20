@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#f8fafc"/>
+  <style>.title{font:700 27px Arial;fill:#0f172a}.h{font:700 18px Arial;fill:#0f172a}.t{font:15px Arial;fill:#334155}.small{font:13px Arial;fill:#475569}.conn{fill:#f59e0b;stroke:#92400e;stroke-width:2}.field{fill:none;stroke:#2563eb;stroke-width:2;stroke-dasharray:8 6}.axis{stroke:#64748b;stroke-width:2}.warn{font:700 18px Arial;fill:#991b1b}</style>
+  <text x="50" y="48" class="title">Proposal 015F - nominal four-connector field and lateral tolerance chain</text>
+  <g transform="translate(120,105)">
+    <line x1="0" y1="500" x2="640" y2="500" class="axis"/><line x1="0" y1="500" x2="0" y2="0" class="axis"/>
+    <text x="645" y="507" class="t">+X</text><text x="-16" y="-12" class="t">+Y</text>
+    <rect x="0" y="230" width="62" height="250" class="conn"/><text x="8" y="220" class="h">CN12</text>
+    <rect x="0" y="30" width="62" height="205" class="conn"/><text x="8" y="22" class="h">CN11 datum</text>
+    <rect x="485" y="55" width="62" height="205" class="conn"/><text x="490" y="45" class="h">CN8</text>
+    <rect x="485" y="285" width="62" height="155" class="conn"/><text x="490" y="277" class="h">CN7</text>
+    <rect x="-28" y="0" width="605" height="510" class="field"/>
+    <text x="170" y="540" class="t">nominal body field 53.416 x 47.752 mm; diagonal 71.649 mm</text>
+    <text x="82" y="92" class="small">CN7 relative origin: +48.260, -2.540 mm</text>
+    <text x="82" y="122" class="small">CN8 relative origin: +48.260, +17.780 mm</text>
+    <text x="82" y="152" class="small">CN12 relative origin: 0, +24.384 mm</text>
+  </g>
+  <g transform="translate(775,105)">
+    <rect x="0" y="0" width="365" height="420" rx="8" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+    <text x="22" y="40" class="h">Worst-case lateral chain</text>
+    <text x="22" y="82" class="t">1. MB1939 socket placement/rotation</text><text x="305" y="82" class="warn">?</text>
+    <text x="22" y="122" class="t">2. SSW contact-entry capture</text><text x="305" y="122" class="warn">?</text>
+    <text x="22" y="162" class="t">3. Amphenol pitch/post true position</text><text x="305" y="162" class="warn">?</text>
+    <text x="22" y="202" class="t">4. Interposer PTH position</text><text x="275" y="202" class="t">±0.05</text>
+    <text x="22" y="242" class="t">5. Four-strip fixture/solder shift</text><text x="305" y="242" class="warn">?</text>
+    <line x1="22" y1="270" x2="340" y2="270" stroke="#475569"/>
+    <text x="22" y="310" class="h">WC sum: BLOCKED</text><text x="22" y="344" class="h">RSS: not eligible</text>
+    <text x="22" y="382" class="small">RSS is supplemental only after every</text><text x="22" y="402" class="small">input has a controlled statistical basis.</text>
+  </g>
+  <rect x="70" y="650" width="1060" height="72" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="95" y="684" class="warn">No allowable lateral misalignment or capture margin is proven for the development cross-mate.</text>
+  <text x="95" y="708" class="small">Nominal native coordinates are controlled; as-built four-connector alignment is not.</text>
+</svg>

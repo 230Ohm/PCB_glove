@@ -1,0 +1,13 @@
+case,required_channels,raw_waveform_file,screenshot_file,instrument_setup,observation,status,blocker
+cold_DK_power_on,"CSx5 SCK MOSI INT +3V3_IMU DK_VDD NRST",,,,,NOT_CAPTURED,"No DK/oscilloscope/fixture"
+DK_reset_button,"CSx5 SCK MOSI INT +3V3_IMU DK_VDD NRST",,,,,NOT_CAPTURED,"No DK/oscilloscope/fixture"
+debugger_reset,"CSx5 SCK MOSI INT +3V3_IMU DK_VDD NRST",,,,,NOT_CAPTURED,"No ST-LINK/firmware/oscilloscope"
+software_reset,"CSx5 SCK MOSI INT +3V3_IMU DK_VDD NRST",,,,,NOT_CAPTURED,"No firmware or DK"
+watchdog_reset,"CSx5 SCK MOSI INT +3V3_IMU DK_VDD NRST",,,,,NOT_CAPTURED,"No firmware or DK"
+qualification_fault,"CSx5 SCK MOSI INT +3V3_IMU DK_VDD NRST",,,,,NOT_CAPTURED,"No firmware or DK"
+DK_power_down,"CSx5 SCK MOSI INT +3V3_IMU DK_VDD NRST",,,,,NOT_CAPTURED,"No DK/oscilloscope/fixture"
+PCB_glove_power_down,"CSx5 SCK MOSI INT +3V3_IMU DK_VDD NRST",,,,,NOT_CAPTURED,"No powered fixture"
+DK_powers_first,"CSx5 SCK MOSI INT +3V3_IMU DK_VDD NRST",,,,,NOT_CAPTURED,"No two-source bench setup"
+PCB_glove_powers_first,"CSx5 SCK MOSI INT +3V3_IMU DK_VDD NRST",,,,,NOT_CAPTURED,"No two-source bench setup"
+DK_shuts_down_first,"CSx5 SCK MOSI INT +3V3_IMU DK_VDD NRST",,,,,NOT_CAPTURED,"No two-source bench setup"
+PCB_glove_shuts_down_first,"CSx5 SCK MOSI INT +3V3_IMU DK_VDD NRST",,,,,NOT_CAPTURED,"No two-source bench setup"

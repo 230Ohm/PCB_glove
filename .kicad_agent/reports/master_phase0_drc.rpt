@@ -1,0 +1,13 @@
+** Drc report for PCB_glove.kicad_pcb **
+** Created on 2026-07-12T22:52:12-0400 **
+
+** Found 1 DRC violations **
+[invalid_outline]: Board has malformed outline (no edges found on Edge.Cuts layer)
+    Local override; error
+    @(0.0000 mm, 0.0000 mm): PCB
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

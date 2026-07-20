@@ -1,0 +1,8 @@
+case_id,concept,equation,min_mm,nom_mm,max_mm,source,status,preload_risk,notes
+S01,Fixed nominal standoff,Hsupport=12.32,,12.32,,Nominal connector CAD,REJECTED,HIGH,Would force nominal geometry and can create preload/bow
+S02,Measured three-point floating support,Hstop_i=Gseated_local_i+clearance,0.05,0.10,0.15,Project concept,BLOCKED_PENDING_MEASUREMENT,LOW_IF_CONTROLLED,Values are clearance above measured fully seated plane not absolute height
+S03,Support mismatch allowance,epsilon=max(Hstop_i-Gseated_local_i),0.05,0.10,0.15,Project concept,CONDITIONAL,LOW_IF_POSITIVE,Every support must remain unloaded in static mated state
+S04,Negative mismatch/interference,epsilon<0,,,,Project prohibition,FAIL,UNACCEPTABLE,Any negative clearance is automatic gate failure
+S05,Connector structural reliance,load_on_connectors=external_load-support_load,0,0,0,Project requirement,BLOCKED,HIGH_UNTIL_VERIFIED,Connector strips may locate electrically but may not carry wearable structural loads
+S06,Fixture process,carrier datum plus simultaneous mated soldering,,,,Assembler inquiry,BLOCKED,CONTROL_REQUIRED,Loose hand soldering is not accepted
+S07,Provisional support hardware,three adjustable nylon-tipped stops in external carrier,,,,Project concept,MEASUREMENT_REQUIRED,LOW_IF_VALIDATED,Exact MPN and locking method intentionally not selected without measured stack

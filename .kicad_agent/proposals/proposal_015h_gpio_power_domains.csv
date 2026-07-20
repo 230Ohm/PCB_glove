@@ -1,0 +1,14 @@
+signal,mcu_pin,bank,dk_contact,intended_function,io_structure,supply,documented_range,reset_state,five_volt_tolerant,absent_supply_risk,status
+IMU_SPI_SCK,PE15,E,CN12-6,SPI5_SCK AF5,TT,VDD,"3.0-3.6 V for 3.3 V operation","analog input / high impedance",NO,"External high can inject/back-power when VDD is absent",DOCUMENTED_DESIGN_ACTUAL_CONFIG_UNPROVEN
+IMU_SPI_MISO,PH8,H,CN12-5,SPI5_MISO AF5,TT,VDD,"3.0-3.6 V for 3.3 V operation","analog input / high impedance",NO,"Glove-driven high while DK is off is not proven safe",DOCUMENTED_DESIGN_ACTUAL_CONFIG_UNPROVEN
+IMU_SPI_MOSI,PG2,G,CN12-4,SPI5_MOSI AF5,TT,VDD,"3.0-3.6 V for 3.3 V operation","analog input / high impedance",NO,"External high can inject/back-power when VDD is absent",DOCUMENTED_DESIGN_ACTUAL_CONFIG_UNPROVEN
+IMU_THUMB_CS_N,PA3,A,CN12-3,GPIO output,TT,VDD,"3.0-3.6 V for 3.3 V operation","analog input / high impedance",NO,"External pull-up must be glove-side and backfeed-tested",DOCUMENTED_DESIGN_ACTUAL_CONFIG_UNPROVEN
+IMU_INDEX_CS_N,PE14,E,CN12-2,GPIO output,TT,VDD,"3.0-3.6 V for 3.3 V operation","analog input / high impedance",NO,"External pull-up must be glove-side and backfeed-tested",DOCUMENTED_DESIGN_ACTUAL_CONFIG_UNPROVEN
+IMU_MIDDLE_CS_N,PE7,E,CN12-1,GPIO output,TT,VDD,"3.0-3.6 V for 3.3 V operation","analog input / high impedance",NO,"External pull-up must be glove-side and backfeed-tested",DOCUMENTED_DESIGN_ACTUAL_CONFIG_UNPROVEN
+IMU_RING_CS_N,PD6,D,CN11-8,GPIO output,TT,VDD,"3.0-3.6 V for 3.3 V operation","analog input / high impedance",NO,"External pull-up must be glove-side and backfeed-tested",DOCUMENTED_DESIGN_ACTUAL_CONFIG_UNPROVEN
+IMU_PINKY_CS_N,PE13,E,CN11-7,GPIO output,TT,VDD,"3.0-3.6 V for 3.3 V operation","analog input / high impedance",NO,"External pull-up must be glove-side and backfeed-tested",DOCUMENTED_DESIGN_ACTUAL_CONFIG_UNPROVEN
+IMU_THUMB_INT1,PE10,E,CN11-6,GPIO input EXTI10,TT,VDD,"3.0-3.6 V for 3.3 V operation","analog input / high impedance",NO,"Glove INT high while DK is off is not proven safe",DOCUMENTED_DESIGN_ACTUAL_CONFIG_UNPROVEN
+IMU_INDEX_INT1,PH5,H,CN11-5,GPIO input EXTI5,TT,VDD,"3.0-3.6 V for 3.3 V operation","analog input / high impedance",NO,"Glove INT high while DK is off is not proven safe",DOCUMENTED_DESIGN_ACTUAL_CONFIG_UNPROVEN
+IMU_MIDDLE_INT1,PE9,E,CN11-4,GPIO input EXTI9,TT,VDD,"3.0-3.6 V for 3.3 V operation","analog input / high impedance",NO,"Glove INT high while DK is off is not proven safe",DOCUMENTED_DESIGN_ACTUAL_CONFIG_UNPROVEN
+IMU_RING_INT1,PD0,D,CN11-3,GPIO input EXTI0,TT,VDD,"3.0-3.6 V for 3.3 V operation","analog input / high impedance",NO,"Glove INT high while DK is off is not proven safe",DOCUMENTED_DESIGN_ACTUAL_CONFIG_UNPROVEN
+IMU_PINKY_INT1,PD11,D,CN7-4,GPIO input EXTI11,TT,VDD,"3.0-3.6 V for 3.3 V operation","analog input / high impedance",NO,"Glove INT high while DK is off is not proven safe",DOCUMENTED_DESIGN_ACTUAL_CONFIG_UNPROVEN

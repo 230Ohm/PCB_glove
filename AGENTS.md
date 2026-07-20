@@ -3,7 +3,7 @@
 
 
 The folder reference\_designs/imu\_pcb/ contains a previous IMU PCB made by us.
-
+Use kicad-happy for instructions on how to make the PCB 
 
 
 Codex may inspect this folder to understand:
@@ -34,5 +34,5 @@ Do not modify, rename, delete, reformat, or overwrite any file in reference\_des
 
 
 
-For the new PCB\_glove project, Codex should create proposals based on lessons from the IMU reference design. It must not blindly copy the old design.
+For the new PCB\_glove project, Codex should create proposals based on lessons from the IMU reference design. It should use reference\_designs/imu\_pcb/ and copy it for 5 fingers for the glove. 
 

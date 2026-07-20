@@ -1,0 +1,109 @@
+{
+  "proposal": "015K",
+  "result": "PASS",
+  "kicad_cli": "C:\\Program Files\\KiCad\\9.0\\bin\\kicad-cli.exe",
+  "validators": {
+    "validate_project_footprints.py": {
+      "return_code": 0,
+      "log": ".kicad_agent/reports/proposal_015k_breakout_closure/validate_project_footprints.log"
+    },
+    "validate_dk_breakouts.py": {
+      "return_code": 0,
+      "log": ".kicad_agent/reports/proposal_015k_breakout_closure/validate_dk_breakouts.log"
+    }
+  },
+  "breakouts": [
+    {
+      "name": "CN7",
+      "erc": {
+        "errors": 0,
+        "warnings": 0,
+        "report": ".kicad_agent/reports/proposal_015k_breakout_closure/CN7_erc.rpt",
+        "log": ".kicad_agent/reports/proposal_015k_breakout_closure/CN7_erc_command.log"
+      },
+      "drc": {
+        "violations": 0,
+        "unconnected_pads": 0,
+        "footprint_errors": 0,
+        "report": ".kicad_agent/reports/proposal_015k_breakout_closure/CN7_drc.rpt",
+        "log": ".kicad_agent/reports/proposal_015k_breakout_closure/CN7_drc_command.log"
+      },
+      "parity": {
+        "issues": 0,
+        "netlist_available": true,
+        "fully_annotated": true,
+        "report": ".kicad_agent/reports/proposal_015k_breakout_closure/CN7_parity.rpt",
+        "log": ".kicad_agent/reports/proposal_015k_breakout_closure/CN7_parity_command.log"
+      }
+    },
+    {
+      "name": "CN8",
+      "erc": {
+        "errors": 0,
+        "warnings": 0,
+        "report": ".kicad_agent/reports/proposal_015k_breakout_closure/CN8_erc.rpt",
+        "log": ".kicad_agent/reports/proposal_015k_breakout_closure/CN8_erc_command.log"
+      },
+      "drc": {
+        "violations": 0,
+        "unconnected_pads": 0,
+        "footprint_errors": 0,
+        "report": ".kicad_agent/reports/proposal_015k_breakout_closure/CN8_drc.rpt",
+        "log": ".kicad_agent/reports/proposal_015k_breakout_closure/CN8_drc_command.log"
+      },
+      "parity": {
+        "issues": 0,
+        "netlist_available": true,
+        "fully_annotated": true,
+        "report": ".kicad_agent/reports/proposal_015k_breakout_closure/CN8_parity.rpt",
+        "log": ".kicad_agent/reports/proposal_015k_breakout_closure/CN8_parity_command.log"
+      }
+    },
+    {
+      "name": "CN11",
+      "erc": {
+        "errors": 0,
+        "warnings": 0,
+        "report": ".kicad_agent/reports/proposal_015k_breakout_closure/CN11_erc.rpt",
+        "log": ".kicad_agent/reports/proposal_015k_breakout_closure/CN11_erc_command.log"
+      },
+      "drc": {
+        "violations": 0,
+        "unconnected_pads": 0,
+        "footprint_errors": 0,
+        "report": ".kicad_agent/reports/proposal_015k_breakout_closure/CN11_drc.rpt",
+        "log": ".kicad_agent/reports/proposal_015k_breakout_closure/CN11_drc_command.log"
+      },
+      "parity": {
+        "issues": 0,
+        "netlist_available": true,
+        "fully_annotated": true,
+        "report": ".kicad_agent/reports/proposal_015k_breakout_closure/CN11_parity.rpt",
+        "log": ".kicad_agent/reports/proposal_015k_breakout_closure/CN11_parity_command.log"
+      }
+    },
+    {
+      "name": "CN12",
+      "erc": {
+        "errors": 0,
+        "warnings": 0,
+        "report": ".kicad_agent/reports/proposal_015k_breakout_closure/CN12_erc.rpt",
+        "log": ".kicad_agent/reports/proposal_015k_breakout_closure/CN12_erc_command.log"
+      },
+      "drc": {
+        "violations": 0,
+        "unconnected_pads": 0,
+        "footprint_errors": 0,
+        "report": ".kicad_agent/reports/proposal_015k_breakout_closure/CN12_drc.rpt",
+        "log": ".kicad_agent/reports/proposal_015k_breakout_closure/CN12_drc_command.log"
+      },
+      "parity": {
+        "issues": 0,
+        "netlist_available": true,
+        "fully_annotated": true,
+        "report": ".kicad_agent/reports/proposal_015k_breakout_closure/CN12_parity.rpt",
+        "log": ".kicad_agent/reports/proposal_015k_breakout_closure/CN12_parity_command.log"
+      }
+    }
+  ]
+}

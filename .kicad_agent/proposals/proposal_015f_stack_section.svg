@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <style>.title{font:700 28px Arial;fill:#0f172a}.h{font:700 19px Arial;fill:#0f172a}.t{font:15px Arial;fill:#334155}.small{font:13px Arial;fill:#475569}.dim{stroke:#2563eb;stroke-width:2;marker-start:url(#a);marker-end:url(#a)}.guide{stroke:#94a3b8;stroke-width:1.5;stroke-dasharray:6 5}.warn{fill:#991b1b;font:700 18px Arial}.box{stroke:#334155;stroke-width:2}</style>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M8,0 L0,4 L8,8 z" fill="#2563eb"/></marker></defs>
+  <text x="50" y="48" class="title">Proposal 015F - nominal vertical stack and unresolved tolerance datums</text>
+  <rect x="130" y="105" width="700" height="34" fill="#64748b" class="box"/>
+  <text x="145" y="98" class="h">MB1939 PCB (finished thickness and local flatness tolerance unavailable)</text>
+  <rect x="270" y="139" width="180" height="190" rx="6" fill="#f59e0b" class="box"/>
+  <text x="287" y="176" class="h">Samtec SSW</text><text x="287" y="202" class="t">fixed DK socket</text><text x="287" y="228" class="t">9.78 mm CAD nominal</text><text x="287" y="254" class="t">min/max: unresolved</text>
+  <line x1="240" y1="139" x2="240" y2="329" class="dim"/><text x="120" y="240" class="t">Hs = 9.78 nominal</text>
+  <line x1="270" y1="329" x2="450" y2="329" stroke="#0f172a" stroke-width="4"/><text x="468" y="335" class="t">socket entry / body-contact plane</text>
+  <rect x="300" y="329" width="120" height="72" rx="4" fill="#22c55e" class="box"/>
+  <text x="312" y="360" class="h">77311</text><text x="307" y="385" class="t">Hh = 2.54 nom.</text>
+  <line x1="472" y1="329" x2="472" y2="401" class="dim"/><text x="492" y="372" class="t">header body</text>
+  <rect x="130" y="401" width="700" height="34" fill="#64748b" class="box"/>
+  <text x="145" y="468" class="h">PCB_glove interposer: 1.60 mm baseline</text><text x="145" y="492" class="t">standard published range 1.44-1.76 mm; tighter 1.50-1.70 mm is RFQ only</text>
+  <rect x="343" y="218" width="34" height="183" fill="#2563eb"/>
+  <text x="590" y="215" class="h">Mating post P = 5.84 mm nominal</text><text x="590" y="242" class="t">SSW published insertion range: 3.68-6.35 mm</text><text x="590" y="269" class="t">nominal margins: +2.16 / +0.51 mm</text><text x="590" y="296" class="t">required remaining margin: 0.25 mm at both ends</text>
+  <line x1="550" y1="218" x2="550" y2="401" class="dim"/>
+  <rect x="343" y="435" width="34" height="91" fill="#2563eb"/>
+  <line x1="420" y1="435" x2="420" y2="526" class="dim"/><text x="445" y="474" class="t">tail = 2.41 mm nominal</text><text x="445" y="501" class="t">protrusion = 0.81 mm at 1.60 nominal</text>
+  <line x1="130" y1="329" x2="830" y2="329" class="guide"/><line x1="130" y1="401" x2="830" y2="401" class="guide"/>
+  <rect x="80" y="570" width="1040" height="98" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="105" y="606" class="warn">TASK E BLOCKED</text><text x="105" y="635" class="t">Post/body/tail min-max, socket seating datum, MB1939 as-built plane, four-header solder seating, and support height are not controlled.</text><text x="105" y="658" class="small">Documentation only - not a PCB outline, placement drawing, fabrication drawing, or physical measurement.</text>
+</svg>

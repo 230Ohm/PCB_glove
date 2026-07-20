@@ -1,0 +1,16 @@
+scope,signals_or_pin,reference,official_default,alternate_function_or_route,required_state,design_evidence,physical_evidence,status,impact
+STMod SPI5 group,"PE15 PH8 PG2 PA3","SB11 SB13 SB15 SB18",OFF,"Connects SPI5 functions to CN4 STMod",OFF,UM3300 bridge table and official MB1939 schematic,None supplied,UNPROVEN_PHYSICAL,"Unexpected external loads/parallel connector route if populated"
+STMod UART2 group,CN4 UART2 path,"SB10 SB12 SB14 SB17",ON,"Default CN4 UART2 routing",ON unless separately documented,UM3300 bridge table and official MB1939 schematic,None supplied,UNPROVEN_PHYSICAL,"Changing these may alter CN4 ownership but is not authorized"
+Arduino A3 digital,PD11 / IMU_PINKY_INT1,SB20,ON,"Connects ARD_A3D PD11 to CN7 A3 while PA12 analog path is parallel",ON,Official local Arduino_UNO_R3_SMD.SchDoc shows SB20 SB_ON 0 ohm,None supplied,UNPROVEN_PHYSICAL,"Open bridge loses pinky interrupt; PA12 must be high-Z"
+Direct Arduino D13,PE15 / IMU_SPI_SCK,NONE,Direct,"Also LD6 green active-high",No bridge change,UM3300 Table 8 and Table 24,None supplied,UNPROVEN_LOAD,"LED load must be measured at intended clock"
+Direct Arduino D12,PH8 / IMU_SPI_MISO,NONE,Direct,No selected bridge in Arduino sheet,No change,Official MB1939 design records,None supplied,UNPROVEN_PHYSICAL,Continuity required
+Direct Arduino D11,PG2 / IMU_SPI_MOSI,NONE,Direct,No selected bridge in Arduino sheet,No change,Official MB1939 design records,None supplied,UNPROVEN_PHYSICAL,Continuity required
+Direct Arduino D10,PA3 / IMU_THUMB_CS_N,NONE,Direct,No selected bridge in Arduino sheet,No change,Official MB1939 design records,None supplied,UNPROVEN_PHYSICAL,Continuity required
+Direct Arduino D9,PE14 / IMU_INDEX_CS_N,NONE,Direct,No selected bridge in Arduino sheet,No change,Official MB1939 design records,None supplied,UNPROVEN_PHYSICAL,Continuity required
+Direct Arduino D8,PE7 / IMU_MIDDLE_CS_N,NONE,Direct,No selected bridge in Arduino sheet,No change,Official MB1939 design records,None supplied,UNPROVEN_PHYSICAL,Continuity required
+Direct Arduino D7,PD6 / IMU_RING_CS_N,NONE,Direct,No selected bridge in Arduino sheet,No change,Official MB1939 design records,None supplied,UNPROVEN_PHYSICAL,Continuity required
+Direct Arduino D6,PE13 / IMU_PINKY_CS_N,NONE,Direct,No selected bridge in Arduino sheet,No change,Official MB1939 design records,None supplied,UNPROVEN_PHYSICAL,Continuity required
+Direct Arduino D5,PE10 / IMU_THUMB_INT1,NONE,Direct,No selected bridge in Arduino sheet,No change,Official MB1939 design records,None supplied,UNPROVEN_PHYSICAL,Continuity required
+Direct Arduino D4,PH5 / IMU_INDEX_INT1,NONE,Direct,No selected bridge in Arduino sheet,No change,Official MB1939 design records,None supplied,UNPROVEN_PHYSICAL,Continuity required
+Direct Arduino D3,PE9 / IMU_MIDDLE_INT1,NONE,Direct,No selected bridge in Arduino sheet,No change,Official MB1939 design records,None supplied,UNPROVEN_PHYSICAL,Continuity required
+Direct Arduino D2,PD0 / IMU_RING_INT1,NONE,Direct,No selected bridge in Arduino sheet,No change,Official MB1939 design records,None supplied,UNPROVEN_PHYSICAL,Continuity required

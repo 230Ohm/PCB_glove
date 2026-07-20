@@ -1,0 +1,9 @@
+sensitivity_id,variable,low_mm,nominal_mm,high_mm,equation,low_result_mm,nominal_result_mm,high_result_mm,criterion_mm,interpretation
+T01,Positive post-length/overtravel error,0,0.13,0.26,Mmax=0.51-error,0.51,0.38,0.25,0.25,0.26 mm consumes all allowed upper-margin budget
+T02,Interference/preload magnitude,0,0.13,0.30,Mmax=0.51-preload,0.51,0.38,0.21,0.25,0.30 mm fails target and any negative face gap is prohibited regardless
+T03,Positive face separation,0,1.00,1.91,Mmin=2.16-separation,2.16,1.16,0.25,0.25,Minimum engagement is less sensitive than bottoming
+T04,Header tail negative tolerance,0,0.13,0.40,Tprot=2.41-delta-1.76,0.65,0.52,0.25,0.25,Unknown tail tolerance can consume standard-board protrusion budget
+T05,Single-board connector-field bow,0,0.107473,0.214947,Mmax=0.51-bow,0.51,0.402527,0.295053,0.25,Nominal column is 0.15 percent and high column is 0.30 percent over the field
+T06,Two-board bow at 0.15 percent each,0,0.214947,0.214947,Mmax=0.51-bow_combined,0.51,0.295053,0.295053,0.25,Leaves only 0.045 mm for all connector/seating/post contributors above required margin
+T07,Two-board bow at 0.30 percent each,0,0.429894,0.429894,Mmax=0.51-bow_combined,0.51,0.080106,0.080106,0.25,Fails before connector tolerances
+T08,Lateral capture allowance,0,0,0,margin=capture-WC_misalignment,,,,0.00,No result until Samtec publishes capture and all X/Y contributors are bounded

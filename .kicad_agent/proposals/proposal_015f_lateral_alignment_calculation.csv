@@ -1,0 +1,13 @@
+case_id,item,x_mm,y_mm,reference,known_tolerance_mm,worst_case_formula,worst_case_mm,rss_formula,rss_mm,status,notes
+L01,CN11 datum origin,86.487,52.959,Official native CAD,,,0,,0,NOMINAL_ONLY,Reference origin
+L02,CN7 relative origin,48.260,-2.540,CN11,,,0,,0,NOMINAL_ONLY,Exact nominal coordinate only
+L03,CN8 relative origin,48.260,17.780,CN11,,,0,,0,NOMINAL_ONLY,Exact nominal coordinate only
+L04,CN12 relative origin,0,24.384,CN11,,,0,,0,NOMINAL_ONLY,Exact nominal coordinate only
+L05,Connector aggregate field width,53.416398,,Native body AABB,,,0,,0,NOMINAL_ONLY,Used for bow and support sensitivity
+L06,Connector aggregate field height,,47.752041,Native body AABB,,,0,,0,NOMINAL_ONLY,Used for bow and support sensitivity
+L07,JLCPCB individual PTH position,,,Interposer datum,0.05,2*0.05,0.10,sqrt(0.05^2+0.05^2),0.071,PARTIAL_ONLY,Relative pair result; excludes every connector and assembly contributor
+L08,Amphenol strip pitch/cumulative position,,,Header strip,,post true position + pitch accumulation,,, ,BLOCKED,Exact tolerances unavailable
+L09,Samtec contact-entry capture allowance,,,SSW contact,,manufacturer allowable X/Y misalignment,,, ,BLOCKED,No published system-level capture/misalignment limit found
+L10,MB1939 four-socket as-built placement,,,DK datum,,socket placement + rotation + solder shift,,, ,BLOCKED,Native CAD is nominal only
+L11,Interposer four-header assembled placement,,,Interposer datum,,hole + post + seating + fixture + solder shift,,, ,BLOCKED,Assembler capability absent
+L12,Full four-strip relative misalignment,,,CN11 datum,,sum of L08+L09+L10+L11,,, ,BLOCKED,No negative lateral margin can be demonstrated

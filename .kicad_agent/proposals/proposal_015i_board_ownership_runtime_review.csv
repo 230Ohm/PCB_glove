@@ -1,0 +1,14 @@
+signal,pin,required_owner,conflict_to_exclude,source_register_or_runtime_evidence,result,status
+IMU_SPI_SCK,PE15,SPI5_AF5,"LD6 BSP and STMod duplicate",,"No firmware/runtime access",NOT_REVIEWED
+IMU_SPI_MISO,PH8,SPI5_AF5,"other AF/STMod duplicate",,"No firmware/runtime access",NOT_REVIEWED
+IMU_SPI_MOSI,PG2,SPI5_AF5,"other AF/STMod duplicate",,"No firmware/runtime access",NOT_REVIEWED
+IMU_THUMB_CS_N,PA3,GPIO,"SPI5_NSS/STMod/other AF",,"No firmware/runtime access",NOT_REVIEWED
+IMU_INDEX_CS_N,PE14,GPIO,"SPI4/I2C4/other AF",,"No firmware/runtime access",NOT_REVIEWED
+IMU_MIDDLE_CS_N,PE7,GPIO,"TIM/MDF/UART/SAI/FMC",,"No firmware/runtime access",NOT_REVIEWED
+IMU_RING_CS_N,PD6,GPIO,"SPI2/I2S/TIM/FMC",,"No firmware/runtime access",NOT_REVIEWED
+IMU_PINKY_CS_N,PE13,GPIO,"SPI4/I2C4/SAI/FMC",,"No firmware/runtime access",NOT_REVIEWED
+IMU_THUMB_INT1,PE10,EXTI10 input/no-pull,"TRACECLK/UART/MDF/DCMIPP/FMC",,"No firmware/runtime access",NOT_REVIEWED
+IMU_INDEX_INT1,PH5,EXTI5 input/no-pull,"ETH1_MDC/SPI5_SCK",,"No firmware/runtime access",NOT_REVIEWED
+IMU_MIDDLE_INT1,PE9,EXTI9 input/no-pull,"TIM/MDF/UART/FMC",,"No firmware/runtime access",NOT_REVIEWED
+IMU_RING_INT1,PD0,EXTI0 input/no-pull,"FDCAN/UART/DCMIPP/FMC",,"No firmware/runtime access",NOT_REVIEWED
+IMU_PINKY_INT1,PD11,EXTI11 input/no-pull,"I2C4/SPI2/UCPD; PA12 must high-Z",,"No firmware/runtime access or SB20 continuity",NOT_REVIEWED

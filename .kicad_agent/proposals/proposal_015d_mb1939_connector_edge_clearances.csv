@@ -1,0 +1,5 @@
+reference,left_extent_clearance_mm,right_extent_clearance_mm,bottom_extent_clearance_mm,top_extent_clearance_mm,method,limitation
+CN7,132.235418,12.738677,42.608937,51.775767,connector native body AABB to native board extrema,Nominal projected geometry; not a tolerance or service clearance
+CN8,132.235362,12.738733,60.388998,28.915706,connector native body AABB to native board extrema,Nominal projected geometry; not a tolerance or service clearance
+CN11,83.975275,60.998819,42.608790,46.695914,connector native body AABB to native board extrema,Nominal projected geometry; not a tolerance or service clearance
+CN12,83.975219,60.998875,64.452830,19.771874,connector native body AABB to native board extrema,Nominal projected geometry; not a tolerance or service clearance

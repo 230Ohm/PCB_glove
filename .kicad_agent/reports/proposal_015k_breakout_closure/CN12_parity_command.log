@@ -1,0 +1,8 @@
+COMMAND: "C:\Program Files\KiCad\9.0\bin\kicad-cli.exe" pcb drc --schematic-parity --severity-all --exit-code-violations --output C:\Users\ohmdd\Downloads\Larri\PCB_glove\.kicad_agent\reports\proposal_015k_breakout_closure\CN12_parity.rpt C:\Users\ohmdd\Downloads\Larri\PCB_glove\PCB_glove\dk_breakouts\CN12\CN12_DK_breakout.kicad_pcb
+RETURN_CODE: 0
+STDOUT:
+Found 0 violations
+Found 0 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to C:\Users\ohmdd\Downloads\Larri\PCB_glove\.kicad_agent\reports\proposal_015k_breakout_closure\CN12_parity.rpt
+STDERR:

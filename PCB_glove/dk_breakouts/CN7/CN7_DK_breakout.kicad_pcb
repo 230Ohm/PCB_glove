@@ -1,0 +1,718 @@
+(kicad_pcb
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(general
+		(thickness 1.6)
+		(legacy_teardrops no)
+	)
+	(paper "A4")
+	(title_block
+		(title "CN7 independent STM32N6570-DK breakout")
+		(comment 1 "DRAFT DEVELOPMENT HARDWARE - NOT FOR FABRICATION")
+		(comment 2 "Physical fit, harness, carrier, and wearable qualification deferred")
+	)
+	(layers
+		(0 "F.Cu" signal)
+		(2 "B.Cu" signal)
+		(9 "F.Adhes" user "F.Adhesive")
+		(11 "B.Adhes" user "B.Adhesive")
+		(13 "F.Paste" user)
+		(15 "B.Paste" user)
+		(5 "F.SilkS" user "F.Silkscreen")
+		(7 "B.SilkS" user "B.Silkscreen")
+		(1 "F.Mask" user)
+		(3 "B.Mask" user)
+		(17 "Dwgs.User" user "User.Drawings")
+		(19 "Cmts.User" user "User.Comments")
+		(21 "Eco1.User" user "User.Eco1")
+		(23 "Eco2.User" user "User.Eco2")
+		(25 "Edge.Cuts" user)
+		(27 "Margin" user)
+		(31 "F.CrtYd" user "F.Courtyard")
+		(29 "B.CrtYd" user "B.Courtyard")
+		(35 "F.Fab" user)
+		(33 "B.Fab" user)
+		(39 "User.1" user)
+		(41 "User.2" user)
+		(43 "User.3" user)
+		(45 "User.4" user)
+	)
+	(setup
+		(pad_to_mask_clearance 0)
+		(allow_soldermask_bridges_in_footprints no)
+		(tenting front back)
+		(pcbplotparams
+			(layerselection 0x00000000_00000000_55555555_5755f5ff)
+			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
+			(disableapertmacros no)
+			(usegerberextensions no)
+			(usegerberattributes yes)
+			(usegerberadvancedattributes yes)
+			(creategerberjobfile yes)
+			(dashed_line_dash_ratio 12.000000)
+			(dashed_line_gap_ratio 3.000000)
+			(svgprecision 4)
+			(plotframeref no)
+			(mode 1)
+			(useauxorigin no)
+			(hpglpennumber 1)
+			(hpglpenspeed 20)
+			(hpglpendiameter 15.000000)
+			(pdf_front_fp_property_popups yes)
+			(pdf_back_fp_property_popups yes)
+			(pdf_metadata yes)
+			(pdf_single_document no)
+			(dxfpolygonmode yes)
+			(dxfimperialunits yes)
+			(dxfusepcbnewfont yes)
+			(psnegative no)
+			(psa4output no)
+			(plot_black_and_white yes)
+			(sketchpadsonfab no)
+			(plotpadnumbers no)
+			(hidednponfab no)
+			(sketchdnponfab yes)
+			(crossoutdnponfab yes)
+			(subtractmaskfromsilk no)
+			(outputformat 1)
+			(mirror no)
+			(drillshape 1)
+			(scaleselection 1)
+			(outputdirectory "")
+		)
+	)
+	(net 0 "")
+	(net 1 "IMU_PINKY_INT1")
+	(footprint "PCB_glove:Pigtail_1x01_26AWG_StrainRelief"
+		(layer "F.Cu")
+		(uuid "59735ad2-9ffa-4462-ba27-28f412cbf8b8")
+		(at 12.62 16.5)
+		(descr "Development-only direct 26 AWG pigtail termination; one 0.80 mm finished wire hole and two 2.00 mm NPTH strain-relief holes")
+		(tags "pigtail 26AWG strain relief development")
+		(property "Reference" "J_WIRE1"
+			(at 0 -2.2 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "999d9e17-c969-49fb-94da-b1545a771892")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "Pigtail_1x01_26AWG_StrainRelief"
+			(at 0 7 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4f2bb68c-cee8-4e63-bb7d-3cc0e7ed4299")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dd092d6a-dfda-406b-a3e5-8c9e9c30b857")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c5ee95d2-d6bd-4181-9e84-81d89371ba0c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr through_hole)
+		(fp_rect
+			(start -3.8 -1.5)
+			(end 3.8 6.6)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "6d561b4c-acc4-4130-bcda-0558f4eb3dc9")
+		)
+		(fp_text user "CABLE EXIT"
+			(at 0 5.8 0)
+			(layer "F.Fab")
+			(uuid "3f761c1d-8c1a-4e95-b317-510aef8ad0b3")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at -2.5 4)
+			(size 2 2)
+			(drill 2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "6843f248-594f-4472-9f96-3dd7098cc146")
+		)
+		(pad "" np_thru_hole circle
+			(at 2.5 4)
+			(size 2 2)
+			(drill 2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "4fcee09b-37c9-466b-a010-b565adb9eef5")
+		)
+		(pad "1" thru_hole rect
+			(at 0 0)
+			(size 1.8 1.8)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 1 "IMU_PINKY_INT1")
+			(uuid "38e02f41-ab9b-42fe-a913-383bb0a1e1bf")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "PCB_glove:Amphenol_77311-101-06LF_CN7_Breakout"
+		(layer "F.Cu")
+		(uuid "ab259ad9-9715-4c8c-9100-38994ab6e7bc")
+		(at 5 5)
+		(descr "CN7 independent breakout; Amphenol 77311-101-06LF; nominal F.Fab body 15.24 x 2.54 mm; project-defined 0.50 mm courtyard expansion; manufacturer recommended hole 1.02+/-0.08 mm; project-selected 1.70 mm copper land on DK pin 4; all DNC posts use nominal 1.02 mm NPTH with no copper")
+		(tags "Amphenol 77311 BergStik CN7 independent breakout DNC")
+		(property "Reference" "J_CN7_DK1"
+			(at 6.35 -3 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "4db9804c-8c2e-4023-8377-052e06341f77")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Amphenol_77311-101-06LF_CN7_Breakout"
+			(at 6.35 3 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "96dcd9a3-ee98-4d1c-a822-ae8be7e40944")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7d76681f-7313-412c-bb17-74a83da9b7d7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a0422929-f34f-4730-9f6f-55b1c4785cca")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr through_hole)
+		(fp_line
+			(start -1.4 -1.4)
+			(end 13.9 -1.4)
+			(stroke
+				(width 0.2)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "3051120d-a326-4544-8588-8933febc6b37")
+		)
+		(fp_line
+			(start -1.4 1.4)
+			(end 13.9 1.4)
+			(stroke
+				(width 0.2)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "90dea239-bf18-444f-8267-93f542b93fda")
+		)
+		(fp_circle
+			(center 0 -2.1)
+			(end 0.35 -2.1)
+			(stroke
+				(width 0.2)
+				(type default)
+			)
+			(fill no)
+			(layer "F.SilkS")
+			(uuid "39291416-18e5-48ea-9c69-58ab2f1ba41c")
+		)
+		(fp_line
+			(start -1.77 -1.77)
+			(end 14.47 -1.77)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "d8324930-8c6a-4dce-8b69-1261cd663fe2")
+		)
+		(fp_line
+			(start -1.77 1.77)
+			(end -1.77 -1.77)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "0682c40e-6b34-4d9e-9fc5-563c6ccb5719")
+		)
+		(fp_line
+			(start 14.47 -1.77)
+			(end 14.47 1.77)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "f93eab89-444c-4dc5-a6b8-f7f66b66a03f")
+		)
+		(fp_line
+			(start 14.47 1.77)
+			(end -1.77 1.77)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "464acb37-49bb-4e23-b30c-5de5d37548f3")
+		)
+		(fp_rect
+			(start -1.27 -1.27)
+			(end 13.97 1.27)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "bbe3c549-9ba3-4c58-bb14-ba3fb9f1cc36")
+		)
+		(fp_text user "DNC HOLES = NO COPPER"
+			(at 6.35 5.2 0)
+			(layer "F.Fab")
+			(uuid "51b3c2d6-a634-4163-8003-f55651473489")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(fp_text user "CN7 - DEVELOPMENT ONLY"
+			(at 6.35 4.2 0)
+			(layer "F.Fab")
+			(uuid "7162f430-a62c-488f-b3a4-8ba9a645ec79")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.12)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 1.02 1.02)
+			(drill 1.02)
+			(layers "*.Cu" "*.Mask")
+			(uuid "6b0aad59-ad8f-4fb7-8c54-80b632f03c1a")
+		)
+		(pad "" np_thru_hole circle
+			(at 2.54 0)
+			(size 1.02 1.02)
+			(drill 1.02)
+			(layers "*.Cu" "*.Mask")
+			(uuid "255f2e8e-e8c7-41fc-bd60-5f0785711194")
+		)
+		(pad "" np_thru_hole circle
+			(at 5.08 0)
+			(size 1.02 1.02)
+			(drill 1.02)
+			(layers "*.Cu" "*.Mask")
+			(uuid "d0a79057-75b6-4357-9a8c-ed7903f27fb7")
+		)
+		(pad "" np_thru_hole circle
+			(at 10.16 0)
+			(size 1.02 1.02)
+			(drill 1.02)
+			(layers "*.Cu" "*.Mask")
+			(uuid "070110e2-e514-452c-9456-f54a162945b8")
+		)
+		(pad "" np_thru_hole circle
+			(at 12.7 0)
+			(size 1.02 1.02)
+			(drill 1.02)
+			(layers "*.Cu" "*.Mask")
+			(uuid "36f5b2d6-7182-4904-aefd-8ad83b3a0d36")
+		)
+		(pad "4" thru_hole circle
+			(at 7.62 0)
+			(size 1.7 1.7)
+			(drill 1.02)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 1 "IMU_PINKY_INT1")
+			(uuid "4178194f-be56-4f25-8c53-c07768b19873")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "PCB_glove:Carrier_Clamp_2x_M2.5_NPTH_P10mm"
+		(layer "F.Cu")
+		(uuid "c5d23174-ba53-4cd0-a1d9-58906092e5ad")
+		(at 11 29.5)
+		(descr "Development carrier/clamp interface; two 2.70 mm NPTH holes on 10.00 mm centers; mechanical hardware and clamp load remain physically unverified")
+		(tags "carrier clamp M2.5 NPTH development")
+		(property "Reference" "MH_CARRIER1"
+			(at 0 -2.4 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "57a3a184-3817-430a-aa10-6200c77eb549")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "CARRIER_CLAMP_MECHANICAL_VERIFY"
+			(at 0 2.4 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2058f0d5-4517-4d18-a439-4f731d85ed59")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "db9707cd-55d3-479b-89e0-46dc97589e1d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dcff0d43-3d19-4b50-bd18-6cd349a2f2bc")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(fp_line
+			(start -7 -1.7)
+			(end 7 -1.7)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "454cef85-0176-45ba-991b-2465ea47d997")
+		)
+		(fp_line
+			(start -7 1.7)
+			(end -7 -1.7)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "1445e15d-71fe-4e18-8c91-c708bf05ded2")
+		)
+		(fp_line
+			(start 7 -1.7)
+			(end 7 1.7)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "1c49bb16-8454-4c85-8334-418331a41481")
+		)
+		(fp_line
+			(start 7 1.7)
+			(end -7 1.7)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "05b36e96-146e-48d0-ac69-04c15623a2ec")
+		)
+		(pad "" np_thru_hole circle
+			(at -5 0)
+			(size 2.7 2.7)
+			(drill 2.7)
+			(layers "*.Cu" "*.Mask")
+			(uuid "64aa7796-6140-48d3-9027-fb1fd6ea8022")
+		)
+		(pad "" np_thru_hole circle
+			(at 5 0)
+			(size 2.7 2.7)
+			(drill 2.7)
+			(layers "*.Cu" "*.Mask")
+			(uuid "0bf9f185-987e-49c4-86f1-bfaa432bdc32")
+		)
+		(embedded_fonts no)
+	)
+	(gr_line
+		(start 22 34)
+		(end 0 34)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "5912a86a-c76f-476c-ad6d-e4c053485bc3")
+	)
+	(gr_line
+		(start 0 0)
+		(end 22 0)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "6ff8ecf9-92ec-4deb-85af-e91a0567afc1")
+	)
+	(gr_line
+		(start 0 34)
+		(end 0 0)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "e27f3ffc-c7fb-4a46-8741-d4f1fa5cb5c4")
+	)
+	(gr_line
+		(start 22 0)
+		(end 22 34)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "fb143c7a-a658-40cc-9b51-555214ac4775")
+	)
+	(gr_text "MATING PINS FACE DK"
+		(at 11 1.9 0)
+		(layer "F.SilkS")
+		(uuid "2ea1e395-25f7-4853-9537-4feccafe6703")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+		)
+	)
+	(gr_text "INT5"
+		(at 12.62 24.8 90)
+		(layer "F.SilkS")
+		(uuid "2f873e1d-411b-488d-a184-efa4ce3cbec0")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+		)
+	)
+	(gr_text "NOT FOR FABRICATION"
+		(at 11 33 0)
+		(layer "F.SilkS")
+		(uuid "52769e26-1246-40eb-890e-e8bfec3c517f")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+		)
+	)
+	(gr_text "CN7 DK BREAKOUT"
+		(at 11 0.8 0)
+		(layer "F.SilkS")
+		(uuid "f46c6a64-c374-49ed-84e6-2f4bd3feeca2")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+		)
+	)
+	(gr_text "NOT FOR FABRICATION"
+		(at 11 13.55 0)
+		(layer "B.SilkS")
+		(uuid "0c9281b3-0d14-45bb-aa3f-50e9fd8aa3b7")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "DRAFT DEVELOPMENT HARDWARE"
+		(at 11 9.8 0)
+		(layer "B.SilkS")
+		(uuid "227db8b4-5af1-4cf5-ab54-981a55efde6d")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "NOT PHYSICALLY QUALIFIED"
+		(at 11 11.05 0)
+		(layer "B.SilkS")
+		(uuid "313f2c2b-43ae-4560-b0ed-eaa491b69002")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "DEVELOPMENT ONLY"
+		(at 11 1.9 0)
+		(layer "B.SilkS")
+		(uuid "47e60f64-9c11-4705-8346-e6ed7af51347")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "OPPOSING MATING VIEW"
+		(at 11 3 0)
+		(layer "B.SilkS")
+		(uuid "7ef73963-8508-40e8-b057-fdf5338b13be")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "NOT WEARABLE QUALIFIED"
+		(at 11 12.3 0)
+		(layer "B.SilkS")
+		(uuid "83c96566-53c5-4c94-ac2b-adb5a1874751")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "PIGTAIL STRAIN RELIEF"
+		(at 11 23 0)
+		(layer "B.SilkS")
+		(uuid "96c19fe4-7ae8-48ae-baca-e957eebb5f9a")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "DNC P1,P2,P3,P5,P6"
+		(at 11 7.3 0)
+		(layer "B.SilkS")
+		(uuid "b0e38fff-b386-4d2b-ae7b-facbcce1ca00")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "CARRIER CLAMP - VERIFY"
+		(at 11 33 0)
+		(layer "B.SilkS")
+		(uuid "d86dc07f-7062-4e4a-bc6d-d26baa5e8e17")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "DNC = NPTH / NO CU / NO WIRE"
+		(at 11 8.55 0)
+		(layer "B.SilkS")
+		(uuid "eea2bbb2-c70e-41b7-80c0-3e8a7fe5ac9e")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.136)
+			)
+			(justify mirror)
+		)
+	)
+	(segment
+		(start 12.62 5)
+		(end 12.62 16.5)
+		(width 0.5)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "bd5d6ce8-ec5f-4a3e-be4f-9f0b1af18ed5")
+	)
+	(embedded_fonts no)
+)

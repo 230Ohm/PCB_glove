@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="810" viewBox="0 0 250 135">
+  <rect width="250" height="135" fill="#f7f8fa"/>
+  <style>.t{font:3px sans-serif;fill:#17212b}.s{font:2.4px sans-serif;fill:#17212b}.h{font:bold 5px sans-serif;fill:#10243e}.board{fill:#eef7ef;stroke:#245c35;stroke-width:.7}.mate{fill:#9bf6ff;fill-opacity:.55;stroke:#0077b6;stroke-width:.5}.travel{stroke:#d00000;stroke-width:1.3;marker-end:url(#r)}.service{stroke:#ff8500;stroke-width:1;stroke-dasharray:2 1;marker-end:url(#o)}.dk{fill:#cdb4db;stroke:#6a3d86;stroke-width:.55}.warn{font:bold 2.8px sans-serif;fill:#9b2226}</style>
+  <defs><marker id="r" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#d00000"/></marker><marker id="o" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#ff8500"/></marker></defs>
+  <text x="10" y="8" class="h">Proposal 015E — E2 mating body and E3 insertion/removal map</text>
+  <text x="10" y="12" class="warn">PROJECT ENGINEERING KEEP-OUT — NOT MANUFACTURER MAXIMUM</text>
+  <rect x="10" y="15" width="150" height="110" rx="2" class="board"/>
+  <!-- Cable connector mating bodies and straight travel -->
+  <rect x="151" y="88" width="18" height="12" class="mate"/><line x1="158" y1="94" x2="182" y2="94" class="travel"/><text x="151" y="87" class="s">CN6 USB-C</text>
+  <rect x="5" y="91" width="18" height="12" class="mate"/><line x1="15" y1="97" x2="-8" y2="97" class="travel"/><text x="16" y="90" class="s">CN18 USB-C</text>
+  <rect x="-3" y="66" width="22" height="14" class="mate"/><line x1="10" y1="73" x2="-12" y2="73" class="service"/><text x="18" y="72" class="s">CN17 unused</text>
+  <rect x="-1" y="37" width="22" height="18" class="mate"/><line x1="10" y1="46" x2="-12" y2="46" class="service"/><text x="21" y="45" class="s">CN16 RJ45</text>
+  <rect x="35" y="113" width="10" height="12" class="mate"/><line x1="40" y1="120" x2="40" y2="133" class="service"/><text x="46" y="121" class="s">CN15 audio</text>
+  <rect x="76" y="113" width="15" height="12" class="mate"/><line x1="83" y1="120" x2="83" y2="133" class="service"/><text x="92" y="121" class="s">CN13 card</text>
+  <rect x="53" y="15" width="22" height="8" class="mate"/><line x1="64" y1="20" x2="64" y2="5" class="service"/><text x="76" y="20" class="s">CN14 FFC</text>
+  <rect x="116" y="15" width="30" height="13" class="mate"/><line x1="131" y1="22" x2="131" y2="5" class="service"/><text x="132" y="31" class="s">CN4 STMod+</text>
+  <rect x="151" y="98" width="15" height="18" class="mate"/><line x1="158" y1="107" x2="177" y2="107" class="service"/><text x="141" y="118" class="s">CN5</text>
+  <!-- Vertical service interfaces shown as plan boxes -->
+  <rect x="7" y="21" width="20" height="20" class="mate"/><text x="8" y="32" class="s">CN1 probe +Z</text>
+  <rect x="96" y="113" width="18" height="12" class="mate"/><text x="97" y="120" class="s">CN10 -Z</text>
+  <rect x="128" y="113" width="18" height="12" class="mate"/><text x="130" y="120" class="s">CN9 -Z</text>
+  <circle cx="127" cy="119" r="7" fill="none" stroke="#ff8500" stroke-width=".8" stroke-dasharray="2 1"/><text x="118" y="112" class="s">JP1 15mm -Z</text>
+  <circle cx="118" cy="119" r="8" fill="none" stroke="#d00000" stroke-width=".8"/><text x="108" y="108" class="s">JP2 15mm -Z</text>
+  <rect x="68" y="54" width="40" height="18" class="mate"/><text x="78" y="64" class="s">CN3 +Z service</text>
+  <!-- Four mandatory DK socket/header mating paths -->
+  <rect x="141" y="66" width="7" height="18" class="dk"/><rect x="141" y="42" width="7" height="23" class="dk"/>
+  <rect x="93" y="60" width="7" height="23" class="dk"/><rect x="93" y="33" width="7" height="28" class="dk"/>
+  <line x1="145" y1="76" x2="145" y2="86" class="travel"/><line x1="145" y1="54" x2="145" y2="64" class="travel"/>
+  <line x1="97" y1="72" x2="97" y2="82" class="travel"/><line x1="97" y1="47" x2="97" y2="57" class="travel"/>
+  <text x="104" y="47" class="t">CN7/CN8/CN11/CN12:</text><text x="104" y="51" class="s">15mm straight -Z assembly path</text>
+  <text x="166" y="18" class="h">Control</text>
+  <rect x="166" y="24" width="12" height="7" class="mate"/><text x="181" y="29" class="t">E2 body</text>
+  <line x1="166" y1="38" x2="178" y2="38" class="travel"/><text x="181" y="39" class="t">required E3 path</text>
+  <line x1="166" y1="47" x2="178" y2="47" class="service"/><text x="181" y="48" class="t">removal-service path</text>
+  <text x="166" y="59" class="t">E2 plug/backshell bounds</text><text x="166" y="63" class="t">are conservative project</text><text x="166" y="67" class="t">selection envelopes where a</text><text x="166" y="71" class="t">final cable is not selected.</text>
+  <text x="166" y="80" class="t">All used connectors have a</text><text x="166" y="84" class="t">straight insertion/removal</text><text x="166" y="88" class="t">direction and clearance.</text>
+  <text x="166" y="100" class="t">Board view: top; +Y up.</text><text x="166" y="104" class="t">Vertical (+/-Z) access is</text><text x="166" y="108" class="t">shown as plan-view boxes.</text>
+</svg>

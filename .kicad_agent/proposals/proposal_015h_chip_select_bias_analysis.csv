@@ -1,0 +1,6 @@
+pullup_ohms,current_each_at_3v3,current_five_at_3v3,assumed_capacitance,rc_time_constant,ten_to_ninety_rise_estimate,assessment
+4700,0.702 mA,3.51 mA,100 pF assumed,0.47 us,1.03 us,"Strongest bias but excessive static current when CS low; not preferred"
+10000,0.330 mA,1.65 mA,100 pF assumed,1.00 us,2.20 us,"PROVISIONAL choice; one per CS to +3V3_IMU; requires leakage/backfeed/waveform validation"
+47000,0.070 mA,0.351 mA,100 pF assumed,4.70 us,10.34 us,"Lower current but weaker noise immunity and slower release"
+100000,0.033 mA,0.165 mA,100 pF assumed,10.00 us,22.00 us,"Too weak for an uncharacterized wearable harness baseline"
+

@@ -1,0 +1,12 @@
+case_id,contributor,span_mm,limit_or_rate,min_mm,nom_mm,max_mm,source,class,disposition,status,notes
+C01,SSW CN7 body bow,15.748,0.003 mm/mm,0,0,0.047244,Samtec SSW print note 3,manufacturer,CONTROLLED_LOCAL,PARTIAL_ONLY,Does not include seating height
+C02,SSW CN8 body bow,20.828,0.003 mm/mm,0,0,0.062484,Samtec SSW print note 3,manufacturer,CONTROLLED_LOCAL,PARTIAL_ONLY,Applies also to CN11
+C03,SSW CN12 body bow,25.908,0.003 mm/mm,0,0,0.077724,Samtec SSW print note 3,manufacturer,CONTROLLED_LOCAL,PARTIAL_ONLY,Longest strip
+C04,Connector-field diagonal,71.648929,derived,,,71.648929,Proposal 015D native geometry,board,CONTROLLED_NOMINAL,NOMINAL_ONLY,Diagonal of 53.416398 by 47.752041 mm field
+C05,Interposer at general 0.75 percent bow,71.648929,0.0075,0,0,0.537367,JLCPCB warpage guidance,fabricator,NOT_ACCEPTED_FOR_GATE,FAIL_SENSITIVITY,Exceeds entire nominal 0.51 mm upper insertion margin
+C06,Interposer at project 0.30 percent sensitivity,71.648929,0.0030,0,0,0.214947,Project sensitivity,project,SENSITIVITY_ONLY,SENSITIVITY,Not a selected limit
+C07,Interposer at project 0.15 percent target,71.648929,0.0015,0,0,0.107473,Project RFQ target,project,FAB_ACCEPTANCE_REQUIRED,CONDITIONAL,Still must combine with DK and connector seating
+C08,MB1939 local board bow,71.648929,unknown,,,,Official ST package,board,MEASUREMENT_REQUIRED,BLOCKED,No finished-board local flatness limit
+C09,MB1939 SSW seating spread,71.648929,unknown,,,,Official ST package,board,MEASUREMENT_REQUIRED,BLOCKED,Same CAD plane is not as-built coplanarity
+C10,Amphenol header body/seating spread,71.648929,unknown,,,,Amphenol/assembler inquiry,manufacturer,OFFICIAL_AND_ASSEMBLER_CLOSURE_REQUIRED,BLOCKED,Four separate strips
+C11,Combined four-connector plane,71.648929,WC=sum all signed contributors,,,,C01-C10 plus support,project,ALL_INPUTS_REQUIRED,BLOCKED,RSS may be supplemental only after bounded inputs exist

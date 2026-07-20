@@ -1,0 +1,7 @@
+architecture,concept,simultaneous_rigid_DK_mates,mechanical_tolerance_5,electrical_behavior_5,development_use_5,wearable_relevance_5,documentation_manufacturing_5,total_25,result,reason
+A,"Four independent DK breakout sections with direct strain-relieved pigtails and a short grouped harness",1,5,4,5,4,4,22,"PASS WITH DEVELOPMENT CONTROLS","Eliminates four-header coplanarity/preload; exact map retained; cable SI and assembly inspection remain controlled development items"
+B,"Two split rigid interposers joined by short cables",2,4,4,4,3,3,18,"NOT SELECTED","Reduces but does not eliminate simultaneous rigid engagement and still needs two local stack analyses"
+C,"One rigid DK connector subset plus auxiliary harnesses",1,3,4,3,3,3,16,"FAIL","The proven signal map spans CN7 CN8 CN11 and CN12; no single subset carries all required signals and grounds"
+D,"Floating/compliant four-connector carrier",4,3,4,2,2,2,13,"FAIL","Still requires four simultaneous connector mates and adds unproven compliance travel alignment and preload behavior"
+E,"Loose individual development breakout harnesses",1,5,2,4,2,3,16,"NOT SELECTED","Mechanically tolerant but insufficiently keyed supported and strain-relieved for a controlled interface"
+F,"Direct wiring to fewer DK connector subsets",1,5,5,4,3,1,18,"FAIL","Official pin map proves the required allocation spans all four Arduino headers; reducing subsets would change or invent the map"

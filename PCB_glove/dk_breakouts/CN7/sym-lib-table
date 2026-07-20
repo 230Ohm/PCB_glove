@@ -1,0 +1,7 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "PCB_glove_Breakout")(type "KiCad")
+    (uri "${KIPRJMOD}/../../lib/symbols/PCB_glove_Breakout.kicad_sym")
+    (options "")
+    (descr "PCB_glove project-local breakout symbols"))
+)

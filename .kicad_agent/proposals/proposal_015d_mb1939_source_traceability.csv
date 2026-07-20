@@ -1,0 +1,16 @@
+evidence_item,official_source,source_object_or_record,verification_method,status,limitation
+Package identity,C:/Users/ohmdd/Downloads/mb1939-bdp.zip,ZIP plus readme.txt,SHA-256 AAE18A8A51A7C72D59E9C437CD02B2AB9C05A7BAE61E60D5188AACB9F742DA11 and ST readme release 1.0 dated 2024-11-04,PASS,Local copy supplied by user
+Native board identity,MB1939.PcbDoc,OLE compound file,SHA-256 78F5F25460CC1B0B0994D12EBD3B1638E5D15E2D9EC6D15A5CE797A2F2929E86 matches prior official record,PASS,Read only
+Primary datum,MB1939.PcbDoc,Board6/Data ORIGINX and ORIGINY,Direct native property decode,PASS,"X=9964.0945mil; Y=7346.2991mil"
+Board outline,MB1939.PcbDoc,Board6/Data 29 indexed primitives,Direct native primitive decode through exact EOF,PASS,Exact primitives retained in proposal_015d_mb1939_outline_primitives.csv
+Board extents,MB1939.PcbDoc,Board6/Data,Derived from decoded native primitives,PASS,"150.130294 x 110.132703mm overall extrema"
+Native stack thickness,MB1939.PcbDoc,Board6/Data layer stack,Sum of declared copper dielectric and mask layers,PASS WITH CAVEAT,"1.4839696mm copper+dielectric; 1.5139924mm including masks; no independent finished-board nominal/tolerance field"
+Mounting holes,MB1939.PcbDoc,Pads6/Data,Direct pad and drill decode through exact EOF,PASS,Nominal CAD values only
+Connector origins,MB1939.PcbDoc,Components6/Data,Direct component property decode through exact EOF,PASS,Nominal placement only
+Connector pad centers and names,MB1939.PcbDoc,Pads6/Data,Direct six-subrecord binary decode through exact EOF,PASS,Nominal placement only
+Connector pad 1,MB1939.PcbDoc plus Arduino_UNO_R3_SMD.SchDoc,Pads6 pad name 1 plus independent schematic pin designator 1,Cross-source native board/schematic check,PASS,Does not prove a visible silkscreen mark
+Connector bodies,MB1939.PcbDoc,ComponentBodies6/Data and Models/55 Models/66 Models/67 Models/68,Direct body polygon and embedded STEP record decode,PASS,Nominal AABB and height only; no maximum tolerance envelope
+Connector coplanarity,MB1939.PcbDoc,Components6/Data and ComponentBodies6/Data,Common Bottom layer placement plane and model origins,PASS NOMINAL,Tolerance/coplanarity maximum not supplied
+Nearby-body gaps,MB1939.PcbDoc,ComponentBodies6/Data,AABB-to-AABB calculation,PASS NOMINAL,Not a tolerance or assembly clearance proof
+Task-B service clearances,MB1939.PcbDoc plus component drawings,Not present as a controlled service-envelope specification,Source audit,BLOCKED,Approved finger tool cable insertion and removal clearances are missing
+KiCad Altium import,KiCad 9.0.4 ALTIUM_DESIGNER importer,MB1939.PcbDoc,Read-only temporary import attempt,FAILED/NOT USED,Importer stopped at unexpected layer ID; all retained evidence comes from exact raw native-stream decoding

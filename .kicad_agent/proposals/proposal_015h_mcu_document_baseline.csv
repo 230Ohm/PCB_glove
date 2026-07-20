@@ -1,0 +1,17 @@
+item,required_baseline,documented_value,evidence,status,limitation
+Fitted MCU,Exact fitted device,STM32N657X0H3Q,ST UM3300 Rev 1 board description and BOM designator,PROVEN FOR OFFICIAL DESIGN,"Actual package marking was not photographed"
+Silicon revision,Board production silicon,Revision B,ST UM3300 Rev 1 product identification,PROVEN FOR OFFICIAL DESIGN,"Actual DBGMCU_IDCODE/REV_ID was not read"
+Discovery kit,Exact board,STM32N6570-DK product code DK32N6570$CR1,ST UM3300 Rev 1,PROVEN FOR OFFICIAL DESIGN,"Actual board label/serial was not photographed"
+Motherboard,Exact MB revision,MB1939-N6570-C02,ST UM3300 Rev 1 and official MB1939 package,PROVEN FOR OFFICIAL DESIGN,"Actual silkscreen revision was not photographed"
+Datasheet,STM32N657 device data,DS14791 Rev 9 December 2025,ST STM32N657X0 datasheet,PROVEN,Applies to family/device not actual option-byte state
+Reference manual,STM32N6 programming model,RM0486 Rev 2,ST RM0486,PROVEN,No device register dump supplied
+Board user manual,DK board configuration,UM3300 Rev 1,ST UM3300,PROVEN,Official default configuration only
+Board schematic,MB1939 circuit,MB1939-N6570-C02 schematic pack,Official ST schematic pack,PROVEN FOR DESIGN,Physical population requires inspection
+Board CAD,Native geometry and design records,MB1939 board-design package v1.0 dated 2024-11-04,User-supplied official mb1939-bdp.zip SHA256 AAE18A8A51A7C72D59E9C437CD02B2AB9C05A7BAE61E60D5188AACB9F742DA11,PROVEN FOR DESIGN,Physical board not inspected
+STM32CubeN6,Reference package only,v1.4.0 tag dated 2026-06-30 commit 612268e,Official ST GitHub tag,PROVEN AS AVAILABLE REFERENCE,"Not selected as the application firmware"
+HAL driver,Reference package only,v1.4.0 dated 2026-06-03 commit d88071ed0adc1991a5daed6f20ab311f80bb33b7,STM32CubeN6 v1.4.0 pinned submodule/release header,PROVEN AS AVAILABLE REFERENCE,Not found in this project
+CMSIS device N6,Reference package only,v1.4.0 dated 2026-06-03 commit 81fe2fe8d576ec4c55be308ac4504bd580e498e6,STM32CubeN6 v1.4.0 pinned submodule/release header,PROVEN AS AVAILABLE REFERENCE,Not found in this project
+CMSIS Core(M),Reference package only,v6.1,STM32CubeN6 v1.4.0 cmsis_version.h,PROVEN AS AVAILABLE REFERENCE,Not found in this project
+STM32N6570-DK BSP,Reference package only,v1.4.0 dated 2026-06-03 commit 1c2dd0b3ec4e609e99af3ffb5f380b5b562236a4,STM32CubeN6 v1.4.0 pinned submodule/release header,PROVEN AS AVAILABLE REFERENCE,Not found in this project
+Intended application,Exact repository/branch/commit/build,NOT PROVIDED,Workspace search found no firmware source project or .ioc,UNPROVEN,Task H blocker
+Actual option bytes/OTP,Exact device state,NOT PROVIDED,No read-only programmer capture supplied,UNPROVEN,Task H blocker

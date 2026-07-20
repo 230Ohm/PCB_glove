@@ -1,0 +1,28 @@
+{
+  "cross_verify_version": 1,
+  "schematic_file": "C:\\Users\\ohmdd\\Downloads\\Larri\\PCB_glove\\PCB_glove\\dk_breakouts\\CN12\\CN12_DK_breakout.kicad_sch",
+  "pcb_file": "C:\\Users\\ohmdd\\Downloads\\Larri\\PCB_glove\\PCB_glove\\dk_breakouts\\CN12\\CN12_DK_breakout.kicad_pcb",
+  "component_matching": {
+    "schematic_count": 4,
+    "pcb_count": 5,
+    "matched": 4,
+    "orphans": [
+      {
+        "ref": "MH_CARRIER1",
+        "pcb_value": "CARRIER_CLAMP_MECHANICAL_VERIFY",
+        "status": "fail",
+        "message": "MH_CARRIER1 in PCB but not in schematic (stale placement?)"
+      }
+    ],
+    "missing": [],
+    "value_mismatches": [],
+    "dnp_conflicts": []
+  },
+  "summary": {
+    "total_checks": 1,
+    "pass": 0,
+    "warning": 0,
+    "fail": 1,
+    "info": 0
+  }
+}

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <defs><style>.t{font:700 28px sans-serif;fill:#0f172a}.h{font:700 18px sans-serif;fill:#0f172a}.s{font:15px sans-serif;fill:#334155}.note{font:700 16px sans-serif;fill:#b91c1c}.base{fill:#e2e8f0;stroke:#334155;stroke-width:3}.dk{fill:#e0f2fe;stroke:#0369a1;stroke-width:3}.bo{fill:#ecfccb;stroke:#4d7c0f;stroke-width:2}.clamp{fill:#fef3c7;stroke:#b45309;stroke-width:3}.wire{stroke:#334155;stroke-width:8;fill:none}.thin{stroke:#64748b;stroke-width:2;fill:none}.float{stroke:#7c3aed;stroke-width:3;fill:none;stroke-dasharray:8 6}</style></defs>
+  <rect width="1400" height="820" fill="white"/>
+  <text x="40" y="48" class="t">Proposal 015G — mechanical support and strain-relief concept</text>
+  <text x="40" y="78" class="s">Documentation-only controlled-development carrier. Dimensions and fabrication are not authorized.</text>
+  <text x="60" y="120" class="h">Top / carrier view</text>
+  <rect x="60" y="145" width="820" height="500" rx="28" class="base"/>
+  <text x="470" y="175" text-anchor="middle" class="h">Custom carrier PCBGLV-015G-CARRIER-001</text>
+  <rect x="150" y="220" width="620" height="330" rx="22" class="dk"/><text x="460" y="258" text-anchor="middle" class="h">STM32N6570-DK / MB1939</text>
+  <circle cx="180" cy="250" r="14" fill="white" stroke="#334155" stroke-width="3"/><circle cx="740" cy="250" r="14" fill="white" stroke="#334155" stroke-width="3"/><circle cx="180" cy="520" r="14" fill="white" stroke="#334155" stroke-width="3"/><circle cx="740" cy="520" r="14" fill="white" stroke="#334155" stroke-width="3"/>
+  <text x="460" y="292" text-anchor="middle" class="s">Carrier uses verified DK mounting holes; connector strips carry no structural load</text>
+  <rect x="255" y="350" width="105" height="55" rx="8" class="bo"/><text x="307" y="383" text-anchor="middle" class="s">CN11 BO</text>
+  <rect x="255" y="430" width="105" height="55" rx="8" class="bo"/><text x="307" y="463" text-anchor="middle" class="s">CN12 BO</text>
+  <rect x="560" y="330" width="105" height="55" rx="8" class="bo"/><text x="612" y="363" text-anchor="middle" class="s">CN7 BO</text>
+  <rect x="560" y="420" width="105" height="55" rx="8" class="bo"/><text x="612" y="453" text-anchor="middle" class="s">CN8 BO</text>
+  <rect x="235" y="330" width="145" height="175" rx="20" class="float"/><rect x="540" y="310" width="145" height="185" rx="20" class="float"/>
+  <text x="460" y="595" text-anchor="middle" class="s">Each breakout pocket permits local float during mating; pocket is clamped only after full seating.</text>
+  <rect x="765" y="325" width="90" height="130" rx="12" class="clamp"/><text x="810" y="375" text-anchor="middle" class="s">two-stage</text><text x="810" y="398" text-anchor="middle" class="s">cable</text><text x="810" y="421" text-anchor="middle" class="s">clamp</text>
+  <path d="M360 378 C520 378 650 380 765 380" class="wire"/><path d="M360 458 C520 458 650 430 765 430" class="wire"/>
+  <path d="M665 358 C710 358 730 365 765 380" class="wire"/><path d="M665 448 C710 448 730 438 765 430" class="wire"/>
+  <path d="M855 390 C930 390 970 420 1030 420" class="wire"/>
+  <text x="780" y="485" class="note">Cable pull terminates at carrier clamp</text>
+
+  <text x="940" y="120" class="h">Required assembly sequence</text>
+  <rect x="930" y="145" width="410" height="500" rx="20" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="965" y="190" class="s">1. Fasten DK to carrier using mounting holes.</text>
+  <text x="965" y="230" class="s">2. Keep all four breakout pockets locally free.</text>
+  <text x="965" y="270" class="s">3. Mate CN7 breakout alone; inspect seating.</text>
+  <text x="965" y="310" class="s">4. Repeat independently for CN8, CN11, CN12.</text>
+  <text x="965" y="350" class="s">5. No step requires two rigid strips to align.</text>
+  <text x="965" y="390" class="s">6. Clamp breakout bodies to carrier pockets.</text>
+  <text x="965" y="430" class="s">7. Form service loops; clamp harness twice.</text>
+  <text x="965" y="470" class="s">8. Apply connector and wire labels.</text>
+  <text x="965" y="510" class="s">9. Run continuity / isolation / pull screen.</text>
+  <text x="965" y="550" class="s">10. Connect Micro-Lock groups after checks.</text>
+  <text x="1135" y="605" text-anchor="middle" class="note">MAXIMUM SIMULTANEOUS RIGID MATES: 1</text>
+  <text x="60" y="710" class="h">Wearable boundary</text>
+  <text x="60" y="742" class="s">The DK and breakout carrier remain bench-mounted/off-glove. Only the short harness reaches the PCB_glove development assembly.</text>
+  <text x="60" y="775" class="note">No adhesive or cable tie may load a DK socket, breakout solder joint, or Amphenol contact. No connector is a stand-off.</text>
+</svg>

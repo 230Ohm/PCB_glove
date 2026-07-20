@@ -1,0 +1,10 @@
+COMMAND: "C:\Program Files\KiCad\9.0\bin\python.exe" C:\Users\ohmdd\Downloads\Larri\PCB_glove\tools\validate_project_footprints.py
+RETURN_CODE: 0
+STDOUT:
+PASS Amphenol_77311-101-06LF_CN7_Breakout: 6 contacts at 2.54 mm pitch, 1.02 mm drills, used PTH=[4], manufacturer nominal F.Fab and project 0.50 mm courtyard
+PASS Amphenol_77311-101-08LF_CN8_Breakout: 8 contacts at 2.54 mm pitch, 1.02 mm drills, used PTH=[6, 7], manufacturer nominal F.Fab and project 0.50 mm courtyard
+PASS Amphenol_77311-101-08LF_CN11_Breakout: 8 contacts at 2.54 mm pitch, 1.02 mm drills, used PTH=[3, 4, 5, 6, 7, 8], manufacturer nominal F.Fab and project 0.50 mm courtyard
+PASS Amphenol_77311-101-10LF_CN12_Breakout: 10 contacts at 2.54 mm pitch, 1.02 mm drills, used PTH=[1, 2, 3, 4, 5, 6, 7], manufacturer nominal F.Fab and project 0.50 mm courtyard
+PASS DRAFT_0R_Jumper_0603_VERIFY: exact routed KiCad 9 R_0603_1608Metric pad geometry
+PASS Molex 5055750620 pads: six 1.00 x 3.00 mm lands at 2.00 mm pitch; two netless MP lands 1.80 x 4.00 mm
+STDERR:

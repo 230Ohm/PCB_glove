@@ -1,0 +1,6 @@
+signal,nominal_ohms,measured_ohms,tolerance,placement,rail_voltage_v,low_current_uA,high_voltage_v,rise_time_ns,decay_time_ns,dk_off_result,debug_reset_result,status
+IMU_THUMB_CS_N,10000,,,,,,,,,,,NOT_MEASURED
+IMU_INDEX_CS_N,10000,,,,,,,,,,,NOT_MEASURED
+IMU_MIDDLE_CS_N,10000,,,,,,,,,,,NOT_MEASURED
+IMU_RING_CS_N,10000,,,,,,,,,,,NOT_MEASURED
+IMU_PINKY_CS_N,10000,,,,,,,,,,,NOT_MEASURED

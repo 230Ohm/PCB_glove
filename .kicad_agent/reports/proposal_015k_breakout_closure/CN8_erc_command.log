@@ -1,0 +1,6 @@
+COMMAND: "C:\Program Files\KiCad\9.0\bin\kicad-cli.exe" sch erc --severity-all --exit-code-violations --output C:\Users\ohmdd\Downloads\Larri\PCB_glove\.kicad_agent\reports\proposal_015k_breakout_closure\CN8_erc.rpt C:\Users\ohmdd\Downloads\Larri\PCB_glove\PCB_glove\dk_breakouts\CN8\CN8_DK_breakout.kicad_sch
+RETURN_CODE: 0
+STDOUT:
+Found 0 violations
+Saved ERC Report to C:\Users\ohmdd\Downloads\Larri\PCB_glove\.kicad_agent\reports\proposal_015k_breakout_closure\CN8_erc.rpt
+STDERR:

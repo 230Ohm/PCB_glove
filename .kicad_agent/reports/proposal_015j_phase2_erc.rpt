@@ -1,0 +1,38 @@
+ERC report (2026-07-15T17:44:40-0400, Encoding UTF8)
+
+***** Sheet /
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(60.96 mm, 45.72 mm): Global Label 'DK_IMU_SPI_SCK_TBD'
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(40.64 mm, 142.24 mm): Global Label 'IMU_THUMB_INT2_TBD'
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(162.56 mm, 45.72 mm): Global Label 'DK_IMU_SPI_MOSI_TBD'
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(116.84 mm, 142.24 mm): Global Label 'IMU_INDEX_INT2_TBD'
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(193.04 mm, 142.24 mm): Global Label 'IMU_MIDDLE_INT2_TBD'
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(269.24 mm, 142.24 mm): Global Label 'IMU_RING_INT2_TBD'
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; warning
+    @(345.44 mm, 142.24 mm): Global Label 'IMU_PINKY_INT2_TBD'
+
+***** Sheet /DK ADAPTER HEADERS/
+
+***** Sheet /IMU CENTRAL DISTRIBUTION/
+
+***** Sheet /FINGER IMU MODULE REFERENCE/
+
+***** Sheet /POWER AND TEST/
+
+***** Sheet /CAMERA PLACEHOLDERS/
+
+***** Sheet /NOTES AND TODOS/
+
+ ** ERC messages: 7  Errors 0  Warnings 7

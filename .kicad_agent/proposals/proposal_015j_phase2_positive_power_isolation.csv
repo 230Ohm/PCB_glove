@@ -1,0 +1,11 @@
+DK_connector,pin,official_name,schematic_disposition,exported_netlist_node,result
+CN8,2,IOREF,explicit no-connect,absent,PASS
+CN8,4,3V3,explicit no-connect,absent,PASS
+CN8,5,5V,explicit no-connect,absent,PASS
+CN8,8,VIN,explicit no-connect,absent,PASS
+CN8,1,NC,explicit no-connect,absent,PASS
+CN8,3,RESET,explicit no-connect,absent,PASS
+CN7,"1,2,3,5,6","A0,A1,A2,A4/SDA,A5/SCL",explicit no-connect,absent,PASS
+CN11,"1,2","RX/D0,TX/D1",explicit no-connect,absent,PASS
+CN12,"8,9,10","AREF,SDA,SCL",explicit no-connect,absent,PASS
+

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="810" viewBox="0 0 250 135">
+  <rect width="250" height="135" fill="#f7f8fa"/>
+  <style>.t{font:3px sans-serif;fill:#17212b}.s{font:2.4px sans-serif;fill:#17212b}.h{font:bold 5px sans-serif;fill:#10243e}.board{fill:#eef7ef;stroke:#245c35;stroke-width:.7}.no{fill:#ef233c;fill-opacity:.22;stroke:#c1121f;stroke-width:.55}.svc{fill:#ffb703;fill-opacity:.18;stroke:#cc7a00;stroke-width:.5;stroke-dasharray:2 1}.region{fill:#80ed99;fill-opacity:.62;stroke:#1b7f3b;stroke-width:.9}.dk{fill:#cdb4db;stroke:#6a3d86;stroke-width:.55}.hole{fill:none;stroke:#6c757d;stroke-width:.65;stroke-dasharray:2 1}.warn{font:bold 2.8px sans-serif;fill:#9b2226}</style>
+  <text x="10" y="8" class="h">Proposal 015E — E7 permanent interposer exclusion and practical region</text>
+  <text x="10" y="12" class="warn">PROJECT ENGINEERING KEEP-OUT — NOT MANUFACTURER MAXIMUM</text>
+  <rect x="10" y="15" width="150" height="110" rx="2" class="board"/>
+  <!-- Edge/service E7 exclusions -->
+  <rect x="148" y="84" width="40" height="20" class="no"/><text x="150" y="86" class="s">CN6 USB corridor</text>
+  <rect x="-10" y="87" width="35" height="21" class="no"/><text x="11" y="111" class="s">CN18 corridor</text>
+  <rect x="-12" y="60" width="35" height="26" class="svc"/><text x="12" y="63" class="s">CN17 unused</text>
+  <rect x="-12" y="31" width="35" height="31" class="svc"/><text x="12" y="34" class="s">CN16 service</text>
+  <rect x="30" y="108" width="20" height="28" class="svc"/><text x="31" y="107" class="s">CN15</text>
+  <rect x="72" y="108" width="24" height="28" class="svc"/><text x="74" y="107" class="s">CN13</text>
+  <rect x="47" y="5" width="34" height="26" class="no"/><text x="49" y="33" class="s">CN14 camera/FFC</text>
+  <rect x="48" y="66" width="32" height="32" class="no"/><text x="56" y="82" class="s">U27 thermal</text>
+  <rect x="110" y="6" width="42" height="28" class="svc"/><text x="116" y="36" class="s">CN4 service</text>
+  <!-- Fastener driver cylinders -->
+  <circle cx="15.08" cy="119.92" r="6" class="hole"/><circle cx="15.08" cy="20.08" r="6" class="hole"/>
+  <circle cx="154.92" cy="119.92" r="6" class="hole"/><circle cx="154.92" cy="20.08" r="6" class="hole"/>
+  <circle cx="26.76" cy="118.82" r="7" class="hole"/><circle cx="26.76" cy="33.28" r="7" class="hole"/>
+  <circle cx="143.24" cy="118.82" r="7" class="hole"/><circle cx="143.24" cy="33.28" r="7" class="hole"/>
+  <!-- Documentation-only practical interposer region: native x 82.5..139.5, y 41..92.5 with H6 notch. -->
+  <path d="M92.5 84 H149.5 V41.5 H135 V32.5 H92.5 Z" class="region"/>
+  <text x="105" y="88" class="t">PRACTICAL MECHANICAL REGION</text><text x="106" y="92" class="s">not a KiCad board outline</text>
+  <!-- Required connector field within candidate region -->
+  <rect x="141" y="66" width="7" height="18" class="dk"/><rect x="141" y="42" width="7" height="23" class="dk"/>
+  <rect x="93" y="60" width="7" height="23" class="dk"/><rect x="93" y="33" width="7" height="28" class="dk"/>
+  <text x="104" y="58" class="s">required CN7/CN8/CN11/CN12 field</text>
+  <circle cx="143.24" cy="33.28" r="7" class="hole"/><text x="136" y="28" class="s">H6 tool notch</text>
+  <text x="166" y="18" class="h">Decision</text>
+  <rect x="166" y="24" width="12" height="7" class="no"/><text x="181" y="29" class="t">E7 no-board</text>
+  <rect x="166" y="34" width="12" height="7" class="svc"/><text x="181" y="39" class="t">service exclusion</text>
+  <rect x="166" y="44" width="12" height="7" class="region"/><text x="181" y="49" class="t">practical region</text>
+  <rect x="166" y="54" width="12" height="7" class="dk"/><text x="181" y="59" class="t">intended mate exception</text>
+  <text x="166" y="70" class="t">Native candidate coordinates:</text><text x="166" y="74" class="t">X 82.5..139.5mm</text><text x="166" y="78" class="t">Y 41.0..92.5mm</text><text x="166" y="82" class="t">notch: X&gt;125mm and</text><text x="166" y="86" class="t">Y&gt;83.5mm for H6.</text>
+  <text x="166" y="96" class="t">Connector-body edge margin</text><text x="166" y="100" class="t">is at least 1mm. Unrelated</text><text x="166" y="104" class="t">interposer components require</text><text x="166" y="108" class="t">2mm from controlled E1.</text>
+  <text x="166" y="118" class="t">Rigid-interposer geometry is</text><text x="166" y="122" class="t">mechanically practical at Task B.</text>
+</svg>

@@ -1,0 +1,27 @@
+category,reference,role,side,origin_x_mm,origin_y_mm,nominal_aabb_width_mm,nominal_aabb_depth_mm,nominal_height_mm,body_evidence,task_b_disposition
+USB/ST-LINK,CN6,ST-LINK USB-C,Bottom,142.543,30.764,10.500,9.200,3.260,embedded STEP c12401826,NOMINAL ONLY
+USB,CN18,USB1 DRP USB-C,Bottom,7.351,27.532,10.500,9.200,3.260,embedded STEP c12401826,NOMINAL ONLY
+USB,CN17,USB2 Type-A,Bottom,-1.306,51.070,15.260,15.994,7.730,embedded STEP 676433911,NOMINAL ONLY
+Debug,CN1,Tag-Connect TC2050,Top,6.858,93.726,6.851,12.566,13.000,native primitive only,NOMINAL ONLY
+ST-LINK,CN9,1x4 header,Bottom,131.331,15.926,10.287,2.540,8.382,embedded STEP TSW-104,NOMINAL ONLY
+External debug,CN10,2x10 1.27mm header,Bottom,94.123,9.449,5.842,12.700,5.963,embedded STEP FTSH-110,NOMINAL ONLY
+ST-LINK jumper,JP1,1x2 header,Bottom,116.713,15.748,5.207,2.540,8.382,embedded STEP TSW-102,NOMINAL ONLY
+Button,B1,RESET,Top,144.272,55.118,6.800,6.500,3.500,native primitive only,NOMINAL ONLY
+Button,B2,USER1,Top,144.272,67.818,6.800,6.500,4.300,native primitive only,NOMINAL ONLY
+Button,B4,TAMP,Top,144.272,80.518,6.800,6.500,4.300,native primitive only,NOMINAL ONLY
+Power,CN2,2x7 power header,Top,26.289,104.902,17.780,5.080,8.382,embedded STEP TSW-107,NOMINAL ONLY
+Power selection,JP2,2x3 selector header,Bottom,107.823,9.525,7.696,7.620,9.652,embedded STEP TSM-103,NOMINAL ONLY
+Camera,CN14,22-pin 0.5mm FFC,Bottom,54.008,104.080,16.430,5.110,2.050,embedded STEP 2-1734592-2,NOMINAL ONLY CAMERA ELECTRICAL TBD
+Display,CN3,2x25 1.27mm LCD socket,Top,75.003,66.133,31.864,4.595,4.547,embedded STEP FLE-125,NOMINAL ONLY
+SD/storage,CN13,reversed push-push microSD,Bottom,75.039,-0.300,14.600,14.200,2.000,embedded STEP PJS008-2003,NOMINAL ONLY
+Expansion,CN4,STMOD+ right-angle 2x10,Top,118.475,101.380,20.297,9.870,4.000,embedded STEP SQT-110 RA,NOMINAL ONLY METADATA DISCREPANCY
+Expansion,CN5,MEMS-mic 2x10 1.27mm,Top,146.398,18.311,3.000,13.160,4.300,embedded STEP MINITEK-20P,NOMINAL ONLY
+Expansion/DK,CN7,1x6 socket,Bottom,134.747,50.419,5.156,15.748,9.779,embedded STEP SSW-106,NOMINAL ONLY
+Expansion/DK,CN8,1x8 socket,Bottom,134.747,70.739,5.156,20.828,9.779,embedded STEP SSW-108,NOMINAL ONLY
+Expansion/DK,CN11,1x8 socket,Bottom,86.487,52.959,5.156,20.828,9.779,embedded STEP SSW-108,NOMINAL ONLY
+Expansion/DK,CN12,1x10 socket,Bottom,86.487,77.343,5.156,25.908,9.779,embedded STEP SSW-110,NOMINAL ONLY
+Cable/audio,CN15,3.5mm stereo jack,Bottom,33.168,0.262,5.999,16.899,5.000,native primitive only,NOMINAL ONLY
+Cable/Ethernet,CN16,RJ45 magnetics and LEDs,Bottom,0.029,76.627,21.840,22.793,17.000,native primitive only,NOMINAL ONLY METADATA DISCREPANCY
+Switch,SW1,BOOT1,Top,144.526,91.948,10.000,2.500,7.900,native primitive only,NOMINAL ONLY
+Switch,SW2,BOOT0,Top,144.526,94.869,10.000,2.500,7.900,native primitive only,NOMINAL ONLY
+Thermal/socket,U27,STM32 socket footprint,Bottom,54.117,43.231,20.738,20.738,9.860,native primitive only,NOMINAL ONLY METADATA DISCREPANCY NO HEATSINK MODEL

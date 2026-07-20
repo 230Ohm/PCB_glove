@@ -1,0 +1,104 @@
+{
+  "proposal": "015K",
+  "result": "PASS",
+  "invariant": "connector/pigtail/clamp coordinates and orientation, pad geometry, routing, outlines, drawings, warning text, nets and zones are byte-independent geometry matches",
+  "boards": [
+    {
+      "board": "PCB_glove/dk_breakouts/CN7/CN7_DK_breakout.kicad_pcb",
+      "geometry_preserved": true,
+      "footprint_ids": {
+        "carrier": "PCB_glove:Carrier_Clamp_2x_M2.5_NPTH_P10mm",
+        "dk": "PCB_glove:Amphenol_77311-101-06LF_CN7_Breakout",
+        "wire": "PCB_glove:Pigtail_1x01_26AWG_StrainRelief"
+      },
+      "references": {
+        "carrier": "MH_CARRIER1",
+        "dk": "J_CN7_DK1",
+        "wire": "J_WIRE1"
+      },
+      "carrier_board_only": true,
+      "track_count": 1,
+      "zone_count": 0,
+      "net_names": [
+        "IMU_PINKY_INT1"
+      ]
+    },
+    {
+      "board": "PCB_glove/dk_breakouts/CN8/CN8_DK_breakout.kicad_pcb",
+      "geometry_preserved": true,
+      "footprint_ids": {
+        "carrier": "PCB_glove:Carrier_Clamp_2x_M2.5_NPTH_P10mm",
+        "dk": "PCB_glove:Amphenol_77311-101-08LF_CN8_Breakout",
+        "wire": "PCB_glove:Pigtail_1x03_26AWG_StrainRelief"
+      },
+      "references": {
+        "carrier": "MH_CARRIER1",
+        "dk": "J_CN8_DK1",
+        "wire": "J_WIRE1"
+      },
+      "carrier_board_only": true,
+      "track_count": 8,
+      "zone_count": 0,
+      "net_names": [
+        "GND"
+      ]
+    },
+    {
+      "board": "PCB_glove/dk_breakouts/CN11/CN11_DK_breakout.kicad_pcb",
+      "geometry_preserved": true,
+      "footprint_ids": {
+        "carrier": "PCB_glove:Carrier_Clamp_2x_M2.5_NPTH_P10mm",
+        "dk": "PCB_glove:Amphenol_77311-101-08LF_CN11_Breakout",
+        "wire": "PCB_glove:Pigtail_1x06_26AWG_StrainRelief"
+      },
+      "references": {
+        "carrier": "MH_CARRIER1",
+        "dk": "J_CN11_DK1",
+        "wire": "J_WIRE1"
+      },
+      "carrier_board_only": true,
+      "track_count": 6,
+      "zone_count": 0,
+      "net_names": [
+        "IMU_INDEX_INT1",
+        "IMU_MIDDLE_INT1",
+        "IMU_PINKY_CS_N",
+        "IMU_RING_CS_N",
+        "IMU_RING_INT1",
+        "IMU_THUMB_INT1"
+      ]
+    },
+    {
+      "board": "PCB_glove/dk_breakouts/CN12/CN12_DK_breakout.kicad_pcb",
+      "geometry_preserved": true,
+      "footprint_ids": {
+        "R1": "PCB_glove:DRAFT_0R_Jumper_0603_VERIFY",
+        "R2": "PCB_glove:DRAFT_0R_Jumper_0603_VERIFY",
+        "carrier": "PCB_glove:Carrier_Clamp_2x_M2.5_NPTH_P10mm",
+        "dk": "PCB_glove:Amphenol_77311-101-10LF_CN12_Breakout",
+        "wire": "PCB_glove:Pigtail_1x07_26AWG_StrainRelief"
+      },
+      "references": {
+        "R1": "R1",
+        "R2": "R2",
+        "carrier": "MH_CARRIER1",
+        "dk": "J_CN12_DK1",
+        "wire": "J_WIRE1"
+      },
+      "carrier_board_only": true,
+      "track_count": 9,
+      "zone_count": 0,
+      "net_names": [
+        "DK_IMU_SPI_MOSI_TBD",
+        "DK_IMU_SPI_SCK_TBD",
+        "GND",
+        "IMU_INDEX_CS_N",
+        "IMU_MIDDLE_CS_N",
+        "IMU_SPI_MISO",
+        "IMU_SPI_MOSI",
+        "IMU_SPI_SCK",
+        "IMU_THUMB_CS_N"
+      ]
+    }
+  ]
+}

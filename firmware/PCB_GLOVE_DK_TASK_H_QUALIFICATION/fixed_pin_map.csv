@@ -1,0 +1,17 @@
+function,net,dk_contact,mcu_pin,required_mode
+SPI clock,IMU_SPI_SCK,CN12-6,PE15,SPI5_AF5_mode3
+SPI MISO,IMU_SPI_MISO,CN12-5,PH8,SPI5_AF5_input
+SPI MOSI,IMU_SPI_MOSI,CN12-4,PG2,SPI5_AF5
+Thumb CS,IMU_THUMB_CS_N,CN12-3,PA3,GPIO_high_preloaded
+Index CS,IMU_INDEX_CS_N,CN12-2,PE14,GPIO_high_preloaded
+Middle CS,IMU_MIDDLE_CS_N,CN12-1,PE7,GPIO_high_preloaded
+Ring CS,IMU_RING_CS_N,CN11-8,PD6,GPIO_high_preloaded
+Pinky CS,IMU_PINKY_CS_N,CN11-7,PE13,GPIO_high_preloaded
+Thumb INT,IMU_THUMB_INT1,CN11-6,PE10,EXTI10_input_no_pull_masked
+Index INT,IMU_INDEX_INT1,CN11-5,PH5,EXTI5_input_no_pull_masked
+Middle INT,IMU_MIDDLE_INT1,CN11-4,PE9,EXTI9_input_no_pull_masked
+Ring INT,IMU_RING_INT1,CN11-3,PD0,EXTI0_input_no_pull_masked
+Pinky INT,IMU_PINKY_INT1,CN7-4,PD11,EXTI11_input_no_pull_masked
+Ground,GND,CN12-7,signal reference,connect_first
+Ground,GND,CN8-6,signal reference,connect_first
+Ground,GND,CN8-7,signal reference,connect_first

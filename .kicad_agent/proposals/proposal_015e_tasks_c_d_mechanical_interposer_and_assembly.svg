@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1260" viewBox="0 0 300 210">
+  <rect width="300" height="210" fill="#f7f8fa"/>
+  <style>.h{font:bold 5px sans-serif;fill:#10243e}.ph{font:bold 3.2px sans-serif;fill:#10243e}.t{font:2.5px sans-serif;fill:#17212b}.s{font:2px sans-serif;fill:#17212b}.panel{fill:white;stroke:#8795a1;stroke-width:.5}.dk{fill:#d8f3dc;stroke:#245c35;stroke-width:.5}.ip{fill:#80ed99;fill-opacity:.7;stroke:#1b7f3b;stroke-width:.7}.conn{fill:#cdb4db;stroke:#6a3d86;stroke-width:.45}.pin1{fill:#d00000}.keep{fill:#ef233c;fill-opacity:.18;stroke:#c1121f;stroke-width:.4;stroke-dasharray:2 1}.cable{stroke:#ff8500;stroke-width:2;fill:none}.dim{stroke:#222;stroke-width:.35}.warn{font:bold 2.8px sans-serif;fill:#9b2226}</style>
+  <text x="8" y="8" class="h">Proposal 015E — Tasks C/D documentation-only mechanical interposer and combined assembly</text>
+  <text x="8" y="12" class="warn">MECHANICAL FIT-CHECK ONLY — NO COPPER, NETS, ROUTING, PCB OUTLINE, OR FABRICATION RELEASE</text>
+
+  <!-- 1 top assembly -->
+  <rect x="5" y="17" width="70" height="88" class="panel"/><text x="8" y="22" class="ph">1. Top assembly view</text>
+  <rect x="10" y="27" width="60" height="44" rx="1" class="dk"/><path d="M43 61 H66 V44 H60 V25 H43 Z" class="ip"/>
+  <rect x="62" y="47" width="3" height="8" class="conn"/><rect x="62" y="36" width="3" height="10" class="conn"/>
+  <rect x="44" y="44" width="3" height="11" class="conn"/><rect x="44" y="31" width="3" height="13" class="conn"/>
+  <text x="9" y="78" class="t">Native region: X 82.5..139.5mm</text><text x="9" y="82" class="t">Y 41.0..92.5mm; H6 notch.</text>
+  <text x="9" y="88" class="t">1mm board-edge to controlled E1;</text><text x="9" y="92" class="t">2mm interposer-component clearance.</text>
+  <text x="9" y="99" class="s">Board region is documentation geometry, not KiCad.</text>
+
+  <!-- 2 DK bottom -->
+  <rect x="80" y="17" width="70" height="88" class="panel"/><text x="83" y="22" class="ph">2. DK-bottom view</text>
+  <rect x="85" y="27" width="60" height="44" rx="1" class="dk"/>
+  <rect x="137" y="47" width="3" height="8" class="conn"/><rect x="137" y="36" width="3" height="10" class="conn"/>
+  <rect x="119" y="44" width="3" height="11" class="conn"/><rect x="119" y="31" width="3" height="13" class="conn"/>
+  <circle cx="138.5" cy="54" r=".9" class="pin1"/><circle cx="138.5" cy="37" r=".9" class="pin1"/><circle cx="120.5" cy="54" r=".9" class="pin1"/><circle cx="120.5" cy="43" r=".9" class="pin1"/>
+  <text x="83" y="78" class="t">CN7 p1 (136.4615,56.7690)</text><text x="83" y="82" class="t">CN8 p1 (136.4615,79.6290)</text>
+  <text x="83" y="86" class="t">CN11 p1 (84.7725,44.0690)</text><text x="83" y="90" class="t">CN12 p1 (84.7725,65.9130)</text>
+  <text x="83" y="98" class="s">Bottom view uses official native orientation.</text>
+
+  <!-- 3 interposer mating -->
+  <rect x="155" y="17" width="70" height="88" class="panel"/><text x="158" y="22" class="ph">3. Interposer mating view</text>
+  <path d="M160 71 H220 V44 H214 V25 H160 Z" class="ip"/>
+  <rect x="162" y="47" width="3" height="8" class="conn"/><rect x="162" y="36" width="3" height="10" class="conn"/>
+  <rect x="180" y="44" width="3" height="11" class="conn"/><rect x="180" y="31" width="3" height="13" class="conn"/>
+  <circle cx="163.5" cy="54" r=".9" class="pin1"/><circle cx="163.5" cy="37" r=".9" class="pin1"/><circle cx="181.5" cy="54" r=".9" class="pin1"/><circle cx="181.5" cy="43" r=".9" class="pin1"/>
+  <text x="158" y="78" class="t">Mirror of DK bottom when viewed</text><text x="158" y="82" class="t">from interposer component side.</text>
+  <text x="158" y="88" class="t">Headers: 77311-101-06LF,</text><text x="158" y="92" class="t">-08LF ×2, -10LF; 2.54mm pitch.</text>
+  <text x="158" y="99" class="s">32 pad centers remain controlled by 015D CSV.</text>
+
+  <!-- 4 side stack -->
+  <rect x="230" y="17" width="65" height="88" class="panel"/><text x="233" y="22" class="ph">4. Side stack view</text>
+  <rect x="235" y="31" width="52" height="2.2" fill="#3a86ff"/><text x="236" y="29" class="s">DK PCB 1.514mm nominal stack-derived</text>
+  <rect x="242" y="33.2" width="9" height="25" class="conn"/><text x="252" y="45" class="s">SSW body 9.78</text>
+  <rect x="241" y="58.2" width="11" height="6.5" fill="#ffb703"/><text x="253" y="62" class="s">header body 2.54</text>
+  <rect x="235" y="64.7" width="52" height="3.2" fill="#2a9d8f"/><text x="236" y="72" class="s">interposer PCB 1.60</text>
+  <line x1="246.5" y1="58.2" x2="246.5" y2="43.5" stroke="#555" stroke-width=".8"/><text x="253" y="54" class="s">post 5.84 into SSW</text>
+  <line x1="246.5" y1="67.9" x2="246.5" y2="74" stroke="#555" stroke-width=".8"/><text x="253" y="78" class="s">tail 2.41; protrusion 0.81</text>
+  <line x1="290" y1="33.2" x2="290" y2="64.7" class="dim"/><text x="275" y="84" class="t">nominal board-face gap 12.32mm</text>
+  <text x="233" y="94" class="t">Nominal only. Task E min/max stack</text><text x="233" y="98" class="t">is blocked by missing tolerances.</text>
+
+  <!-- 5 connector section -->
+  <rect x="5" y="110" width="70" height="93" class="panel"/><text x="8" y="115" class="ph">5. Connector section</text>
+  <rect x="10" y="124" width="55" height="3" fill="#3a86ff"/><rect x="28" y="127" width="12" height="30" class="conn"/>
+  <rect x="27" y="157" width="14" height="7" fill="#ffb703"/><rect x="10" y="164" width="55" height="3" fill="#2a9d8f"/>
+  <line x1="34" y1="157" x2="34" y2="143" stroke="#555" stroke-width=".9"/>
+  <text x="8" y="174" class="t">5.84mm nominal engagement is within</text><text x="8" y="178" class="t">SSW 3.68..6.35mm window.</text>
+  <text x="8" y="184" class="t">Nominal upper margin = 0.51mm;</text><text x="8" y="188" class="t">not enough to infer tolerance closure.</text>
+  <text x="8" y="196" class="s">Header body lengths: 15.24/20.32/25.40mm.</text>
+
+  <!-- 6 supports -->
+  <rect x="80" y="110" width="70" height="93" class="panel"/><text x="83" y="115" class="ph">6. Mounting-support view</text>
+  <path d="M85 166 H145 V139 H139 V120 H85 Z" class="ip"/>
+  <circle cx="140" cy="122" r="7" fill="none" stroke="#6c757d" stroke-dasharray="2 1"/><text x="126" y="118" class="s">H6 Ø14 tool notch</text>
+  <circle cx="100" cy="143" r="3" fill="none" stroke="#1b7f3b"/><circle cx="130" cy="143" r="3" fill="none" stroke="#1b7f3b"/>
+  <circle cx="100" cy="160" r="3" fill="none" stroke="#1b7f3b"/><circle cx="130" cy="160" r="3" fill="none" stroke="#1b7f3b"/>
+  <text x="83" y="174" class="t">Four carrier-support candidate zones shown.</text><text x="83" y="178" class="t">They do not use connector mating force.</text>
+  <text x="83" y="184" class="t">Exact support hardware remains Task F;</text><text x="83" y="188" class="t">Task E stops before that decision.</text>
+  <text x="83" y="196" class="s">All 8 DK holes retain Ø12/Ø14×25 tool access.</text>
+
+  <!-- 7 cable exits -->
+  <rect x="155" y="110" width="70" height="93" class="panel"/><text x="158" y="115" class="ph">7. Cable-exit view</text>
+  <rect x="160" y="124" width="55" height="44" rx="1" class="dk"/><path d="M186 165 H211 V140 H205 V121 H186 Z" class="ip"/>
+  <path d="M211 130 H224 Q235 130 235 141" class="cable"/><text x="202" y="126" class="s">CN6 +X</text>
+  <path d="M161 140 H151 Q140 140 140 151" class="cable"/><text x="158" y="137" class="s">CN18 -X</text>
+  <text x="158" y="176" class="t">Primary USB and ST-LINK exits avoid</text><text x="158" y="180" class="t">the interposer region; R20 reserved.</text>
+  <text x="158" y="186" class="t">Optional ports are serviceable after</text><text x="158" y="190" class="t">interposer removal.</text>
+  <text x="158" y="197" class="s">Camera FFC reservation remains outside region.</text>
+
+  <!-- 8 access/keepout -->
+  <rect x="230" y="110" width="65" height="93" class="panel"/><text x="233" y="115" class="ph">8. Access/keepout view</text>
+  <rect x="235" y="124" width="52" height="44" rx="1" class="dk"/>
+  <rect x="275" y="142" width="19" height="12" class="keep"/><text x="276" y="140" class="s">CN6 E7</text>
+  <rect x="230" y="146" width="15" height="15" class="keep"/><text x="232" y="164" class="s">CN18 E7</text>
+  <rect x="247" y="124" width="15" height="12" class="keep"/><text x="248" y="138" class="s">camera E7</text>
+  <path d="M260 166 H285 V151 H280 V130 H260 Z" class="ip"/>
+  <text x="233" y="176" class="t">Checked 2D assembly preserves:</text><text x="233" y="180" class="t">USB/debug/reset/boot/power access,</text><text x="233" y="184" class="t">camera reservation, all cable exits,</text><text x="233" y="188" class="t">fastener tool paths, and removal motion.</text>
+  <text x="233" y="196" class="s">Bench/off-glove use avoids skin-facing contact.</text>
+</svg>

@@ -1,0 +1,13 @@
+case_id,case_name,equation,inputs_mm,result_mm,min_depth_margin_mm,max_depth_or_bottom_margin_mm,tail_protrusion_mm,status,reason
+V01,Nominal insertion,E=P,5.84,5.84,2.16,0.51,,NOMINAL_ONLY,Exact post tolerance and bottoming datum unavailable
+V02,Minimum-margin separation threshold,Delta_max=P-(Imin+Mreq),5.84-3.68-0.25,1.91,0.25,,,THRESHOLD_ONLY,Positive face separation above 1.91 mm violates minimum target
+V03,Maximum-margin overtravel threshold,Overtravel_max=Imax-Mreq-P,6.35-0.25-5.84,0.26,,0.25,,THRESHOLD_ONLY,Combined post growth/preload/bottom-reference error must not exceed 0.26 mm
+V04,Standard 1.60 mm board nominal-tail minimum,Tprot=Ptail_nom-tboard_max,2.41-1.76,0.65,,,0.65,CONDITIONAL,Passes 0.25 mm only if 2.41 mm is not below nominal
+V05,Tighter 1.60 mm RFQ nominal-tail minimum,Tprot=Ptail_nom-tboard_max,2.41-1.70,0.71,,,0.71,CONDITIONAL,Requires fabricator and assembler written acceptance
+V06,Thin 1.20 mm board nominal-tail minimum,Tprot=Ptail_nom-tboard_max,2.41-1.32,1.09,,,1.09,REJECTED,Improves tail but worsens rigidity and does not close connector tolerances
+V07,Thick 2.00 mm board nominal-tail minimum,Tprot=Ptail_nom-tboard_max,2.41-2.20,0.21,,,0.21,FAIL,Less than provisional 0.25 mm protrusion even before tail tolerance
+V08,Actual minimum insertion,Emin=Pmin-Delta_positive_max,Pmin and assembly separation unknown,,,,,BLOCKED,Amphenol post min and four-connector separation not controlled
+V09,Actual maximum insertion,Emax=Pmax-Delta_min,Pmax and negative gap/preload unknown,,,,,BLOCKED,Post max and bottoming/preload reference not controlled
+V10,Actual minimum tail,Tprot_min=Ptail_min-tboard_max,Ptail_min unknown and board max 1.76,,,,,BLOCKED,Header tail minimum unavailable
+V11,Actual maximum tail,Tprot_max=Ptail_max-tboard_min,Ptail_max unknown and board min 1.44,,,,,BLOCKED,Tail maximum and enclosure clearance unavailable
+V12,Four-connector simultaneous plane,Gactual_i=Hs_i+Hh_i+gap_i,all component/seating/board/support tolerances,,,,,BLOCKED,Cannot prove no partial seating bow or solder loading

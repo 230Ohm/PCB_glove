@@ -1,0 +1,20 @@
+state,trigger_or_interval,cs_outputs,sck_mosi,miso_int_inputs,documented_or_required,status
+1 DK power off,VDD absent,"Glove-side 10k pull-ups to +3V3_IMU required; MCU pin unpowered","Do not drive glove from DK","May be driven by powered glove; series isolation/backfeed fixture required",Required safe state; not a silicon guarantee,BLOCKED_PENDING_TEST
+2 DK supply ramp,VDD rising,"External pull-ups hold all CS high","MCU pins remain high impedance until firmware owns them","Inputs high impedance",Required system behavior,BLOCKED_PENDING_CAPTURE
+3 POR reset,Power-on reset asserted,"MCU GPIO analog/high-Z; external pull-ups hold high","Analog/high-Z","Analog/high-Z",DS14791 reset state plus Phase 2 pulls,DESIGN_PROVEN_IMPLEMENTATION_PENDING
+4 system reset,NRST/system reset asserted,"Preloaded latches cannot be assumed; external pull-ups hold high","Return/retain behavior must be captured","Inputs must not source glove",Required behavior,BLOCKED_PENDING_CAPTURE
+5 reset release before firmware,First instructions,"All CS remain externally high","No SPI clocks; MOSI quiet","INT inputs high-Z and EXTI masked",Mandatory firmware contract,ENFORCEABLE_SPEC
+6 ROM boot,BOOT selection enters ST ROM,"No application ownership proven; external pulls required","No selected-pin activity may be assumed","No pull assumed",Actual BOOT switches and option state absent,BLOCKED
+7 OTP boot path,OTP boot selected,"No application ownership proven","No activity may be assumed","No pull assumed",Actual OTP boot selection absent,BLOCKED
+8 secure initialization,Secure boot/application stage,"All CS high until explicit glove init","No SPI activity before ownership","EXTI masked",Mandatory contract; actual image absent,BLOCKED
+9 BSP initialization,Board support initialization,"Preload output data registers high before mode change","Keep SPI pins GPIO/high-Z until configured","Configure inputs/no pull; EXTI masked",Mandatory contract; BSP may also own LD6/Arduino pins,BLOCKED
+10 application pre-init,Before glove state machine,"CS high and verified","SCK idle high for SPI mode 3; MOSI quiet","Input/no pull; interrupts masked",Mandatory contract,ENFORCEABLE_SPEC
+11 SPI configured,State 2,"CS remain high","AF5 mode 3; 4-wire; MSB first; software NSS; 100 kHz-1 MHz bring-up","MISO input path active; INT still masked",ISM330DHCX supports modes 0 and 3; mode 3 selected for deterministic idle-high,ENFORCEABLE_SPEC
+12 IMU initialization,State 4 after rail valid,"Assert one CS at a time only after rail delay","Clock only selected IMU","INT remains masked until CTRL3_C/route configured",Mandatory contract,ENFORCEABLE_SPEC
+13 debugger attach/reset,Connect-under-reset/halt/reset,"External pulls must prevent low pulses","No assumption about debugger scripts","Inputs high-Z/no pull",Actual debugger behavior absent,BLOCKED_PENDING_CAPTURE
+14 watchdog reset,IWDG/WWDG reset,"External pulls hold high while firmware restarts","No clocks until State 2","EXTI masked before handler enable",Mandatory reset-fault behavior,BLOCKED_PENDING_CAPTURE
+15 software reset,NVIC_SystemReset or equivalent,"External pulls hold high","No clocks until State 2","EXTI masked",Mandatory reset-fault behavior,BLOCKED_PENDING_CAPTURE
+16 low-power entry,Stop/standby/shutdown entry,"Drive CS high then choose retention or analog; never low","Stop SPI and force idle before entry","Mask EXTI or use only intentional wake source",Mode-specific implementation absent,BLOCKED
+17 low-power exit,Wake/restart,"Re-run State 1 before any bus activity","Re-run SPI setup","Clear pending flags then arm intended edges",Mandatory contract,BLOCKED
+18 DK on glove off,DK VDD present +3V3_IMU absent,"DK outputs must not drive unpowered IMUs; CS preferably input/high-Z after pull rail absent","SCK/MOSI must be input/high-Z or isolated","MISO/INT low/unpowered",Hardware test mode required,BLOCKED_PENDING_TEST
+19 DK off glove on,DK VDD absent +3V3_IMU present,"Glove pull-ups may energize DK clamps; fixture links and current limit required","DK outputs unpowered; no safe hot-plug claim","MISO/INT can drive unpowered DK",Hardware test mode required,BLOCKED_PENDING_TEST

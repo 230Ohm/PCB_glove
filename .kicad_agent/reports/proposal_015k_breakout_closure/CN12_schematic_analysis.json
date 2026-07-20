@@ -1,0 +1,1904 @@
+{
+  "analyzer_type": "schematic",
+  "schema_version": "1.3.0",
+  "summary": {
+    "total_findings": 6,
+    "by_severity": {
+      "error": 0,
+      "warning": 2,
+      "info": 4
+    }
+  },
+  "trust_summary": {
+    "total_findings": 6,
+    "trust_level": "high",
+    "by_confidence": {
+      "deterministic": 6,
+      "heuristic": 0,
+      "datasheet-backed": 0
+    },
+    "by_evidence_source": {
+      "datasheet": 0,
+      "topology": 4,
+      "heuristic_rule": 0,
+      "symbol_footprint": 0,
+      "bom": 2,
+      "geometry": 0,
+      "api_lookup": 0
+    },
+    "provenance_coverage_pct": 66.7,
+    "bom_coverage": {
+      "total_components": 3,
+      "with_mpn": 2,
+      "with_datasheet": 1,
+      "mpn_pct": 66.7,
+      "datasheet_pct": 33.3
+    }
+  },
+  "file": "C:\\Users\\ohmdd\\Downloads\\Larri\\PCB_glove\\PCB_glove\\dk_breakouts\\CN12\\CN12_DK_breakout.kicad_sch",
+  "kicad_version": "proposal_015k",
+  "file_version": "20250114",
+  "title_block": {
+    "title": "CN12 independent DK breakout - annotated digital draft",
+    "date": "2026-07-20",
+    "rev": "PROPOSAL 015K DRAFT",
+    "company": "PCB_glove",
+    "comment_1": "NOT FOR FABRICATION",
+    "comment_2": "PHYSICAL AND WEARABLE QUALIFICATION BLOCKED"
+  },
+  "statistics": {
+    "total_components": 4,
+    "unique_parts": 3,
+    "dnp_parts": 0,
+    "total_nets": 9,
+    "total_wires": 9,
+    "total_no_connects": 0,
+    "component_types": {
+      "connector": 2,
+      "resistor": 2
+    },
+    "power_rails": [
+      {
+        "name": "GND",
+        "voltage": null
+      }
+    ],
+    "missing_mpn": [
+      "R1",
+      "R2"
+    ],
+    "missing_footprint": []
+  },
+  "findings": [
+    {
+      "ref": "J_CN12_DK1",
+      "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+      "total_pins": 7,
+      "ground_pins": 1,
+      "signal_pins": 6,
+      "signal_per_ground": 6.0,
+      "status": "advisory",
+      "detail": "J_CN12_DK1: 6 signal pins per ground pin (recommended: \u22643 for EMI control)",
+      "detector": "audit_connector_ground_distribution",
+      "rule_id": "CG-AUD",
+      "category": "connectors",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "Connector J_CN12_DK1: 6:1 signal-to-ground ratio",
+      "description": "Connector J_CN12_DK1 has 6.0 signal pins per ground pin.",
+      "components": [
+        "J_CN12_DK1"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "Add more ground pins (target \u22643 signal pins per ground).",
+      "report_context": {
+        "section": "Connector Ground",
+        "impact": "",
+        "standard_ref": ""
+      },
+      "provenance": {
+        "evidence": "cg_ground_audit",
+        "confidence": "deterministic",
+        "claimed_components": [
+          "J_CN12_DK1"
+        ],
+        "excluded_by": [],
+        "suppressed_candidates": []
+      },
+      "detection_id": "connector_ground_audit:464808f38b0b",
+      "stages": [
+        "schematic"
+      ]
+    },
+    {
+      "ref": "J_WIRE1",
+      "value": "Pigtail_1x07_26AWG_StrainRelief",
+      "total_pins": 7,
+      "ground_pins": 1,
+      "signal_pins": 6,
+      "signal_per_ground": 6.0,
+      "status": "advisory",
+      "detail": "J_WIRE1: 6 signal pins per ground pin (recommended: \u22643 for EMI control)",
+      "detector": "audit_connector_ground_distribution",
+      "rule_id": "CG-AUD",
+      "category": "connectors",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "Connector J_WIRE1: 6:1 signal-to-ground ratio",
+      "description": "Connector J_WIRE1 has 6.0 signal pins per ground pin.",
+      "components": [
+        "J_WIRE1"
+      ],
+      "nets": [],
+      "pins": [],
+      "recommendation": "Add more ground pins (target \u22643 signal pins per ground).",
+      "report_context": {
+        "section": "Connector Ground",
+        "impact": "",
+        "standard_ref": ""
+      },
+      "provenance": {
+        "evidence": "cg_ground_audit",
+        "confidence": "deterministic",
+        "claimed_components": [
+          "J_WIRE1"
+        ],
+        "excluded_by": [],
+        "suppressed_candidates": []
+      },
+      "detection_id": "connector_ground_audit:d58f043cfa48",
+      "stages": [
+        "schematic"
+      ]
+    },
+    {
+      "detector": "audit_datasheet_coverage",
+      "rule_id": "DS-002",
+      "severity": "warning",
+      "confidence": "deterministic",
+      "evidence_source": "bom",
+      "category": "verification",
+      "summary": "No datasheets directory found (2/4 parts have MPNs). Sync datasheets before making pin-level claims.",
+      "components": [
+        "J_CN12_DK1",
+        "J_WIRE1"
+      ],
+      "nets": [],
+      "pins": [],
+      "datasheets_dir": null,
+      "datasheet_file_count": 0,
+      "bom_size": 4,
+      "mpn_coverage_percent": 50.0,
+      "recommendation": "Run datasheet sync via the digikey / mouser / lcsc / element14 skill (which one depends on the user's distributor access and API credentials). A ./datasheets/ directory with PDFs and a manifest.json enables pin-level verification in the next analyzer run.",
+      "report_context": {
+        "section": "Datasheet Coverage",
+        "impact": "Review claims must stay at consistency level until datasheets land.",
+        "standard_ref": ""
+      },
+      "stages": [
+        "schematic"
+      ]
+    },
+    {
+      "connector_ref": "J_CN12_DK1",
+      "connector_value": "Amphenol_77311-101-10LF_CN12_Breakout",
+      "interface_type": "generic",
+      "risk_level": "medium_risk",
+      "signal_nets": [
+        "DK_IMU_SPI_MOSI_TBD",
+        "DK_IMU_SPI_SCK_TBD",
+        "IMU_INDEX_CS_N",
+        "IMU_MIDDLE_CS_N",
+        "IMU_SPI_MISO",
+        "IMU_THUMB_CS_N"
+      ],
+      "protected_nets": [],
+      "unprotected_nets": [
+        "DK_IMU_SPI_MOSI_TBD",
+        "DK_IMU_SPI_SCK_TBD",
+        "IMU_INDEX_CS_N",
+        "IMU_MIDDLE_CS_N",
+        "IMU_SPI_MISO",
+        "IMU_THUMB_CS_N"
+      ],
+      "coverage": "none",
+      "esd_devices": [],
+      "esd_device_details": [],
+      "detector": "audit_esd_protection",
+      "rule_id": "EP-AUD",
+      "category": "protection",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "ESD audit J_CN12_DK1 (generic): none coverage",
+      "description": "ESD protection audit for generic connector J_CN12_DK1: none coverage.",
+      "components": [
+        "J_CN12_DK1"
+      ],
+      "nets": [
+        "DK_IMU_SPI_MOSI_TBD",
+        "DK_IMU_SPI_SCK_TBD",
+        "IMU_INDEX_CS_N",
+        "IMU_MIDDLE_CS_N",
+        "IMU_SPI_MISO",
+        "IMU_THUMB_CS_N"
+      ],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "ESD Protection",
+        "impact": "",
+        "standard_ref": ""
+      },
+      "provenance": {
+        "evidence": "esd_coverage_audit",
+        "confidence": "deterministic",
+        "claimed_components": [
+          "J_CN12_DK1"
+        ],
+        "excluded_by": [],
+        "suppressed_candidates": []
+      },
+      "detection_id": "",
+      "stages": [
+        "schematic"
+      ]
+    },
+    {
+      "connector_ref": "J_WIRE1",
+      "connector_value": "Pigtail_1x07_26AWG_StrainRelief",
+      "interface_type": "generic",
+      "risk_level": "medium_risk",
+      "signal_nets": [
+        "IMU_INDEX_CS_N",
+        "IMU_MIDDLE_CS_N",
+        "IMU_SPI_MISO",
+        "IMU_SPI_MOSI",
+        "IMU_SPI_SCK",
+        "IMU_THUMB_CS_N"
+      ],
+      "protected_nets": [],
+      "unprotected_nets": [
+        "IMU_INDEX_CS_N",
+        "IMU_MIDDLE_CS_N",
+        "IMU_SPI_MISO",
+        "IMU_SPI_MOSI",
+        "IMU_SPI_SCK",
+        "IMU_THUMB_CS_N"
+      ],
+      "coverage": "none",
+      "esd_devices": [],
+      "esd_device_details": [],
+      "detector": "audit_esd_protection",
+      "rule_id": "EP-AUD",
+      "category": "protection",
+      "severity": "info",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "ESD audit J_WIRE1 (generic): none coverage",
+      "description": "ESD protection audit for generic connector J_WIRE1: none coverage.",
+      "components": [
+        "J_WIRE1"
+      ],
+      "nets": [
+        "IMU_INDEX_CS_N",
+        "IMU_MIDDLE_CS_N",
+        "IMU_SPI_MISO",
+        "IMU_SPI_MOSI",
+        "IMU_SPI_SCK",
+        "IMU_THUMB_CS_N"
+      ],
+      "pins": [],
+      "recommendation": "",
+      "report_context": {
+        "section": "ESD Protection",
+        "impact": "",
+        "standard_ref": ""
+      },
+      "provenance": {
+        "evidence": "esd_coverage_audit",
+        "confidence": "deterministic",
+        "claimed_components": [
+          "J_WIRE1"
+        ],
+        "excluded_by": [],
+        "suppressed_candidates": []
+      },
+      "detection_id": "",
+      "stages": [
+        "schematic"
+      ]
+    },
+    {
+      "detector": "audit_sourcing_gate",
+      "rule_id": "SS-002",
+      "severity": "warning",
+      "confidence": "deterministic",
+      "evidence_source": "bom",
+      "category": "sourcing",
+      "summary": "Sourcing gap: 2/3 unique BOM parts have an MPN (67%). Populate before fab.",
+      "description": "Sourcing audit: 2 of 3 unique BOM lines (grouped by value + footprint) carry a manufacturer part number (66.7%). Pre-fab readiness requires 100% coverage; production assembly requires all parts sourceable via one of the supported distributors.",
+      "components": [
+        "R1",
+        "R2"
+      ],
+      "nets": [],
+      "pins": [],
+      "mpn_coverage_percent": 66.7,
+      "missing_mpn_lines": 1,
+      "missing_mpn_refs": 2,
+      "total_bom_lines": 3,
+      "recommendation": "Populate the MPN field on the listed refs (use the digikey / mouser / lcsc / element14 skill to search by value/footprint when the MPN isn't already known).",
+      "report_context": {
+        "section": "Sourcing",
+        "impact": "Pre-fab gate: board cannot be ordered until MPN coverage reaches 100%.",
+        "standard_ref": ""
+      },
+      "stages": [
+        "pre_fab"
+      ]
+    }
+  ],
+  "bom": [
+    {
+      "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+      "footprint": "PCB_glove:Amphenol_77311-101-10LF_CN12_Breakout",
+      "mpn": "77311-101-10LF",
+      "manufacturer": "Amphenol ICC",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/77311.pdf",
+      "description": "",
+      "references": [
+        "J_CN12_DK1"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "connector"
+    },
+    {
+      "value": "Pigtail_1x07_26AWG_StrainRelief",
+      "footprint": "PCB_glove:Pigtail_1x07_26AWG_StrainRelief",
+      "mpn": "TBD / NOT A PRODUCTION CONNECTOR",
+      "manufacturer": "PROJECT DEVELOPMENT FEATURE",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "~",
+      "description": "",
+      "references": [
+        "J_WIRE1"
+      ],
+      "quantity": 1,
+      "dnp": false,
+      "type": "connector"
+    },
+    {
+      "value": "0R/DNP/TBD_SERIES_OPTION",
+      "footprint": "PCB_glove:DRAFT_0R_Jumper_0603_VERIFY",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "datasheet": "~",
+      "description": "",
+      "references": [
+        "R1",
+        "R2"
+      ],
+      "quantity": 2,
+      "dnp": false,
+      "type": "resistor"
+    }
+  ],
+  "components": [
+    {
+      "reference": "J_CN12_DK1",
+      "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+      "lib_id": "PCB_glove_Breakout:CN12_DK_USED_CONTACTS",
+      "lib_name": "",
+      "footprint": "PCB_glove:Amphenol_77311-101-10LF_CN12_Breakout",
+      "datasheet": "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/77311.pdf",
+      "description": "",
+      "mpn": "77311-101-10LF",
+      "manufacturer": "Amphenol ICC",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "x": 60.96,
+      "y": 91.44,
+      "angle": 0.0,
+      "mirror_x": false,
+      "mirror_y": false,
+      "unit": 1,
+      "uuid": "35f2adf9-328c-5a92-adee-8343fbd89057",
+      "in_bom": true,
+      "dnp": false,
+      "on_board": true,
+      "pin_uuids": {
+        "1": "02435946-6689-51f5-9559-f8b414d7d5bd",
+        "2": "1e7c853b-7b4b-518e-a144-18d1f80d24fb",
+        "3": "c88ad972-271d-5a71-be91-b47c4b523dd7",
+        "4": "e4a8a704-43a7-5ccd-a038-87b9330b6302",
+        "5": "91faf912-0ece-588c-b0f3-827f15ab7df2",
+        "6": "c02ae00e-80b0-5425-8b9a-53acfc838f76",
+        "7": "753fd117-39d1-57c6-9c26-bf6f5815d477"
+      },
+      "type": "connector",
+      "keywords": "",
+      "is_external_connector": false,
+      "connector_layout": "other",
+      "_sheet": 0,
+      "category": "connector",
+      "pin_nets": {
+        "1": "IMU_MIDDLE_CS_N",
+        "2": "IMU_INDEX_CS_N",
+        "3": "IMU_THUMB_CS_N",
+        "4": "DK_IMU_SPI_MOSI_TBD",
+        "5": "IMU_SPI_MISO",
+        "6": "DK_IMU_SPI_SCK_TBD",
+        "7": "GND"
+      }
+    },
+    {
+      "reference": "J_WIRE1",
+      "value": "Pigtail_1x07_26AWG_StrainRelief",
+      "lib_id": "PCB_glove_Breakout:CN12_PIGTAIL_TERMINATION",
+      "lib_name": "",
+      "footprint": "PCB_glove:Pigtail_1x07_26AWG_StrainRelief",
+      "datasheet": "~",
+      "description": "",
+      "mpn": "TBD / NOT A PRODUCTION CONNECTOR",
+      "manufacturer": "PROJECT DEVELOPMENT FEATURE",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "x": 152.4,
+      "y": 91.44,
+      "angle": 0.0,
+      "mirror_x": false,
+      "mirror_y": false,
+      "unit": 1,
+      "uuid": "8c10fe83-c7c6-5284-aef9-e2fff9fc7f3d",
+      "in_bom": true,
+      "dnp": false,
+      "on_board": true,
+      "pin_uuids": {
+        "1": "5e8ef136-c799-590c-b4cf-a585683563c6",
+        "2": "afe90b5b-1506-59ce-8c63-7cf84903c844",
+        "3": "7894cfbf-14e3-5cc6-bb4b-1154543c5383",
+        "4": "59da210f-1e3b-5fcd-a1cf-f00d2e636c4f",
+        "5": "679c3f88-b8c0-5cc2-af7f-a33d8b35982f",
+        "6": "cce8b4bc-c555-5e73-90e2-06865bd134dd",
+        "7": "839d002d-a5e0-5332-b85d-f368e8e871c2"
+      },
+      "type": "connector",
+      "keywords": "",
+      "is_external_connector": false,
+      "connector_layout": "single",
+      "_sheet": 0,
+      "category": "connector",
+      "pin_nets": {
+        "1": "IMU_MIDDLE_CS_N",
+        "2": "IMU_INDEX_CS_N",
+        "3": "IMU_THUMB_CS_N",
+        "5": "IMU_SPI_MISO",
+        "7": "GND",
+        "4": "IMU_SPI_MOSI",
+        "6": "IMU_SPI_SCK"
+      }
+    },
+    {
+      "reference": "R1",
+      "value": "0R/DNP/TBD_SERIES_OPTION",
+      "lib_id": "PCB_glove_Breakout:R_SERIES_OPTION",
+      "lib_name": "",
+      "footprint": "PCB_glove:DRAFT_0R_Jumper_0603_VERIFY",
+      "datasheet": "~",
+      "description": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "x": 106.68,
+      "y": 101.6,
+      "angle": 0.0,
+      "mirror_x": false,
+      "mirror_y": false,
+      "unit": 1,
+      "uuid": "3becb423-53f9-528a-a3a0-f80c2ac11b93",
+      "in_bom": true,
+      "dnp": false,
+      "on_board": true,
+      "pin_uuids": {
+        "1": "70832b39-7bbf-536b-a010-f33f878b345f",
+        "2": "2b607b19-77bd-5645-bf19-934909822031"
+      },
+      "type": "resistor",
+      "keywords": "",
+      "_sheet": 0,
+      "category": "resistor",
+      "parsed_value": 0.0,
+      "pin_nets": {
+        "1": "DK_IMU_SPI_SCK_TBD",
+        "2": "IMU_SPI_SCK"
+      }
+    },
+    {
+      "reference": "R2",
+      "value": "0R/DNP/TBD_SERIES_OPTION",
+      "lib_id": "PCB_glove_Breakout:R_SERIES_OPTION",
+      "lib_name": "",
+      "footprint": "PCB_glove:DRAFT_0R_Jumper_0603_VERIFY",
+      "datasheet": "~",
+      "description": "",
+      "mpn": "",
+      "manufacturer": "",
+      "digikey": "",
+      "mouser": "",
+      "lcsc": "",
+      "element14": "",
+      "x": 106.68,
+      "y": 91.44,
+      "angle": 0.0,
+      "mirror_x": false,
+      "mirror_y": false,
+      "unit": 1,
+      "uuid": "dd648145-91b8-5ec2-944c-0a44de7d6f4a",
+      "in_bom": true,
+      "dnp": false,
+      "on_board": true,
+      "pin_uuids": {
+        "1": "553da018-59ce-59a2-bda3-f3199a8e6a38",
+        "2": "662aa42b-ed8a-52e7-9ce2-8ef91fc7bd1b"
+      },
+      "type": "resistor",
+      "keywords": "",
+      "_sheet": 0,
+      "category": "resistor",
+      "parsed_value": 0.0,
+      "pin_nets": {
+        "1": "DK_IMU_SPI_MOSI_TBD",
+        "2": "IMU_SPI_MOSI"
+      }
+    }
+  ],
+  "nets": {
+    "IMU_MIDDLE_CS_N": {
+      "name": "IMU_MIDDLE_CS_N",
+      "pins": [
+        {
+          "component": "J_CN12_DK1",
+          "pin_number": "1",
+          "pin_name": "D8 / PE7",
+          "pin_type": "passive"
+        },
+        {
+          "component": "J_WIRE1",
+          "pin_number": "1",
+          "pin_name": "CS3",
+          "pin_type": "passive"
+        }
+      ],
+      "point_count": 3,
+      "no_connect": false,
+      "labels": [
+        {
+          "name": "IMU_MIDDLE_CS_N",
+          "type": "global_label"
+        }
+      ]
+    },
+    "IMU_INDEX_CS_N": {
+      "name": "IMU_INDEX_CS_N",
+      "pins": [
+        {
+          "component": "J_CN12_DK1",
+          "pin_number": "2",
+          "pin_name": "D9 / PE14",
+          "pin_type": "passive"
+        },
+        {
+          "component": "J_WIRE1",
+          "pin_number": "2",
+          "pin_name": "CS2",
+          "pin_type": "passive"
+        }
+      ],
+      "point_count": 3,
+      "no_connect": false,
+      "labels": [
+        {
+          "name": "IMU_INDEX_CS_N",
+          "type": "global_label"
+        }
+      ]
+    },
+    "IMU_THUMB_CS_N": {
+      "name": "IMU_THUMB_CS_N",
+      "pins": [
+        {
+          "component": "J_CN12_DK1",
+          "pin_number": "3",
+          "pin_name": "D10 / PA3",
+          "pin_type": "passive"
+        },
+        {
+          "component": "J_WIRE1",
+          "pin_number": "3",
+          "pin_name": "CS1",
+          "pin_type": "passive"
+        }
+      ],
+      "point_count": 3,
+      "no_connect": false,
+      "labels": [
+        {
+          "name": "IMU_THUMB_CS_N",
+          "type": "global_label"
+        }
+      ]
+    },
+    "DK_IMU_SPI_MOSI_TBD": {
+      "name": "DK_IMU_SPI_MOSI_TBD",
+      "pins": [
+        {
+          "component": "J_CN12_DK1",
+          "pin_number": "4",
+          "pin_name": "D11 / PG2",
+          "pin_type": "passive"
+        },
+        {
+          "component": "R2",
+          "pin_number": "1",
+          "pin_name": "~",
+          "pin_type": "passive"
+        }
+      ],
+      "point_count": 3,
+      "no_connect": false,
+      "labels": [
+        {
+          "name": "DK_IMU_SPI_MOSI_TBD",
+          "type": "global_label"
+        }
+      ]
+    },
+    "IMU_SPI_MISO": {
+      "name": "IMU_SPI_MISO",
+      "pins": [
+        {
+          "component": "J_CN12_DK1",
+          "pin_number": "5",
+          "pin_name": "D12 / PH8",
+          "pin_type": "passive"
+        },
+        {
+          "component": "J_WIRE1",
+          "pin_number": "5",
+          "pin_name": "MISO",
+          "pin_type": "passive"
+        }
+      ],
+      "point_count": 3,
+      "no_connect": false,
+      "labels": [
+        {
+          "name": "IMU_SPI_MISO",
+          "type": "global_label"
+        }
+      ]
+    },
+    "DK_IMU_SPI_SCK_TBD": {
+      "name": "DK_IMU_SPI_SCK_TBD",
+      "pins": [
+        {
+          "component": "J_CN12_DK1",
+          "pin_number": "6",
+          "pin_name": "D13 / PE15",
+          "pin_type": "passive"
+        },
+        {
+          "component": "R1",
+          "pin_number": "1",
+          "pin_name": "~",
+          "pin_type": "passive"
+        }
+      ],
+      "point_count": 3,
+      "no_connect": false,
+      "labels": [
+        {
+          "name": "DK_IMU_SPI_SCK_TBD",
+          "type": "global_label"
+        }
+      ]
+    },
+    "GND": {
+      "name": "GND",
+      "pins": [
+        {
+          "component": "J_CN12_DK1",
+          "pin_number": "7",
+          "pin_name": "GND",
+          "pin_type": "passive"
+        },
+        {
+          "component": "J_WIRE1",
+          "pin_number": "7",
+          "pin_name": "GND",
+          "pin_type": "passive"
+        }
+      ],
+      "point_count": 3,
+      "no_connect": false,
+      "labels": [
+        {
+          "name": "GND",
+          "type": "global_label"
+        }
+      ]
+    },
+    "IMU_SPI_MOSI": {
+      "name": "IMU_SPI_MOSI",
+      "pins": [
+        {
+          "component": "J_WIRE1",
+          "pin_number": "4",
+          "pin_name": "MOSI",
+          "pin_type": "passive"
+        },
+        {
+          "component": "R2",
+          "pin_number": "2",
+          "pin_name": "~",
+          "pin_type": "passive"
+        }
+      ],
+      "point_count": 3,
+      "no_connect": false,
+      "labels": [
+        {
+          "name": "IMU_SPI_MOSI",
+          "type": "global_label"
+        }
+      ]
+    },
+    "IMU_SPI_SCK": {
+      "name": "IMU_SPI_SCK",
+      "pins": [
+        {
+          "component": "J_WIRE1",
+          "pin_number": "6",
+          "pin_name": "SCK",
+          "pin_type": "passive"
+        },
+        {
+          "component": "R1",
+          "pin_number": "2",
+          "pin_name": "~",
+          "pin_type": "passive"
+        }
+      ],
+      "point_count": 3,
+      "no_connect": false,
+      "labels": [
+        {
+          "name": "IMU_SPI_SCK",
+          "type": "global_label"
+        }
+      ]
+    }
+  },
+  "subcircuits": [],
+  "ic_pin_analysis": [
+    {
+      "reference": "J_CN12_DK1",
+      "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+      "type": "connector",
+      "lib_id": "PCB_glove_Breakout:CN12_DK_USED_CONTACTS",
+      "mpn": "77311-101-10LF",
+      "description": "",
+      "datasheet": "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/77311.pdf",
+      "function": "",
+      "total_pins": 7,
+      "unconnected_pins": 0,
+      "pins": [
+        {
+          "pin_number": "1",
+          "pin_name": "D8 / PE7",
+          "pin_type": "passive",
+          "net": "IMU_MIDDLE_CS_N",
+          "connected_to": [
+            {
+              "ref": "J_WIRE1",
+              "value": "Pigtail_1x07_26AWG_StrainRelief",
+              "type": "connector",
+              "pin": "1",
+              "pin_name": "CS3"
+            }
+          ]
+        },
+        {
+          "pin_number": "2",
+          "pin_name": "D9 / PE14",
+          "pin_type": "passive",
+          "net": "IMU_INDEX_CS_N",
+          "connected_to": [
+            {
+              "ref": "J_WIRE1",
+              "value": "Pigtail_1x07_26AWG_StrainRelief",
+              "type": "connector",
+              "pin": "2",
+              "pin_name": "CS2"
+            }
+          ]
+        },
+        {
+          "pin_number": "3",
+          "pin_name": "D10 / PA3",
+          "pin_type": "passive",
+          "net": "IMU_THUMB_CS_N",
+          "connected_to": [
+            {
+              "ref": "J_WIRE1",
+              "value": "Pigtail_1x07_26AWG_StrainRelief",
+              "type": "connector",
+              "pin": "3",
+              "pin_name": "CS1"
+            }
+          ]
+        },
+        {
+          "pin_number": "4",
+          "pin_name": "D11 / PG2",
+          "pin_type": "passive",
+          "net": "DK_IMU_SPI_MOSI_TBD",
+          "connected_to": [
+            {
+              "ref": "R2",
+              "value": "0R/DNP/TBD_SERIES_OPTION",
+              "type": "resistor",
+              "pin": "1",
+              "pin_name": "~"
+            }
+          ]
+        },
+        {
+          "pin_number": "5",
+          "pin_name": "D12 / PH8",
+          "pin_type": "passive",
+          "net": "IMU_SPI_MISO",
+          "connected_to": [
+            {
+              "ref": "J_WIRE1",
+              "value": "Pigtail_1x07_26AWG_StrainRelief",
+              "type": "connector",
+              "pin": "5",
+              "pin_name": "MISO"
+            }
+          ]
+        },
+        {
+          "pin_number": "6",
+          "pin_name": "D13 / PE15",
+          "pin_type": "passive",
+          "net": "DK_IMU_SPI_SCK_TBD",
+          "connected_to": [
+            {
+              "ref": "R1",
+              "value": "0R/DNP/TBD_SERIES_OPTION",
+              "type": "resistor",
+              "pin": "1",
+              "pin_name": "~"
+            }
+          ]
+        },
+        {
+          "pin_number": "7",
+          "pin_name": "GND",
+          "pin_type": "passive",
+          "net": "GND",
+          "connected_to": [
+            {
+              "ref": "J_WIRE1",
+              "value": "Pigtail_1x07_26AWG_StrainRelief",
+              "type": "connector",
+              "pin": "7",
+              "pin_name": "GND"
+            }
+          ],
+          "has_decoupling_cap": true,
+          "decoupling_caps": [],
+          "note": "Ground net \u2014 decoupling caps listed on VCC/VDD pins"
+        }
+      ],
+      "power_pins": [
+        {
+          "pin_number": "7",
+          "pin_name": "GND",
+          "pin_type": "passive",
+          "net": "GND",
+          "connected_to": [
+            {
+              "ref": "J_WIRE1",
+              "value": "Pigtail_1x07_26AWG_StrainRelief",
+              "type": "connector",
+              "pin": "7",
+              "pin_name": "GND"
+            }
+          ],
+          "has_decoupling_cap": true,
+          "decoupling_caps": [],
+          "note": "Ground net \u2014 decoupling caps listed on VCC/VDD pins"
+        }
+      ],
+      "signal_pins": [
+        {
+          "pin_number": "1",
+          "pin_name": "D8 / PE7",
+          "pin_type": "passive",
+          "net": "IMU_MIDDLE_CS_N",
+          "connected_to": [
+            {
+              "ref": "J_WIRE1",
+              "value": "Pigtail_1x07_26AWG_StrainRelief",
+              "type": "connector",
+              "pin": "1",
+              "pin_name": "CS3"
+            }
+          ]
+        },
+        {
+          "pin_number": "2",
+          "pin_name": "D9 / PE14",
+          "pin_type": "passive",
+          "net": "IMU_INDEX_CS_N",
+          "connected_to": [
+            {
+              "ref": "J_WIRE1",
+              "value": "Pigtail_1x07_26AWG_StrainRelief",
+              "type": "connector",
+              "pin": "2",
+              "pin_name": "CS2"
+            }
+          ]
+        },
+        {
+          "pin_number": "3",
+          "pin_name": "D10 / PA3",
+          "pin_type": "passive",
+          "net": "IMU_THUMB_CS_N",
+          "connected_to": [
+            {
+              "ref": "J_WIRE1",
+              "value": "Pigtail_1x07_26AWG_StrainRelief",
+              "type": "connector",
+              "pin": "3",
+              "pin_name": "CS1"
+            }
+          ]
+        },
+        {
+          "pin_number": "4",
+          "pin_name": "D11 / PG2",
+          "pin_type": "passive",
+          "net": "DK_IMU_SPI_MOSI_TBD",
+          "connected_to": [
+            {
+              "ref": "R2",
+              "value": "0R/DNP/TBD_SERIES_OPTION",
+              "type": "resistor",
+              "pin": "1",
+              "pin_name": "~"
+            }
+          ]
+        },
+        {
+          "pin_number": "5",
+          "pin_name": "D12 / PH8",
+          "pin_type": "passive",
+          "net": "IMU_SPI_MISO",
+          "connected_to": [
+            {
+              "ref": "J_WIRE1",
+              "value": "Pigtail_1x07_26AWG_StrainRelief",
+              "type": "connector",
+              "pin": "5",
+              "pin_name": "MISO"
+            }
+          ]
+        },
+        {
+          "pin_number": "6",
+          "pin_name": "D13 / PE15",
+          "pin_type": "passive",
+          "net": "DK_IMU_SPI_SCK_TBD",
+          "connected_to": [
+            {
+              "ref": "R1",
+              "value": "0R/DNP/TBD_SERIES_OPTION",
+              "type": "resistor",
+              "pin": "1",
+              "pin_name": "~"
+            }
+          ]
+        }
+      ],
+      "decoupling_caps_by_rail": {}
+    },
+    {
+      "reference": "J_WIRE1",
+      "value": "Pigtail_1x07_26AWG_StrainRelief",
+      "type": "connector",
+      "lib_id": "PCB_glove_Breakout:CN12_PIGTAIL_TERMINATION",
+      "mpn": "TBD / NOT A PRODUCTION CONNECTOR",
+      "description": "",
+      "datasheet": "~",
+      "function": "",
+      "total_pins": 7,
+      "unconnected_pins": 0,
+      "pins": [
+        {
+          "pin_number": "1",
+          "pin_name": "CS3",
+          "pin_type": "passive",
+          "net": "IMU_MIDDLE_CS_N",
+          "connected_to": [
+            {
+              "ref": "J_CN12_DK1",
+              "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+              "type": "connector",
+              "pin": "1",
+              "pin_name": "D8 / PE7"
+            }
+          ]
+        },
+        {
+          "pin_number": "2",
+          "pin_name": "CS2",
+          "pin_type": "passive",
+          "net": "IMU_INDEX_CS_N",
+          "connected_to": [
+            {
+              "ref": "J_CN12_DK1",
+              "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+              "type": "connector",
+              "pin": "2",
+              "pin_name": "D9 / PE14"
+            }
+          ]
+        },
+        {
+          "pin_number": "3",
+          "pin_name": "CS1",
+          "pin_type": "passive",
+          "net": "IMU_THUMB_CS_N",
+          "connected_to": [
+            {
+              "ref": "J_CN12_DK1",
+              "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+              "type": "connector",
+              "pin": "3",
+              "pin_name": "D10 / PA3"
+            }
+          ]
+        },
+        {
+          "pin_number": "4",
+          "pin_name": "MOSI",
+          "pin_type": "passive",
+          "net": "IMU_SPI_MOSI",
+          "connected_to": [
+            {
+              "ref": "R2",
+              "value": "0R/DNP/TBD_SERIES_OPTION",
+              "type": "resistor",
+              "pin": "2",
+              "pin_name": "~"
+            }
+          ]
+        },
+        {
+          "pin_number": "5",
+          "pin_name": "MISO",
+          "pin_type": "passive",
+          "net": "IMU_SPI_MISO",
+          "connected_to": [
+            {
+              "ref": "J_CN12_DK1",
+              "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+              "type": "connector",
+              "pin": "5",
+              "pin_name": "D12 / PH8"
+            }
+          ]
+        },
+        {
+          "pin_number": "6",
+          "pin_name": "SCK",
+          "pin_type": "passive",
+          "net": "IMU_SPI_SCK",
+          "connected_to": [
+            {
+              "ref": "R1",
+              "value": "0R/DNP/TBD_SERIES_OPTION",
+              "type": "resistor",
+              "pin": "2",
+              "pin_name": "~"
+            }
+          ]
+        },
+        {
+          "pin_number": "7",
+          "pin_name": "GND",
+          "pin_type": "passive",
+          "net": "GND",
+          "connected_to": [
+            {
+              "ref": "J_CN12_DK1",
+              "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+              "type": "connector",
+              "pin": "7",
+              "pin_name": "GND"
+            }
+          ],
+          "has_decoupling_cap": true,
+          "decoupling_caps": [],
+          "note": "Ground net \u2014 decoupling caps listed on VCC/VDD pins"
+        }
+      ],
+      "power_pins": [
+        {
+          "pin_number": "7",
+          "pin_name": "GND",
+          "pin_type": "passive",
+          "net": "GND",
+          "connected_to": [
+            {
+              "ref": "J_CN12_DK1",
+              "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+              "type": "connector",
+              "pin": "7",
+              "pin_name": "GND"
+            }
+          ],
+          "has_decoupling_cap": true,
+          "decoupling_caps": [],
+          "note": "Ground net \u2014 decoupling caps listed on VCC/VDD pins"
+        }
+      ],
+      "signal_pins": [
+        {
+          "pin_number": "1",
+          "pin_name": "CS3",
+          "pin_type": "passive",
+          "net": "IMU_MIDDLE_CS_N",
+          "connected_to": [
+            {
+              "ref": "J_CN12_DK1",
+              "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+              "type": "connector",
+              "pin": "1",
+              "pin_name": "D8 / PE7"
+            }
+          ]
+        },
+        {
+          "pin_number": "2",
+          "pin_name": "CS2",
+          "pin_type": "passive",
+          "net": "IMU_INDEX_CS_N",
+          "connected_to": [
+            {
+              "ref": "J_CN12_DK1",
+              "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+              "type": "connector",
+              "pin": "2",
+              "pin_name": "D9 / PE14"
+            }
+          ]
+        },
+        {
+          "pin_number": "3",
+          "pin_name": "CS1",
+          "pin_type": "passive",
+          "net": "IMU_THUMB_CS_N",
+          "connected_to": [
+            {
+              "ref": "J_CN12_DK1",
+              "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+              "type": "connector",
+              "pin": "3",
+              "pin_name": "D10 / PA3"
+            }
+          ]
+        },
+        {
+          "pin_number": "4",
+          "pin_name": "MOSI",
+          "pin_type": "passive",
+          "net": "IMU_SPI_MOSI",
+          "connected_to": [
+            {
+              "ref": "R2",
+              "value": "0R/DNP/TBD_SERIES_OPTION",
+              "type": "resistor",
+              "pin": "2",
+              "pin_name": "~"
+            }
+          ]
+        },
+        {
+          "pin_number": "5",
+          "pin_name": "MISO",
+          "pin_type": "passive",
+          "net": "IMU_SPI_MISO",
+          "connected_to": [
+            {
+              "ref": "J_CN12_DK1",
+              "value": "Amphenol_77311-101-10LF_CN12_Breakout",
+              "type": "connector",
+              "pin": "5",
+              "pin_name": "D12 / PH8"
+            }
+          ]
+        },
+        {
+          "pin_number": "6",
+          "pin_name": "SCK",
+          "pin_type": "passive",
+          "net": "IMU_SPI_SCK",
+          "connected_to": [
+            {
+              "ref": "R1",
+              "value": "0R/DNP/TBD_SERIES_OPTION",
+              "type": "resistor",
+              "pin": "2",
+              "pin_name": "~"
+            }
+          ]
+        }
+      ],
+      "decoupling_caps_by_rail": {}
+    }
+  ],
+  "design_analysis": {
+    "net_classification": {
+      "IMU_MIDDLE_CS_N": "chip_select",
+      "IMU_INDEX_CS_N": "chip_select",
+      "IMU_THUMB_CS_N": "chip_select",
+      "DK_IMU_SPI_MOSI_TBD": "data",
+      "IMU_SPI_MISO": "data",
+      "DK_IMU_SPI_SCK_TBD": "clock",
+      "GND": "ground",
+      "IMU_SPI_MOSI": "data",
+      "IMU_SPI_SCK": "clock"
+    },
+    "power_domains": {
+      "ic_power_rails": {},
+      "domain_groups": {}
+    },
+    "cross_domain_signals": [],
+    "bus_analysis": {
+      "i2c": [],
+      "spi": [],
+      "uart": [],
+      "can": []
+    },
+    "differential_pairs": [],
+    "erc_warnings": [],
+    "passive_warnings": []
+  },
+  "connectivity_issues": {
+    "unconnected_pins": [],
+    "single_pin_nets": [],
+    "single_pin_net_findings": [],
+    "multi_driver_nets": [],
+    "power_net_summary": {
+      "GND": {
+        "pin_count": 2,
+        "components": [
+          "J_CN12_DK1",
+          "J_WIRE1"
+        ]
+      }
+    }
+  },
+  "labels": [
+    {
+      "name": "DK_IMU_SPI_MOSI_TBD",
+      "type": "global_label",
+      "x": 85.09,
+      "y": 91.44,
+      "angle": 0.0,
+      "shape": "bidirectional",
+      "_sheet": 0
+    },
+    {
+      "name": "DK_IMU_SPI_SCK_TBD",
+      "type": "global_label",
+      "x": 85.09,
+      "y": 101.6,
+      "angle": 0.0,
+      "shape": "bidirectional",
+      "_sheet": 0
+    },
+    {
+      "name": "GND",
+      "type": "global_label",
+      "x": 106.68,
+      "y": 106.68,
+      "angle": 0.0,
+      "shape": "bidirectional",
+      "_sheet": 0
+    },
+    {
+      "name": "IMU_INDEX_CS_N",
+      "type": "global_label",
+      "x": 106.68,
+      "y": 81.28,
+      "angle": 0.0,
+      "shape": "bidirectional",
+      "_sheet": 0
+    },
+    {
+      "name": "IMU_MIDDLE_CS_N",
+      "type": "global_label",
+      "x": 106.68,
+      "y": 76.2,
+      "angle": 0.0,
+      "shape": "bidirectional",
+      "_sheet": 0
+    },
+    {
+      "name": "IMU_SPI_MISO",
+      "type": "global_label",
+      "x": 106.68,
+      "y": 96.52,
+      "angle": 0.0,
+      "shape": "bidirectional",
+      "_sheet": 0
+    },
+    {
+      "name": "IMU_SPI_MOSI",
+      "type": "global_label",
+      "x": 128.27,
+      "y": 91.44,
+      "angle": 0.0,
+      "shape": "bidirectional",
+      "_sheet": 0
+    },
+    {
+      "name": "IMU_SPI_SCK",
+      "type": "global_label",
+      "x": 128.27,
+      "y": 101.6,
+      "angle": 0.0,
+      "shape": "bidirectional",
+      "_sheet": 0
+    },
+    {
+      "name": "IMU_THUMB_CS_N",
+      "type": "global_label",
+      "x": 106.68,
+      "y": 86.36,
+      "angle": 0.0,
+      "shape": "bidirectional",
+      "_sheet": 0
+    }
+  ],
+  "no_connects": [],
+  "power_symbols": [],
+  "annotation_issues": {},
+  "label_shape_warnings": [],
+  "pwr_flag_warnings": [],
+  "footprint_filter_warnings": [],
+  "sourcing_audit": {
+    "total_bom_components": 4,
+    "mpn_coverage": "2/4",
+    "missing_mpn": [
+      "R1",
+      "R2"
+    ],
+    "missing_digikey": [
+      "J_CN12_DK1",
+      "J_WIRE1",
+      "R1",
+      "R2"
+    ],
+    "missing_lcsc": [
+      "J_CN12_DK1",
+      "J_WIRE1",
+      "R1",
+      "R2"
+    ],
+    "mpn_percent": 50.0
+  },
+  "ground_domains": {
+    "ground_nets": {
+      "GND": {
+        "domain": "signal",
+        "connections": 2,
+        "components": [
+          "J_CN12_DK1",
+          "J_WIRE1"
+        ]
+      }
+    },
+    "multiple_domains": false
+  },
+  "bus_topology": {
+    "bus_wire_count": 0,
+    "bus_entry_count": 0
+  },
+  "wire_geometry": {
+    "total_wires": 9,
+    "total_length_mm": 513.1,
+    "avg_length_mm": 57.0
+  },
+  "simulation_readiness": {
+    "total_components": 4,
+    "likely_simulatable": 2,
+    "needs_model": 2,
+    "components_without_model": [
+      "J_CN12_DK1",
+      "J_WIRE1"
+    ],
+    "simulatable_percent": 50.0
+  },
+  "property_issues": {},
+  "placement_analysis": {
+    "bounding_box": {
+      "x_min": 61.0,
+      "y_min": 91.4,
+      "x_max": 152.4,
+      "y_max": 101.6,
+      "width_mm": 91.4,
+      "height_mm": 10.2
+    },
+    "clusters": [
+      {
+        "region": "row0_col0",
+        "component_count": 1,
+        "types": {
+          "connector": 1
+        },
+        "references": [
+          "J_CN12_DK1"
+        ]
+      },
+      {
+        "region": "row0_col1",
+        "component_count": 3,
+        "types": {
+          "connector": 1,
+          "resistor": 2
+        },
+        "references": [
+          "J_WIRE1",
+          "R1",
+          "R2"
+        ]
+      }
+    ],
+    "grid_size": "1x2"
+  },
+  "hierarchical_labels": {
+    "hierarchical_label_count": 0,
+    "global_label_count": 9,
+    "single_use_global_labels": [
+      "DK_IMU_SPI_MOSI_TBD",
+      "DK_IMU_SPI_SCK_TBD",
+      "GND",
+      "IMU_INDEX_CS_N",
+      "IMU_MIDDLE_CS_N",
+      "IMU_SPI_MISO",
+      "IMU_SPI_MOSI",
+      "IMU_SPI_SCK",
+      "IMU_THUMB_CS_N"
+    ]
+  },
+  "rail_voltages": {
+    "GND": 0
+  },
+  "power_sequencing_validation": {
+    "power_tree": [],
+    "provenance": {
+      "evidence": "pseq_enable_chain",
+      "confidence": "heuristic",
+      "claimed_components": [],
+      "excluded_by": [],
+      "suppressed_candidates": []
+    }
+  },
+  "text_annotations": [
+    {
+      "type": "text",
+      "text": "CN12 INDEPENDENT STM32N6570-DK BREAKOUT SCHEMATIC",
+      "x": 15.24,
+      "y": 15.24,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "DRAFT DEVELOPMENT HARDWARE - NOT FOR FABRICATION",
+      "x": 15.24,
+      "y": 25.4,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "NOT PHYSICALLY QUALIFIED / NOT WEARABLE QUALIFIED",
+      "x": 15.24,
+      "y": 33.02,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "MATING PINS FACE DK; OPPOSING MATING VIEW MUST BE PRESERVED",
+      "x": 15.24,
+      "y": 40.64,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "SYSTEM DK SOURCE-GROUND CONTACTS ARE CN8-P6, CN8-P7 AND CN12-P7 ONLY",
+      "x": 15.24,
+      "y": 48.26,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "EXACT APPROVED PHYSICAL-CONTACT AND LOCAL-PIGTAIL MAPPING:",
+      "x": 15.24,
+      "y": 132.08,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "P1 D8 / PE7 -> J_WIRE1 P1 IMU_MIDDLE_CS_N",
+      "x": 20.32,
+      "y": 138.43,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "P2 D9 / PE14 -> J_WIRE1 P2 IMU_INDEX_CS_N",
+      "x": 20.32,
+      "y": 143.51,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "P3 D10 / PA3 -> J_WIRE1 P3 IMU_THUMB_CS_N",
+      "x": 20.32,
+      "y": 148.59,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "P4 D11 / PG2 -> R2 P1 DK_IMU_SPI_MOSI_TBD",
+      "x": 20.32,
+      "y": 153.67,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "R2 P2 IMU_SPI_MOSI -> J_WIRE1 P4",
+      "x": 20.32,
+      "y": 158.75,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "P5 D12 / PH8 -> J_WIRE1 P5 IMU_SPI_MISO",
+      "x": 20.32,
+      "y": 163.83,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "P6 D13 / PE15 -> R1 P1 DK_IMU_SPI_SCK_TBD",
+      "x": 20.32,
+      "y": 168.91,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "R1 P2 IMU_SPI_SCK -> J_WIRE1 P6",
+      "x": 20.32,
+      "y": 173.99,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "P7 GND -> J_WIRE1 P7",
+      "x": 20.32,
+      "y": 179.07,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "P8 AREF DNC NPTH",
+      "x": 20.32,
+      "y": 184.15,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "P9 SDA DNC NPTH",
+      "x": 20.32,
+      "y": 189.23,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "P10 SCL DNC NPTH",
+      "x": 20.32,
+      "y": 194.31,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "DNC: P8 AREF, P9 SDA, P10 SCL - NPTH / NO COPPER / NO WIRE",
+      "x": 15.24,
+      "y": 201.93,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "MH_CARRIER1 AND ALL UNNUMBERED STRAIN-RELIEF HOLES ARE PCB-ONLY MECHANICAL FEATURES; EXCLUDED FROM THIS NETLIST",
+      "x": 15.24,
+      "y": 209.55,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "NO INVENTED POWER, SIGNAL, PULL-UP, TEST-POINT OR HARNESS CONNECTION IS PRESENT",
+      "x": 15.24,
+      "y": 217.17,
+      "angle": 0.0
+    },
+    {
+      "type": "text",
+      "text": "RUN FULL REVIEW BEFORE PCB LAYOUT OR FABRICATION",
+      "x": 15.24,
+      "y": 224.79,
+      "angle": 0.0
+    }
+  ],
+  "bom_optimization": {
+    "unique_value_counts": {
+      "resistor": 0,
+      "capacitor": 0
+    },
+    "total_unique_footprints": 3,
+    "single_use_passive_values": 0
+  },
+  "test_coverage": {
+    "test_points": [],
+    "test_point_count": 0,
+    "covered_nets": [],
+    "uncovered_key_nets": [
+      {
+        "net": "DK_IMU_SPI_MOSI_TBD",
+        "category": "spi"
+      },
+      {
+        "net": "IMU_SPI_MISO",
+        "category": "spi"
+      },
+      {
+        "net": "DK_IMU_SPI_SCK_TBD",
+        "category": "spi"
+      },
+      {
+        "net": "IMU_SPI_MOSI",
+        "category": "spi"
+      },
+      {
+        "net": "IMU_SPI_SCK",
+        "category": "spi"
+      }
+    ],
+    "observations": [
+      "No test points found in design",
+      "No debug connectors (SWD/JTAG/UART) identified",
+      "Key nets without test points: 5 spi"
+    ]
+  },
+  "assembly_complexity": {
+    "total_components": 4,
+    "smd_count": 4,
+    "tht_count": 0,
+    "complexity_score": 40,
+    "difficulty_breakdown": {
+      "hard": 0,
+      "medium": 4,
+      "easy": 0
+    },
+    "package_breakdown": {
+      "other_SMD": 4
+    },
+    "unique_footprints": 1,
+    "observations": [
+      "Moderate assembly complexity (score 40/100)"
+    ]
+  },
+  "project_settings": {
+    "symbol_libs": [
+      {
+        "name": "PCB_glove_Breakout",
+        "type": "KiCad",
+        "uri": "${KIPRJMOD}/../../lib/symbols/PCB_glove_Breakout.kicad_sym",
+        "descr": "PCB_glove project-local breakout symbols"
+      }
+    ]
+  },
+  "missing_info": {
+    "missing_mpn": [
+      "R1",
+      "R2"
+    ]
+  },
+  "bom_lock": {
+    "total_bom_components": 4,
+    "components_with_mpn": 2,
+    "missing_mpn": [
+      "R1",
+      "R2"
+    ],
+    "missing_mpn_count": 2,
+    "generic_values": [],
+    "lock_pct": 50,
+    "status": "fail"
+  },
+  "design_intent": {
+    "product_class": "prototype",
+    "ipc_class": 2,
+    "target_market": "hobby",
+    "expected_lifetime_years": 5,
+    "operating_temp_range": [
+      -10,
+      70
+    ],
+    "preferred_passive_size": "0603",
+    "test_coverage_target": 0.85,
+    "approved_manufacturers": [],
+    "confidence": 0.3,
+    "detection_signals": [],
+    "source": {
+      "ipc_class": "auto",
+      "product_class": "auto",
+      "target_market": "auto",
+      "expected_lifetime_years": "auto",
+      "operating_temp_range": "auto",
+      "preferred_passive_size": "auto",
+      "test_coverage_target": "auto",
+      "approved_manufacturers": "auto"
+    }
+  },
+  "audience_summary": {
+    "designer": {
+      "total_findings": 6,
+      "by_severity": {
+        "error": 0,
+        "warning": 2,
+        "info": 4
+      },
+      "by_category": {
+        "connectors": 2,
+        "verification": 1,
+        "protection": 2,
+        "sourcing": 1
+      },
+      "top_issues": [
+        {
+          "detector": "audit_datasheet_coverage",
+          "rule_id": "DS-002",
+          "severity": "warning",
+          "confidence": "deterministic",
+          "evidence_source": "bom",
+          "category": "verification",
+          "summary": "No datasheets directory found (2/4 parts have MPNs). Sync datasheets before making pin-level claims.",
+          "components": [
+            "J_CN12_DK1",
+            "J_WIRE1"
+          ],
+          "nets": [],
+          "pins": [],
+          "datasheets_dir": null,
+          "datasheet_file_count": 0,
+          "bom_size": 4,
+          "mpn_coverage_percent": 50.0,
+          "recommendation": "Run datasheet sync via the digikey / mouser / lcsc / element14 skill (which one depends on the user's distributor access and API credentials). A ./datasheets/ directory with PDFs and a manifest.json enables pin-level verification in the next analyzer run.",
+          "report_context": {
+            "section": "Datasheet Coverage",
+            "impact": "Review claims must stay at consistency level until datasheets land.",
+            "standard_ref": ""
+          },
+          "stages": [
+            "schematic"
+          ]
+        },
+        {
+          "detector": "audit_sourcing_gate",
+          "rule_id": "SS-002",
+          "severity": "warning",
+          "confidence": "deterministic",
+          "evidence_source": "bom",
+          "category": "sourcing",
+          "summary": "Sourcing gap: 2/3 unique BOM parts have an MPN (67%). Populate before fab.",
+          "description": "Sourcing audit: 2 of 3 unique BOM lines (grouped by value + footprint) carry a manufacturer part number (66.7%). Pre-fab readiness requires 100% coverage; production assembly requires all parts sourceable via one of the supported distributors.",
+          "components": [
+            "R1",
+            "R2"
+          ],
+          "nets": [],
+          "pins": [],
+          "mpn_coverage_percent": 66.7,
+          "missing_mpn_lines": 1,
+          "missing_mpn_refs": 2,
+          "total_bom_lines": 3,
+          "recommendation": "Populate the MPN field on the listed refs (use the digikey / mouser / lcsc / element14 skill to search by value/footprint when the MPN isn't already known).",
+          "report_context": {
+            "section": "Sourcing",
+            "impact": "Pre-fab gate: board cannot be ordered until MPN coverage reaches 100%.",
+            "standard_ref": ""
+          },
+          "stages": [
+            "pre_fab"
+          ]
+        }
+      ]
+    },
+    "reviewer": {
+      "total_findings": 2,
+      "by_category": {
+        "verification": 1,
+        "sourcing": 1
+      },
+      "top_issues": [
+        {
+          "rule_id": "DS-002",
+          "severity": "warning",
+          "summary": "No datasheets directory found (2/4 parts have MPNs). Sync datasheets before making pin-level claims.",
+          "recommendation": "Run datasheet sync via the digikey / mouser / lcsc / element14 skill (which one depends on the user's distributor access and API credentials). A ./datasheets/ directory with PDFs and a manifest.json enables pin-level verification in the next analyzer run.",
+          "category": "verification"
+        },
+        {
+          "rule_id": "SS-002",
+          "severity": "warning",
+          "summary": "Sourcing gap: 2/3 unique BOM parts have an MPN (67%). Populate before fab.",
+          "recommendation": "Populate the MPN field on the listed refs (use the digikey / mouser / lcsc / element14 skill to search by value/footprint when the MPN isn't already known).",
+          "category": "sourcing"
+        }
+      ]
+    },
+    "manager": {
+      "risk_level": "low",
+      "blocker_count": 0,
+      "warning_count": 2,
+      "stage_readiness": {
+        "schematic": "needs_review",
+        "layout": "pass",
+        "pre_fab": "needs_review",
+        "bring_up": "pass"
+      },
+      "one_liner": "2 warnings across 2 categories."
+    }
+  }
+}

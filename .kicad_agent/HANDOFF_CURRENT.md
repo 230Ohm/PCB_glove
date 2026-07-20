@@ -1,6 +1,319 @@
 # PCB_glove Context Handoff Checkpoint
 
-Updated: 2026-07-12
+## Proposal 015K breakout schematic parity and footprint closure — 2026-07-20
+
+- Authorization: `APPROVE PROPOSAL_015K_BREAKOUT_SCHEMATIC_PARITY_AND_FOOTPRINT_CLOSURE`.
+- Fully annotated standalone KiCad schematics now exist for CN7, CN8, CN11 and CN12. They reproduce the approved Proposal 015G/015J physical-contact and local-pigtail mapping, preserve CN12 R2 MOSI / R1 SCK series boundaries, retain exactly three DK source-ground contacts, and keep CN8 IOREF/3V3/5V/VIN electrically isolated.
+- Every schematic uses project-local symbols and footprints. DNC contacts remain unnumbered NPTH / no copper / no wire. `MH_CARRIER1` and strain-relief holes remain PCB-only mechanical features and are honestly excluded from schematic netlists.
+- The matching breakout PCBs were synchronized only for annotation and project-local footprint identity. Automated invariants prove connector/pigtail/clamp placement and orientation, pad geometry, routes, outlines, DNC implementation, warning text, nets and zones were preserved.
+- Native KiCad results for all four breakouts: ERC 0 errors / 0 warnings; genuine schematic parity 0 issues with fetched netlists and full annotation; DRC 0 violations / 0 unconnected pads / 0 footprint errors. Both deterministic validators and independent raw/rendered review pass.
+- Amphenol 77311 F.Fab body outlines now match released nominal body dimensions; project courtyards use an explicit 0.50 mm expansion. The 1.70 mm copper land remains a documented project choice with nominal 0.34 mm radial annulus at the drawing's 1.02 mm nominal hole. No manufacturer tolerance was invented.
+- Official-source-only review still cannot prove the Molex `5055750620` recommended PCB layout's component-side and mirrored/unmirrored relationship to circuit/cavity 1. The footprint keeps visible `VERIFY` markings, remains unplaced and unauthorized, and an unsent manufacturer clarification request is prepared.
+- `PCB_glove/PCB_glove.kicad_pcb` remains unchanged at SHA-256 `3E491CD8085EFF0D6C95F0A11A135421CBCFCE4C5620E6356C3896E122F1772B`. `reference_designs/imu_pcb/` remains unchanged at digest `8C1366CEA6AEFD840CA30CDF9836D7975E15D4F434CA3F201D81A4071151A07B`. `kicad-happy` remains unchanged at HEAD `839d9b03c42358ab16f2eedfdea6c4bc6469826f`.
+- No main-PCB placement/routing, service fixture, camera circuitry, global-library edit or fabrication output occurred.
+- Closure package: `.kicad_agent/proposals/proposal_015k_breakout_schematic_parity_and_footprint_closure.md`, updated overlay CSV, exact changed-file manifest, unsent Molex inquiry, native reports, analyzer triage, protected hashes and native KiCad renders under `.kicad_agent/reports/proposal_015k_breakout_closure/`.
+
+`PROPOSAL 015K DIGITAL BREAKOUT CLOSURE PASS`
+
+`MOLEX 5055750620 ABSOLUTE CAVITY-1 HANDEDNESS BLOCKED`
+
+`MAIN PCB, PHYSICAL QUALIFICATION AND FABRICATION REMAIN UNAUTHORIZED`
+
+## Proposal 015J Phase 3 partial draft and mandatory stop - 2026-07-20
+
+- Phase 2 remains closed with hierarchical ERC 0 errors / 0 warnings and the fixed 13-signal / three-source-ground / five-CS-pull-up / no-DK-positive-power netlist proof.
+- A project-local footprint library and four separate draft breakout projects now exist for CN7, CN8, CN11 and CN12. Each board has one DK connector, its own closed outline, direct pigtail termination, provisional carrier-clamp holes, zero vias, zero zones, the four required draft warnings, `DEVELOPMENT ONLY`, DNC markings and mating-view notes.
+- Native KiCad DRC for every breakout is 0 violations / 0 unconnected pads / 0 footprint errors. Deterministic raw-file validation passes the exact Proposal 015G mapping, CN12 R1/R2 series boundaries, one-connector architecture and CN8 positive-power isolation.
+- Amphenol 77311 pitch, nominal 1.02 mm holes, used-PTH and DNC-NPTH contact geometry are drawing-backed. Minor body/courtyard overlay deltas and the project-selected 1.70 mm annulus remain documented follow-ups.
+- Molex `5055750620` land, retention, body and restricted-envelope geometry matches the official DXF, but absolute cavity-1 handedness is not proven. The footprint visibly remains `VERIFY`, is unplaced and must not be assigned until controlled component-side/no-mirror evidence exists.
+- No breakout has a matching annotated schematic. KiCad parity attempts report that the schematic netlist cannot be fetched. Raw mapping validation does not replace native schematic-to-PCB parity.
+- The ambiguous connector pinout activates the master mandatory stop. Main `PCB_glove.kicad_pcb` placement/routing and the optional service fixture were not started.
+- Independent main-board review is also NO-GO pending physical-assembly partitioning, all-main-board footprint/MPN closure, a controlled outline/datum/keepout package, connector latch/cable-exit orientation, and approved power/GND/return-path/stack-up rules.
+- `PCB_glove/PCB_glove.kicad_pcb` remains unchanged at SHA-256 `3E491CD8085EFF0D6C95F0A11A135421CBCFCE4C5620E6356C3896E122F1772B`. `reference_designs/imu_pcb/` is unchanged at Proposal 015I digest `8C1366CEA6AEFD840CA30CDF9836D7975E15D4F434CA3F201D81A4071151A07B`. `kicad-happy` remains at HEAD `839d9b03c42358ab16f2eedfdea6c4bc6469826f` with its same pre-existing untracked directories.
+- Full evidence: `.kicad_agent/proposals/proposal_015j_phase3_footprint_and_breakout_gate_report.md`, footprint overlay CSV, exact breakout mapping CSV, changed-file manifest, DRC/parity/analyzer reports and front/back review SVGs.
+
+`PHASE 3 PARTIAL DRAFT - BLOCKED BY MOLEX CAVITY-1 HANDEDNESS AND UNPROVEN KICAD SCHEMATIC PARITY`
+
+`GATE P - PHYSICAL QUALIFICATION BEFORE FABRICATION REMAINS OPEN`
+
+`FABRICATION REMAINS UNAUTHORIZED`
+
+## Proposal 015J no-download digital continuation - 2026-07-15
+
+- Authorization: `APPROVE NO_DOWNLOAD_DIGITAL_DESIGN_WITH_DEFERRED_HARDWARE_VALIDATION`.
+- Digital Phase 1 is closed as `DIGITAL PHASE 1 PASS WITH DEFERRED PHYSICAL VALIDATION` and `TASK H DIGITAL SPECIFICATION COMPLETE — PHYSICAL QUALIFICATION DEFERRED`.
+- Phase 2 replaced the old logical DK placeholder in `PCB_glove/dk_adapter_headers.kicad_sch` with four independent DK connector blocks (CN7/CN8/CN11/CN12), three keyed Molex six-position harness groups, 13 fixed signals, three source ground contacts, explicit DNC contacts and five glove-side 10 kOhm CS pull-ups to `+3V3_IMU`.
+- CN8-2 IOREF, CN8-4 3V3, CN8-5 5V and CN8-8 VIN are explicit no-connects and absent from the exported netlist. PCB_glove positive power remains J9 external input only.
+- Required visible isolation, safe-state, SPI, INT and `DEFERRED PHYSICAL VALIDATION — NOT MEASURED` warnings are present. No camera circuitry was added.
+- Exported-netlist checks pass the 13-signal map, three ground paths, five CS pull-ups and DK positive-power isolation.
+- The retry authorization closed the seven remaining ERC warnings with electrically meaningful edits: J13 SCK and MOSI now reach the glove buses through the existing R1/R2 series options, and the five unused v1 INT2 contacts are explicit no-connects marked `DNC FOR V1`.
+- Full hierarchical KiCad ERC is **0 errors / 0 warnings** with no exclusions, fake net anchors, duplicate labels, or fake power flags. The final exported netlist is `.kicad_agent/reports/proposal_015j_phase2_final.net`.
+- Phase 2 now passes and Master Phase 3 digital footprint/mechanical-breakout work is activated by the approved workflow amendment. Physical qualification and fabrication remain blocked by Gate P.
+- The PCB hash remains `3E491CD8085EFF0D6C95F0A11A135421CBCFCE4C5620E6356C3896E122F1772B`; the root schematic, power sheet and AGENTS.md hashes also remain unchanged. `reference_designs/imu_pcb/` and `kicad-happy` were not modified.
+- Closure package: `.kicad_agent/proposals/proposal_015j_phase2_schematic_closure.md`, the exact signal/power/pull-up proof files, exported netlist, ERC report, analyzer report, Gate P register and final workflow report.
+
+`PHASE 2 DIGITAL SCHEMATIC CLOSURE PASS — ERC 0/0`
+
+`MASTER PHASE 3 DIGITAL FOOTPRINT AND BREAKOUT WORK ACTIVATED`
+
+`FABRICATION REMAINS UNAUTHORIZED`
+
+## Proposal 015I controlled physical bench-session retry — 2026-07-15
+
+- Authorization: `APPROVE PROPOSAL_015I_CONTROLLED_BENCH_SESSION`.
+- Result: `TASK H BLOCKED`; `PHASE 1 REMAINS BLOCKED — PHASE 2 NOT ACTIVATED`.
+- The mandatory read-only preflight again found no visible STM32N6570-DK, ST-LINK, ST VID `0483` endpoint, oscilloscope, logic analyzer, DMM or current instrument. The only serial endpoint was host Intel AMT SOL `COM3`.
+- STM32CubeProgrammer, STM32CubeN6 v1.4.0, STM32CubeIDE, Arm GNU, CMake and Ninja were unavailable. No new photograph, raw capture, waveform, build output or instrument record was present.
+- The session stopped before Stage A. No board/PCB_glove power, bridge/BOOT inspection, continuity test, programmer capture, image preservation, firmware build/flash, voltage/current test or waveform capture occurred.
+- No KiCad schematic/project/library/PCB, option byte, OTP, lifecycle, security, solder bridge, reference-design, global library or `kicad-happy` file changed. No fabrication output was generated.
+- Exact restart checklist: `.kicad_agent/proposals/proposal_015i_controlled_bench_session_preflight.md`. Begin with photographs/identity and unpowered continuity, then two matching read-only captures and existing-image preservation. Do not begin with flashing.
+
+`TASK H BLOCKED`
+
+`PHASE 1 REMAINS BLOCKED — PHASE 2 NOT ACTIVATED`
+
+## Proposal 015I — actual DK and qualification evidence blocked before Stage A
+
+- Authorization: `APPROVE PROPOSAL_015I_ACTUAL_DK_STATE_AND_QUALIFICATION_FIRMWARE_CLOSURE`.
+- Result: `TASK H BLOCKED`; `PHASE 1 REMAINS BLOCKED — PHASE 2 NOT ACTIVATED`.
+- Read-only hardware discovery found no visible STM32N6570-DK, ST-LINK, serial device, oscilloscope, logic analyzer, DMM or current instrument. STM32CubeProgrammer, STM32CubeIDE, Arm GNU compiler, CMake, Ninja and Make were unavailable. No breakout/harness or 13-link service fixture was accessible.
+- The workflow stopped before physical identity capture. No board photo, serial, MCU ID, bridge/BOOT state, option byte, OTP/lifecycle, debug-authentication state, existing-image hash/backup, measurement or waveform exists.
+- A qualification firmware specification and `firmware/PCB_GLOVE_DK_TASK_H_QUALIFICATION/` source staging area were created. There is no C source, linker/startup file, repository commit, build, ELF, binary, map, programmer log or flash event.
+- Measurement CSVs are explicit `NOT_MEASURED` evidence-gap registers, not numeric results and not a completed bundle. The two capture directories contain blocker READMEs only.
+- No KiCad schematic/project/library/PCB, option byte, OTP, lifecycle, security, solder bridge, reference-design, global library or `kicad-happy` file was edited by Proposal 015I. No fabrication output was generated.
+
+### Exact restart input after Proposal 015I
+
+Provide the intended DK connected over ST-LINK; STM32CubeProgrammer; pinned STM32CubeN6 and build tools; required photographs; an unpowered DMM setup; selected breakout/harness and 13-link fixture; five measured glove-side 10 kΩ CS pull-ups; current-limited supplies; oscilloscope/probes; and microammeter capability. Start with Stage A photographs/identity, bridge/BOOT capture, and two matching read-only programmer captures. Preserve the existing image before any reversible qualification flash.
+
+`TASK H BLOCKED`
+
+`PHASE 1 REMAINS BLOCKED — PHASE 2 NOT ACTIVATED`
+
+## Proposal 015H — MCU reset, ownership, and firmware-state closure
+
+- Authorization: `APPROVE PROPOSAL_015H_MCU_RESET_PIN_OWNERSHIP_FIRMWARE_CLOSURE`.
+- Result: `TASK H BLOCKED`; `PHASE 1 REMAINS BLOCKED — PHASE 2 NOT ACTIVATED`.
+- The fixed Proposal 015G map remains unchanged. Official documentation supports the STM32N657X0H3Q/MB1939-C02 baseline, selected VDD-supplied 3.3 V `TT` pins, reset analog/high-impedance state, SPI5 AF5 roles, five unique EXTI lines, official CN4/SB20 defaults, and ISM330DHCX SPI/INT behavior.
+- PE15/D13 also loads LD6; PE15/PH8/PG2/PA3 are duplicated at CN4; PD11/A3 uses default-ON SB20 while PA12 must remain analog/high-impedance. These are mandatory ownership/measurement controls.
+- All five active-low CS nets require external glove-side bias. Use one provisional 10 kΩ pull-up per CS to `+3V3_IMU` only in a future separately authorized schematic phase and only pending leakage/backfeed/waveform validation. Do not add INT1 pull-ups; the IMU default is active-high push-pull and its datasheet warns against an INT1 pull-up during power-on.
+- Initial firmware contract: preload all CS latches high before output mode; configure SPI5 4-wire/MSB-first/software-NSS/mode 3 at 100 kHz–1 MHz; use INT inputs/no-pull with EXTI masked; enable one IMU only after `+3V3_IMU` is valid and stable. Every reset/fault returns to CS-high/no-clock/masked-EXTI.
+- No firmware project or binary exists in this workspace. The actual DK bridge/BOOT/option-byte/OTP/lifecycle state and connector-level reset behavior are unproven. Official defaults are not treated as actual-board evidence.
+- Proposal 015H created its main report plus document baseline, GPIO domains, 19-state table, AF ownership, solder-bridge, option/security, firmware identity, state-machine SVG, CS-bias, SPI/INT, asymmetric-mode, verification and Phase 1 final-review artifacts under `.kicad_agent/proposals/`.
+- No KiCad schematic/project/library/PCB, firmware, reference-design, or `kicad-happy` file was edited by Proposal 015H.
+
+### Exact next controlled input after Proposal 015H
+
+Provide one Task H evidence bundle: board/MCU/revision and SW1/SW2 photos; relevant bridge photos and signed continuity; two matching read-only STM32CubeProgrammer ID/option-byte/OTP/lifecycle captures; immutable firmware repo/commit/toolchain/ELF/BIN hashes; and connector-level State 0–4/reset/asymmetric-power waveform/current captures for all fixed signals. Do not change security state, bridges, firmware, schematic, or PCB merely to obtain a pass.
+
+`TASK H BLOCKED`
+
+`PHASE 1 REMAINS BLOCKED — PHASE 2 NOT ACTIVATED`
+
+Updated: 2026-07-14
+
+## Proposal 015G — DK interface architecture escape and selection
+
+- Authorization: `APPROVE PROPOSAL_015G_DK_INTERFACE_ARCHITECTURE_ESCAPE`.
+- The former common rigid Arduino-pattern board remains `RIGID FOUR-HEADER INTERPOSER — TASK E BLOCKED` and `BLOCKED — NOT AUTHORIZED FOR SCHEMATIC OR PCB IMPLEMENTATION`.
+- Selected development architecture: four independently supported DK breakout sections, each with one exact Amphenol 77311 development header, direct carrier-clamped 26 AWG pigtails, and a short three-group harness. Maximum simultaneous rigid DK mates is **one**.
+- Exact DK mating set remains CN7 `77311-101-06LF`, CN8/CN11 `77311-101-08LF`, and CN12 `77311-101-10LF` against the fixed Samtec SSW sockets. This remains **DEVELOPMENT CROSS-MATE — NOT PRODUCTION CROSS-MATING APPROVAL**.
+- Exact flexible-side development set: Molex `5055750620` 6-position header, `5055700601` housing, `5055721200` terminal, tool `200218-4500`, and Alpha Wire `422607` 26 AWG UL1061 wire. Three keyed groups carry SPI, five chip selects, and five interrupts.
+- Cable policy: 50 mm preferred; 100 mm provisional maximum pending SCK/MISO/MOSI/CS/INT/ground-offset measurements; 150 mm unauthorized until 100 mm passes; 200 mm rejected for the baseline. No series-resistor value was invented.
+- CN8 `IOREF`, `3V3`, `5V`, and `VIN` remain electrically absent: isolated mechanical NPTH only, with no copper, solder, wire, splice, harness cavity, test point, or path to PCB_glove. PCB_glove positive power remains external J9 only. CN12-7, CN8-6, and CN8-7 remain the shared signal-reference grounds.
+- Architecture result: **PASS WITH DEVELOPMENT CONTROLS**. Tasks F/G/I/J/K resumed at documentation level. Task H remains blocked because actual OTP/configuration, named firmware/hash, physical solder-bridge state, reset levels, and inactive chip-select behavior are unproven.
+- Proposal 015G created the main report, architecture comparison, full 32-contact pin map, isolation map, harness grouping, connector candidates, provisional BOM, selected-interface diagram, mechanical support diagram, continuity plan, backfeed integration, and independent review under `.kicad_agent/proposals/`.
+- Proposal 015 and the master Phase 1 blocker report were updated to replace the rigid development baseline while retaining its historical failure. No KiCad schematic, project, library, or PCB file was edited by Proposal 015G. No physical measurement or fabrication output was claimed.
+- Protected verification after Proposal 015G matches the baseline: PCB `3E491CD8…1772B`, root schematic `50A2368C…A9418`, DK sheet `E8EB8A3C…A186C`, power sheet `6B2FCC62…C214`, project library tree `BD1AFD2B…9DA7`, reference tree `54BA6E78…EEB9`, and `kicad-happy` HEAD `839d9b0…9826f` with its pre-existing untracked directories.
+
+### Next controlled input after Proposal 015G
+
+Provide a Task H evidence package from the firmware/DK configuration owner: exact board revision and solder-bridge population, OTP/boot state, named firmware/Cube configuration and hash, connector-level reset measurements for all 13 signals, proof that all five chip selects remain inactive before IMU traffic, proof that the A3 analog path is high impedance, and the intended SPI5 clock-rate range. **Do not change the logical DK schematic connector or begin PCB work before full Phase 1 passes.**
+
+`REPLACEMENT DK INTERFACE PASS WITH DEVELOPMENT CONTROLS`
+
+`PHASE 1 REMAINS BLOCKED — PHASE 2 NOT ACTIVATED`
+
+## Proposal 015F - four-connector stack and tolerance closure stop
+
+- Authorization: `APPROVE PROPOSAL_015F_FOUR_CONNECTOR_STACK_TOLERANCE_CLOSURE`.
+- Fixed connector set remains CN7 `SSW-106-22-L-S-VS`, CN8/CN11 `SSW-108-22-L-S-VS`, CN12 `SSW-110-22-L-S-VS`, mated for development only to `77311-101-06LF`, two `77311-101-08LF`, and `77311-101-10LF`.
+- Fixed disposition: **DEVELOPMENT CROSS-MATE — NOT PRODUCTION CROSS-MATING APPROVAL**.
+- Nominal insertion is `5.84 mm` within the published `3.68...6.35 mm` SSW range. Nominal margins are `2.16 mm` and `0.51 mm`; retaining the required `0.25 mm` upper margin leaves only `0.26 mm` for all positive post-length, bottom-reference, coplanarity, and preload error.
+- The exact SSW seating/bottoming datum and capture allowance, Amphenol body/post/tail/pitch min/max, MB1939 as-built local plane, four-header solder seating/alignment, selected fabricator flatness, assembler fixture capability, and measured support plane remain uncontrolled.
+- PCB_glove retains `1.60 mm` nominal as the interposer baseline. JLCPCB's published standard range is `1.44...1.76 mm`; a tighter `1.50...1.70 mm` and local `0.15%` bow/twist target are RFQ requirements only, not accepted capability.
+- Loose independent hand soldering is rejected. Any future prototype requires a dedicated carrier/master, simultaneous four-header mate-during-solder control, first-article metrology, and a three-point floating support set from the measured fully seated plane.
+- Task E is **BLOCKED**. Proposal 015 Tasks F-K were not resumed. Phase 2 is not activated.
+- Package: `proposal_015f_four_connector_stack_tolerance_package.md`, six calculation/input CSVs, three SVGs, manufacturer/fabricator/assembler inquiries, independent review, and completion report under `.kicad_agent/proposals/`.
+- Proposal 015F changed documentation only. No KiCad schematic, project, library, or PCB file was edited. No placement, routing, outline, copper, fabrication output, purchase, physical measurement, or trial-mate claim was made.
+- Protected hashes remain unchanged: PCB `3E491CD8...772B`, root schematic `50A2368C...418`, DK sheet `E8EB8A3C...186C`, power sheet `6B2FCC62...C214`; `reference_designs/imu_pcb/` tree digest remains `D4D1F5E9...32F0`; `kicad-happy` remains at `839d9b0...9826f` with its pre-existing untracked `KiCAD-MCP-Server/` and `tools/`.
+
+`TASK E BLOCKED — PHASE 1 REMAINS BLOCKED`
+
+`PHASE 1 REMAINS BLOCKED — PHASE 2 NOT ACTIVATED`
+
+## Proposal 015E — Task B service/access closure and automatic continuation
+
+- Authorization: `APPROVE PROPOSAL_015E_TASK_B_SERVICE_ACCESS_ENVELOPE_CLOSURE`.
+- Official source remains the user-supplied `C:/Users/ohmdd/Downloads/mb1939-bdp.zip`, SHA-256 `AAE18A8A51A7C72D59E9C437CD02B2AB9C05A7BAE61E60D5188AACB9F742DA11`.
+- Task B now **passes for the controlled development interposer**. The controlling CSV has 34 items (26 connectors/controls/thermal items plus H1–H8), complete E1–E7 treatment, and zero `UNRESOLVED` access classes.
+- Every project value is explicitly labeled `PROJECT ENGINEERING KEEP-OUT — NOT MANUFACTURER MAXIMUM`; nominal native CAD is not represented as a manufacturer maximum.
+- The practical documentation-only rigid-interposer region is native X `82.5…139.5 mm`, Y `41.0…92.5 mm`, with the H6 tool-access notch X `>125.0 mm`, Y `>83.5 mm`. This is not a KiCad board outline.
+- Required always-access items: CN6 ST-LINK USB, CN18 primary USB, B1 reset, JP2 power selector, SW1/SW2 boot, CN7/CN8/CN11/CN12, and all eight mounting holes.
+- CN2 DK power and CN17 USB host are explicitly unused for the v1 path; optional/debug/storage/audio/Ethernet/expansion features may be serviced after interposer removal.
+- CN14 and U27 remain future-reserved. `CAMERA MECHANICAL ACCESS RESERVED — CAMERA ELECTRICAL DESIGN UNAUTHORIZED`.
+- Six Task B SVG maps, the independent review, and the completion report are in `.kicad_agent/proposals/`.
+- Automatic continuation resumed Tasks C and D. The documentation-only mechanical interposer model and checked nominal 2D assembly pass their limited scopes; no copper, electrical design, PCB placement, or fabrication geometry was created.
+- The workflow reached a new mandatory stop at **Task E**. Exact SSW/BergStik/PCB/support tolerances and cumulative four-connector coplanarity are not closed. The nominal 5.84 mm engagement has only 0.51 mm margin below the 6.35 mm SSW maximum.
+- Tasks F–K were not advanced after Task E. The single next input is a controlled min/nom/max stack package from Samtec, Amphenol, and the selected PCB fabricator/assembler.
+- Proposal 015E changed documentation only. No KiCad schematic or PCB file was edited; no physical measurement/trial mate was claimed; no fabrication output was generated.
+- Protected hashes after Proposal 015E match the before values: PCB `3E491CD8…772B`, root schematic `50A2368C…418`, DK sheet `E8EB8A3C…186C`, and power sheet `6B2FCC62…C214`. The power sheet's pre-existing working-tree modification was not touched. `reference_designs/imu_pcb/` has no scoped status entry. `kicad-happy` retains pre-existing untracked `KiCAD-MCP-Server/` and `tools/`; Proposal 015E did not write there.
+- Records: `proposal_015e_task_b_service_access_envelope_closure.md`, `proposal_015e_task_b_independent_review.md`, `proposal_015e_tasks_c_d_mechanical_interposer_and_assembly.svg`, and `proposal_015e_task_e_stack_tolerance_blocker.md`.
+- **Phase 1 remains BLOCKED at Task E. Phase 2 is not activated.**
+
+## Proposal 015D - final digital Phase 1 closure stop
+
+- The user supplied the official ST package at `C:/Users/ohmdd/Downloads/mb1939-bdp.zip`. Archive SHA-256 is `AAE18A8A51A7C72D59E9C437CD02B2AB9C05A7BAE61E60D5188AACB9F742DA11`; native `MB1939.PcbDoc` SHA-256 is `78F5F25460CC1B0B0994D12EBD3B1638E5D15E2D9EC6D15A5CE797A2F2929E86`, exactly matching the prior official record.
+- The complete read-only `C:/Users/ohmdd/Downloads/kicad-happy/skills/kicad/SKILL.md` workflow was used. No `kicad-happy` file was edited.
+- Task A now **passes for exact nominal native-CAD geometry**. The 29-primitive outline, native datum, stack-derived nominal thickness, eight mounting holes, all 32 connector pads, physical pad 1, connector bodies/heights, nominal gaps, and mirrored views are reproducible.
+- The previous “conservative” connector-field keepout was too small and is withdrawn. The corrected nominal aggregate relative to CN11 is X `-2.578199…+50.838199 mm`, Y `-10.414104…+37.337936 mm`.
+- Proposal 015D stops at mandatory **Task B**. The package has nominal bodies but no approved maximum service envelopes or minimum finger/tool/probe/cable/latch/actuator clearances. Task C would require invented keepouts.
+- The single next missing input is a checked, dimensioned MB1939 service-access and maximum-envelope specification from the user/project mechanical owner, source-traced to official ST and component drawings.
+- Tasks C–K were not advanced after the ordered stop. No combined assembly, tolerance closure, final support/cable drawing, signal-state closure, or final fixture-implementability PASS is claimed.
+- Physical backfeed and thermal measurements remain Master Phase 5 requirements before Gate A placement approval; their absence alone is not misclassified as a Phase 1 blocker.
+- Completion/blocker record: `.kicad_agent/proposals/proposal_015d_final_digital_phase_1_closure.md`.
+- **Phase 1 remains BLOCKED. Phase 2 is not activated. No KiCad schematic or PCB file was edited.**
+
+## Proposal 015C - unrestricted mating-connector closure
+
+- The connector procurement gate **passes for a controlled development interposer** using Amphenol BergStik `77311-101-06LF`, `77311-101-08LF`, and `77311-101-10LF` against the fixed Samtec SSW sockets on CN7/CN8/CN11/CN12.
+- The original Samtec `TSW-106-07-L-S`, `TSW-108-07-L-S`, and `TSW-110-07-L-S` remain `REJECTED FOR NEW DESIGN - EXISTING-CUSTOMER PROCUREMENT RESTRICTION`.
+- The selected headers are 2.54 mm, single-row, vertical THT, with 0.62 mm drawing / 0.64 mm nominal square posts, 5.84 mm mating length, 2.41 mm tails, and 30 microinch gold mating finish. The nominal stack remains 12.32 mm.
+- Use a 1.60 mm PCB baseline. The documented footprint starting point is a 1.00 mm nominal finished PTH and provisional 1.70 mm pad, but no KiCad footprint is authorized; manufacturer-layout/KiCad/fabricator overlay remains mandatory.
+- Cross-mating is independently accepted for development from overlapping manufacturer geometry and Amphenol's support for other 0.025-inch-compatible receptacles. It is **not production-approved** without written cross-mating confirmation, full tolerance/3D review, controlled footprint release, and a physical trial mate.
+- Phase 1B resumed for connector-dependent documentation, then stopped on remaining mechanical and MCU-state evidence. Proposal 015D later clarified that measured backfeed belongs to Master Phase 5, while fixture implementability remains a Phase 1 requirement.
+- Completion record: `.kicad_agent/proposals/proposal_015c_unrestricted_mating_connector_closure.md`. Ready-to-send, unsent inquiry: `.kicad_agent/proposals/proposal_015c_connector_manufacturer_inquiry.md`.
+- **Full Proposal 015 Phase 1 remains BLOCKED. Phase 2 is not activated.** No KiCad schematic or PCB file was edited by Proposal 015C.
+
+## Historical Phase 1B procurement stop - resolved by Proposal 015C
+
+- The user approved `PHASE_1B_DK_INTERFACE_EVIDENCE_CLOSURE` to resume Proposal 015 evidence work without changing KiCad files.
+- Phase 1B originally stopped because official Samtec pages marked `TSW-106-07-L-S`, `TSW-108-07-L-S`, and `TSW-110-07-L-S` as **Existing Customers Only**.
+- That historical blocker is retained for traceability. Proposal 015C now provides the reviewed unrestricted Amphenol development replacement set listed above.
+- Evidence record: `.kicad_agent/proposals/proposal_015_phase_1b_part_status_blocker.md`.
+- Proposal 015 remains **BLOCKED for other Phase 1 evidence**. Phase 2 is not activated. No schematic, footprint, project, or PCB file was modified by Proposal 015C.
+
+## Master conditional workflow - Phase 0 baseline
+
+- The user approved `MASTER_DK_GATE_A_AND_CONDITIONAL_PCB_DESIGN`; progression is conditional and must stop at the first unresolved blocking evidence item.
+- Phase 0 baseline inspection is complete and **PASS**. Record: `.kicad_agent/proposals/master_phase_0_baseline_report.md`.
+- Fresh KiCad 9.0.4 ERC is 0 errors / 0 warnings at `.kicad_agent/reports/master_phase0_erc.rpt`.
+- Read-only PCB DRC reports one honest `invalid_outline` error because the 78-byte PCB placeholder has no `Edge.Cuts`; no exclusion was added. Record: `.kicad_agent/reports/master_phase0_drc.rpt`.
+- Baseline hashes for all schematics, project-local libraries, project file, and PCB are recorded in the Phase 0 report. Existing unrelated working-tree changes remain untouched.
+- PCB editing remains inactive unless every required prior phase objectively passes.
+
+## Master conditional workflow - Phase 1 stop
+
+- Phase 1 was reassessed against the stricter master criteria and is **BLOCKED**. Record: `.kicad_agent/proposals/master_phase_1_blocker_report.md`.
+- Exact MB1939 sockets and the selected Amphenol BergStik development mating MPNs are documented, as are the Arduino-only logical signal map and DK positive-rail isolation.
+- The official MB1939 package is now local and authenticated. Exact nominal native outline, holes, connector pads/pad 1, bodies, heights, and mirror views are recorded in the corrected evidence drawing and Proposal 015D CSV artifacts.
+- The former connector keepout was understated and is withdrawn. The corrected SVG explicitly separates nominal geometry from blocked maximum service envelopes: `.kicad_agent/proposals/proposal_015_dk_interface_mechanical.svg`.
+- The exact Proposal 011 asymmetric-power measurement interface is defined in `.kicad_agent/proposals/proposal_015_backfeed_fixture_definition.md`; no measurements are claimed.
+- The first current blocker is Task B: approved maximum component/service envelopes and finger/tool/probe/cable/latch/actuator clearances. Later Phase 1 blockers include the checked assembly, full tolerance stack, supports/strain relief, and MCU reset/default/configuration closure.
+- Hardware backfeed and thermal results are later Master Phase 5 evidence, not Phase 1 documentation inputs.
+- Per the master stop rule, Phase 2 and all PCB phases remain inactive. No schematic or PCB file was edited.
+
+## Latest checkpoint - Proposal 015 DK physical interface closure
+
+- The user approved `proposal_015_DK_PHYSICAL_INTERFACE_CLOSURE`; the documentation-only MB1939 physical-interface review is complete.
+- Official ST MB1939 BOM v1.0 and native board-design v1.0 were obtained and inspected read-only. The installed Arduino sockets are Samtec CN7 `SSW-106-22-L-S-VS`, CN8/CN11 `SSW-108-22-L-S-VS`, and CN12 `SSW-110-22-L-S-VS`, all on the MB1939 bottom mating side.
+- PCB_glove v1 shall use a rigid Arduino Uno R3-pattern bottom-side interposer/shield, not a loose DK cable harness and not CN4/STMod+.
+- Exact PCB_glove development mating parts are Amphenol `77311-101-06LF`, two `77311-101-08LF`, and `77311-101-10LF`. Their 5.84 mm posts fall within the SSW 3.68-6.35 mm insertion-depth range. Production status remains provisional.
+- Exact nominal native-CAD outline, holes, connector origins, all pads/pad 1, connector bodies, a nominal 12.32 mm board-to-board stack, and orientation/mirroring rules are recorded in Proposal 015D. Maximum keepouts remain blocked; no prior “conservative” keepout may be used.
+- The selected Arduino-only signal map provides SPI5, five chip selects, five INT1 inputs on distinct EXTI lines, and three ground contacts. All DK `3V3`, `5V`, `VIN`, and `IOREF` contacts remain disconnected from PCB_glove power.
+- Actual signal backfeed measurement remains a Master Phase 5 gate. Independently, Task B access geometry and Task H reset/firmware state remain Phase 1 blockers, so the schematic connector replacement is not activated.
+- Detailed record: `.kicad_agent/proposals/proposal_015_dk_physical_interface_closure.md`.
+- Proposal 015 changed documentation only. No KiCad schematic, symbol, footprint, project, or PCB file was edited. No placement, routing, outline, or fabrication output was created.
+
+### Next safe task after Proposal 015
+
+Continue Proposal 015 Phase 1 evidence closure: obtain the exact combined tolerance/3D and access envelope, define supports and strain relief, complete MCU reset/conflict review, obtain written production cross-mating/footprint acceptance, and run the backfeed hardware tests when hardware exists. **Do not replace the logical DK connector until full Phase 1 passes. PCB placement, routing, board-outline work, and fabrication remain unauthorized.**
+
+## Latest checkpoint - Proposal 014 TP_5V_FUSED schematic update
+
+- The user authorized a schematic-only `TP_5V_FUSED` addition; Proposal 014 is complete.
+- TP20, value `TP_5V_FUSED`, is connected to the existing `+5V_FUSED` net between F1 and D1.
+- TP20 uses the requested provisional `TestPoint:TestPoint_Pad_D1.5mm` footprint and remains marked `PROVISIONAL BARE PROBE PAD`.
+- The power-page notes and Proposal 011 bring-up measurement table now use TP20 for the fused node. F1 drop is `TP1 - TP20`; D1 drop is `TP20 - TP19`.
+- Exported-netlist order remains: J9 -> F1 -> `+5V_FUSED` / TP20 -> D1 -> `+5V_PROTECTED` / TP19 -> JP1 -> `+5V_REG_IN` / TP2 -> U2 -> `+3V3_IMU` / TP3.
+- KiCad 9 ERC is **0 errors / 0 warnings** at `.kicad_agent/reports/proposal_014_tp_5v_fused_erc.rpt`. No exclusion or fake PWR_FLAG was added.
+- Completion record: `.kicad_agent/proposals/proposal_014_tp_5v_fused_completion_report.md`.
+- `PCB_glove/PCB_glove.kicad_pcb`, the root schematic, and `PCB_glove/dk_adapter_headers.kicad_sch` are unchanged by Proposal 014.
+- No footprint was placed or moved; no copper, board outline, fabrication output, or DK connector placeholder was changed.
+
+### Next major task after Proposal 014
+
+Create **Proposal 015 - STM32N6570-DK physical interface closure**. Obtain the MB1939 BOM/CAD information, select exact mating connector parts, choose shield versus interposer versus cable harness, and document stacking height, orientation, keepouts, and exact pin mapping. Do not replace the logical DK connector until Proposal 015 has identified and reviewed the physical connector set. **PCB placement, routing, outline work, and fabrication remain unauthorized.**
+
+## Latest checkpoint - Proposal 012 PCB layout readiness and gate-closure plan
+
+- Proposal 012 documents the exact evidence and authorization gates required before PCB placement, routing, board release, or fabrication.
+- Gate A covers manufacturer-to-KiCad overlays for F1, JP1, U2, C4/C5, J9, D1 and test points; D1 cathode marking; safe `+5V_FUSED` access; connector/cable mechanics; U2 reverse-current testing; C4/C5 placement loops; probe access; thermal/wearable restrictions; power-path priority; mechanical keepouts; and final DK physical interface closure.
+- Gate B requires a separately authorized and independently reviewed placement before routing can be authorized.
+- Gate C requires routed-copper, outline, mechanical, ERC/DRC, BOM, assembly and manufacturing-readiness review before release preparation.
+- Gate D requires revision-controlled release data, independent CAM review, fabricator/assembler acceptance, and final user authorization before fabrication outputs.
+- Current status: Gate A is open; Gates B-D are not eligible. The design is not ready for actual PCB placement, routing or fabrication.
+- Detailed plan: `.kicad_agent/proposals/proposal_012_pcb_layout_readiness_and_gate_closure_plan.md`.
+- Proposal 012 changed documentation only. No KiCad schematic, symbol, footprint, project or PCB file was edited, and no fabrication output was generated.
+
+### Next safe task after Proposal 012
+
+Create the Gate A evidence package without editing the PCB: exact footprint overlays, mechanical envelopes/keepouts, selected probe requirements, official DK physical interface closure, and Proposal 011 backfeed/thermal test results. **PCB placement and routing remain unauthorized.**
+
+## Latest checkpoint - Proposal 011 independent power review and bring-up plan
+
+- The user approved `proposal_011_POWER_REVIEW_AND_BRINGUP_PLAN`; the manufacturer-drawing review, independent schematic review, ERC rerun, and current-limited bench procedure are complete.
+- Official JST, Littelfuse, Diodes Incorporated, Samtec, TI, and TDK documents were compared against the current schematic fields and installed KiCad footprints.
+- The exported netlist independently confirms J9 -> F1 -> D1 -> JP1 -> U2 -> `+3V3_IMU`, correct D1 A/K direction, JP1-side test nodes, U2 EN tied to IN, C4/C5 returns to GND, and the J9 ground return.
+- No electrically necessary schematic correction was found. Proposal 011 did not edit any KiCad schematic, symbol, footprint, project, or PCB file.
+- Fresh ERC: **0 errors / 0 warnings** at `.kicad_agent/reports/proposal_011_power_review_erc.rpt`.
+- J9 and D1 are close drawing matches but still require placement/assembly polarity checks. F1, JP1, U2, C4/C5 and physical test-point implementations remain `VERIFY` because generic KiCad patterns/body models are not exact manufacturer release evidence.
+- U2 OUT-to-IN reverse current and DK/GPIO signal backfeed remain open bench gates. Do not add a speculative diode or isolation circuit until the actual path is demonstrated.
+- Proposal 011 contains staged 20 mA/30 mA current-limited bring-up, TP1/TP19/TP2/TP3/GND acceptance limits, JP1 current measurement, startup/shutdown, fault, diode/F1 drop, ripple, thermal, cable-drop and DK-backfeed procedures.
+- Detailed record: `.kicad_agent/proposals/proposal_011_power_review_and_bringup_plan.md`.
+- PCB layout remains unauthorized. A separately authorized PCB-layout **proposal document** may be drafted conditionally, but actual placement/routing remains NO-GO until footprint overlays, safe test access, and backfeed/reverse-current decisions are closed.
+
+### Next safe task after Proposal 011
+
+Review the Proposal 011 acceptance limits and either (a) execute the procedure on a hand-wired/breakout prototype and record results, or (b) authorize a documentation-only PCB-layout proposal that closes exact footprint overlays and mechanical/test-access gates without editing the PCB. **Do not begin PCB layout without a new explicit approval.**
+
+## Latest checkpoint — Proposal 010 approved power fields update
+
+- The user approved `proposal_009_POWER_FIELDS_UPDATE`; the schematic-only provisional power part/field update is complete.
+- Verified power-path order: J9 / `J_PWR_IN` (`+5V_EXT`) → F1 (`1206L010/30WR`) → `+5V_FUSED` → D1 (`B140-13-F`) → `+5V_PROTECTED` → JP1 (`TSW-102-07-G-S` header plus `SNT-100-BK-G` shunt) → `+5V_REG_IN` → U2 (`TLV75533PDBVR`) → `+3V3_IMU`.
+- J9 is provisionally JST `B2B-XH-A`, pin 1 = `+5V_EXT`, pin 2 = GND, with `XHP-2` housing and `SXH-001T-P0.6` terminal fields. Cable polarity and final wearable mechanics remain VERIFY.
+- C4/C5 are now provisional TDK `C1608X7R1A225K080AC`, 2.2 uF, 10 V, X7R, 0603. Effective capacitance at U2 must remain above 0.47 uF.
+- `TP_5V_PROTECTED` was added before JP1. `TP_5V_REG_IN` remains after JP1; input, 3.3 V, and nearby GND access remain. Power test-point footprints are provisional 1.5 mm probe pads.
+- Input ESD remains honestly `DNP / TBD` with no selected MPN or populated footprint.
+- U2, J9, F1, D1, JP1, C4/C5, and all assigned footprints remain provisional/unverified for production. U2 DBV overlay, pin-1 orientation, and reverse-current/backfeed review remain required.
+- DK +5 V remains disconnected from `+5V_EXT`/`+5V_REG_IN`; DK +3.3 V remains disconnected from `+3V3_IMU`; shared GND only is preserved. Final DK physical mapping remains TBD.
+- Camera circuitry remains placeholder/TBD only, and all required root warnings remain visible.
+- ERC stayed at **0 errors / 0 warnings**. Result: `.kicad_agent/reports/power_fields_update_erc.rpt`. No PWR_FLAG or ERC exclusion was added.
+- Detailed record: `.kicad_agent/proposals/proposal_010_power_fields_update_report.md`.
+- `PCB_glove/PCB_glove.kicad_pcb`, the root schematic, `reference_designs/imu_pcb/`, and `C:/Users/ohmdd/Downloads/kicad-happy` were not modified by this task. The pre-existing `.kicad_pro` working-tree change was not touched.
+
+### Remaining blockers after Proposal 010
+
+- Production land-pattern, courtyard/body, pin-1, assembly, and wearable-mechanical verification for every provisional footprint.
+- J9 cable polarity/strain relief/retention and final wearable connector choice.
+- F1/D1 protection coordination, temperature/forward-drop behavior, and input ESD selection.
+- U2 reverse-current/backfeed, startup/fault, thermal/skin, cable-drop, and ground-return validation.
+- MLCC effective-capacitance/placement margin and accessible, safe test-pad implementation.
+- Final DK physical pin map, IMU connector/harness verification, signal-integrity measurements, independent full schematic review, and all camera documentation.
+
+### Next safe task after Proposal 010
+
+Perform a schematic-only independent manufacturer-drawing review and create a current-limited bench bring-up/measurement procedure. **PCB layout is still not authorized.**
 
 ## Latest checkpoint — approved +3V3_IMU power schematic update
 

@@ -1,0 +1,7 @@
+COMMAND: "C:\Program Files\KiCad\9.0\bin\kicad-cli.exe" pcb drc --severity-all --exit-code-violations --output C:\Users\ohmdd\Downloads\Larri\PCB_glove\.kicad_agent\reports\proposal_015k_breakout_closure\CN12_drc.rpt C:\Users\ohmdd\Downloads\Larri\PCB_glove\PCB_glove\dk_breakouts\CN12\CN12_DK_breakout.kicad_pcb
+RETURN_CODE: 0
+STDOUT:
+Found 0 violations
+Found 0 unconnected items
+Saved DRC Report to C:\Users\ohmdd\Downloads\Larri\PCB_glove\.kicad_agent\reports\proposal_015k_breakout_closure\CN12_drc.rpt
+STDERR:

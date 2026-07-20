@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="810" viewBox="0 0 250 135">
+  <rect width="250" height="135" fill="#f7f8fa"/>
+  <style>.t{font:3px sans-serif;fill:#17212b}.s{font:2.4px sans-serif;fill:#17212b}.h{font:bold 5px sans-serif;fill:#10243e}.board{fill:#eef7ef;stroke:#245c35;stroke-width:.7}.must{fill:#d00000;stroke:#7f0000;stroke-width:.35}.service{fill:#f4a261;stroke:#a44a00;stroke-width:.35}.unused{fill:#adb5bd;stroke:#495057;stroke-width:.35}.future{fill:#8338ec;stroke:#4a148c;stroke-width:.35}.warn{font:bold 2.8px sans-serif;fill:#9b2226}</style>
+  <text x="10" y="8" class="h">Proposal 015E — service-priority map</text>
+  <text x="10" y="12" class="warn">PROJECT ENGINEERING KEEP-OUT — NOT MANUFACTURER MAXIMUM</text>
+  <rect x="10" y="15" width="150" height="110" rx="2" class="board"/>
+  <!-- MUST: primary USB, ST-LINK, reset, boot, power selector, DK sockets, all holes -->
+  <circle cx="152.5" cy="94.2" r="3" class="must"/><text x="146" y="90" class="s">CN6</text>
+  <circle cx="17.4" cy="97.5" r="3" class="must"/><text x="20" y="98" class="s">CN18</text>
+  <circle cx="154.3" cy="69.9" r="3" class="must"/><text x="146" y="70" class="s">B1</text>
+  <circle cx="154.5" cy="33.1" r="3" class="must"/><text x="144" y="30" class="s">SW1</text>
+  <circle cx="154.5" cy="30.1" r="3" class="must"/><text x="144" y="27" class="s">SW2</text>
+  <circle cx="117.8" cy="115.5" r="3" class="must"/><text x="110" y="111" class="s">JP2</text>
+  <circle cx="144.7" cy="74.6" r="3" class="must"/><text x="147" y="75" class="s">CN7</text>
+  <circle cx="144.7" cy="54.3" r="3" class="must"/><text x="147" y="55" class="s">CN8</text>
+  <circle cx="96.5" cy="72.0" r="3" class="must"/><text x="99" y="73" class="s">CN11</text>
+  <circle cx="96.5" cy="47.7" r="3" class="must"/><text x="99" y="48" class="s">CN12</text>
+  <circle cx="15.08" cy="119.92" r="2" class="must"/><circle cx="15.08" cy="20.08" r="2" class="must"/>
+  <circle cx="154.92" cy="119.92" r="2" class="must"/><circle cx="154.92" cy="20.08" r="2" class="must"/>
+  <circle cx="26.76" cy="118.82" r="2" class="must"/><circle cx="26.76" cy="33.28" r="2" class="must"/>
+  <circle cx="143.24" cy="118.82" r="2" class="must"/><circle cx="143.24" cy="33.28" r="2" class="must"/>
+  <!-- SERVICE AFTER REMOVAL -->
+  <circle cx="16.9" cy="31.3" r="3" class="service"/><text x="20" y="31" class="s">CN1</text>
+  <circle cx="141.3" cy="119.1" r="3" class="service"/><text x="136" y="115" class="s">CN9</text>
+  <circle cx="104.1" cy="115.6" r="3" class="service"/><text x="98" y="111" class="s">CN10</text>
+  <circle cx="126.7" cy="119.3" r="3" class="service"/><text x="123" y="126" class="s">JP1</text>
+  <circle cx="154.3" cy="57.2" r="3" class="service"/><circle cx="154.3" cy="44.5" r="3" class="service"/><text x="145" y="54" class="s">B2/B4</text>
+  <circle cx="85.0" cy="58.9" r="3" class="service"/><text x="79" y="55" class="s">CN3</text>
+  <circle cx="85.0" cy="125.3" r="3" class="service"/><text x="87" y="123" class="s">CN13</text>
+  <circle cx="128.5" cy="23.6" r="3" class="service"/><text x="131" y="24" class="s">CN4</text>
+  <circle cx="156.4" cy="106.7" r="3" class="service"/><text x="148" y="105" class="s">CN5</text>
+  <circle cx="43.2" cy="124.7" r="3" class="service"/><text x="45" y="122" class="s">CN15</text>
+  <circle cx="10" cy="48.4" r="3" class="service"/><text x="13" y="49" class="s">CN16</text>
+  <!-- UNUSED -->
+  <circle cx="8.7" cy="73.9" r="3" class="unused"/><text x="12" y="74" class="s">CN17</text>
+  <circle cx="36.3" cy="20.1" r="3" class="unused"/><text x="39" y="20" class="s">CN2</text>
+  <!-- FUTURE -->
+  <circle cx="64.0" cy="20.9" r="3" class="future"/><text x="67" y="21" class="s">CN14 camera</text>
+  <circle cx="64.1" cy="81.8" r="3" class="future"/><text x="67" y="82" class="s">U27 thermal</text>
+  <text x="166" y="18" class="h">Final access classes</text>
+  <circle cx="170" cy="28" r="3" class="must"/><text x="176" y="29" class="t">MUST REMAIN ACCESSIBLE</text><text x="176" y="33" class="s">WITH INTERPOSER INSTALLED</text>
+  <circle cx="170" cy="43" r="3" class="service"/><text x="176" y="44" class="t">SERVICE ACCESS AFTER</text><text x="176" y="48" class="s">INTERPOSER REMOVAL ACCEPTABLE</text>
+  <circle cx="170" cy="58" r="3" class="unused"/><text x="176" y="59" class="t">NOT USED — MAY BE BLOCKED</text>
+  <circle cx="170" cy="70" r="3" class="future"/><text x="176" y="71" class="t">RESERVED FOR FUTURE</text><text x="176" y="75" class="s">— KEEP CLEAR</text>
+  <text x="166" y="86" class="t">No feature is UNRESOLVED.</text>
+  <text x="166" y="94" class="t">CN7/CN8/CN11/CN12 are</text><text x="166" y="98" class="t">the intended interposer mate.</text>
+  <text x="166" y="106" class="t">CN2 and CN17 are explicitly</text><text x="166" y="110" class="t">unused in v1 development.</text>
+  <text x="166" y="118" class="t">Camera mechanical access is</text><text x="166" y="122" class="t">reserved; electrical design is not.</text>
+</svg>

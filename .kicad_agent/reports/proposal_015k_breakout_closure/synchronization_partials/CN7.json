@@ -1,0 +1,20 @@
+{
+  "board": "PCB_glove/dk_breakouts/CN7/CN7_DK_breakout.kicad_pcb",
+  "geometry_preserved": true,
+  "footprint_ids": {
+    "carrier": "PCB_glove:Carrier_Clamp_2x_M2.5_NPTH_P10mm",
+    "dk": "PCB_glove:Amphenol_77311-101-06LF_CN7_Breakout",
+    "wire": "PCB_glove:Pigtail_1x01_26AWG_StrainRelief"
+  },
+  "references": {
+    "carrier": "MH_CARRIER1",
+    "dk": "J_CN7_DK1",
+    "wire": "J_WIRE1"
+  },
+  "carrier_board_only": true,
+  "track_count": 1,
+  "zone_count": 0,
+  "net_names": [
+    "IMU_PINKY_INT1"
+  ]
+}
