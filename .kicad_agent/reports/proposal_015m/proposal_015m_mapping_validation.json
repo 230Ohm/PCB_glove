@@ -1,0 +1,80 @@
+{
+  "proposal": "015M",
+  "result": "PASS",
+  "connectors": {
+    "J14": {
+      "1": "IMU_SPI_SCK",
+      "2": "GND",
+      "3": "IMU_SPI_MISO",
+      "4": "GND",
+      "5": "IMU_SPI_MOSI"
+    },
+    "J15": {
+      "1": "IMU_THUMB_CS_N",
+      "2": "GND",
+      "3": "IMU_INDEX_CS_N",
+      "4": "IMU_MIDDLE_CS_N",
+      "5": "IMU_RING_CS_N",
+      "6": "IMU_PINKY_CS_N"
+    },
+    "J16": {
+      "1": "IMU_THUMB_INT1",
+      "2": "GND",
+      "3": "IMU_INDEX_INT1",
+      "4": "IMU_MIDDLE_INT1",
+      "5": "IMU_RING_INT1",
+      "6": "IMU_PINKY_INT1"
+    }
+  },
+  "approved_signals": 13,
+  "dk_source_ground_contacts": [
+    [
+      "J11",
+      "6"
+    ],
+    [
+      "J11",
+      "7"
+    ],
+    [
+      "J13",
+      "7"
+    ]
+  ],
+  "harness_ground_cavities": [
+    [
+      "J14",
+      "2"
+    ],
+    [
+      "J14",
+      "4"
+    ],
+    [
+      "J15",
+      "2"
+    ],
+    [
+      "J16",
+      "2"
+    ]
+  ],
+  "cs_pullups": {
+    "R18": "IMU_THUMB_CS_N",
+    "R19": "IMU_INDEX_CS_N",
+    "R20": "IMU_MIDDLE_CS_N",
+    "R21": "IMU_RING_CS_N",
+    "R22": "IMU_PINKY_CS_N"
+  },
+  "cn8_positive_power_isolation": [
+    "IOREF J11-2",
+    "3V3 J11-4",
+    "5V J11-5",
+    "VIN J11-8"
+  ],
+  "r1_r2_boundaries": {
+    "R1": "J13-6 / DK_IMU_SPI_SCK_TBD -> R1 -> IMU_SPI_SCK / J14-1",
+    "R2": "J13-4 / DK_IMU_SPI_MOSI_TBD -> R2 -> IMU_SPI_MOSI / J14-5"
+  },
+  "active_molex_rows": 0
+}

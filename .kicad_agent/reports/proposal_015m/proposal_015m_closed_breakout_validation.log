@@ -1,0 +1,46 @@
+COMMAND: "C:\Program Files\KiCad\9.0\bin\python.exe" C:\Users\ohmdd\Downloads\Larri\PCB_glove\tools\validate_dk_breakouts.py
+RETURN_CODE: 0
+STDOUT:
+PASS CN7: one DK connector, 1 used contacts, 5 DNC NPTH contacts, 1 track segments, 0 vias, 0 zones
+PASS CN8: one DK connector, 2 used contacts, 6 DNC NPTH contacts, 8 track segments, 0 vias, 0 zones
+PASS CN11: one DK connector, 6 used contacts, 2 DNC NPTH contacts, 6 track segments, 0 vias, 0 zones
+PASS CN12: one DK connector, 7 used contacts, 3 DNC NPTH contacts, 9 track segments, 0 vias, 0 zones
+PASS architecture: four separate board files; maximum DK connector count per continuous rigid body = 1
+PASS CN8 DK positive-power isolation: pins 2/4/5/8 NPTH, netless, unrouted
+STDERR:
+Adding duplicate image handler for 'PNG file'
+Adding duplicate image handler for 'JPEG file'
+Adding duplicate image handler for 'TIFF file'
+Adding duplicate image handler for 'GIF file'
+Adding duplicate image handler for 'PNM file'
+Adding duplicate image handler for 'PCX file'
+Adding duplicate image handler for 'IFF file'
+Adding duplicate image handler for 'Windows icon file'
+Adding duplicate image handler for 'Windows cursor file'
+Adding duplicate image handler for 'Windows animated cursor file'
+Adding duplicate image handler for 'TGA file'
+Adding duplicate image handler for 'XPM file'
+Adding duplicate image handler for 'PNG file'
+Adding duplicate image handler for 'JPEG file'
+Adding duplicate image handler for 'TIFF file'
+Adding duplicate image handler for 'GIF file'
+Adding duplicate image handler for 'PNM file'
+Adding duplicate image handler for 'PCX file'
+Adding duplicate image handler for 'IFF file'
+Adding duplicate image handler for 'Windows icon file'
+Adding duplicate image handler for 'Windows cursor file'
+Adding duplicate image handler for 'Windows animated cursor file'
+Adding duplicate image handler for 'TGA file'
+Adding duplicate image handler for 'XPM file'
+Adding duplicate image handler for 'PNG file'
+Adding duplicate image handler for 'JPEG file'
+Adding duplicate image handler for 'TIFF file'
+Adding duplicate image handler for 'GIF file'
+Adding duplicate image handler for 'PNM file'
+Adding duplicate image handler for 'PCX file'
+Adding duplicate image handler for 'IFF file'
+Adding duplicate image handler for 'Windows icon file'
+Adding duplicate image handler for 'Windows cursor file'
+Adding duplicate image handler for 'Windows animated cursor file'
+Adding duplicate image handler for 'TGA file'
+Adding duplicate image handler for 'XPM file'

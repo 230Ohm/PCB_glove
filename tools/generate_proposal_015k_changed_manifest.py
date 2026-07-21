@@ -26,6 +26,7 @@ def digest(path: Path) -> str:
 
 files: dict[str, str] = {
     ".kicad_agent/HANDOFF_CURRENT.md": "updated",
+    ".kicad_agent/proposals/proposal_015j_phase3_footprint_and_breakout_gate_report.md": "updated",
     "PCB_glove/lib/symbols/PCB_glove_Breakout.kicad_sym": "created",
     "PCB_glove/lib/footprints/PCB_glove.pretty/Amphenol_77311-101-06LF_CN7_Breakout.kicad_mod": "updated",
     "PCB_glove/lib/footprints/PCB_glove.pretty/Amphenol_77311-101-08LF_CN8_Breakout.kicad_mod": "updated",
@@ -46,6 +47,7 @@ files: dict[str, str] = {
 for name in ("CN7", "CN8", "CN11", "CN12"):
     base = f"PCB_glove/dk_breakouts/{name}"
     files[f"{base}/{name}_DK_breakout.kicad_pcb"] = "updated"
+    files[f"{base}/{name}_DK_breakout.kicad_prl"] = "created"
     files[f"{base}/{name}_DK_breakout.kicad_sch"] = "created"
     files[f"{base}/fp-lib-table"] = "created"
     files[f"{base}/sym-lib-table"] = "created"
@@ -81,6 +83,7 @@ lines = [
     "Generated: 2026-07-20",
     "",
     "This is the exact Proposal 015K write set. Files already dirty from unrelated work are not claimed here.",
+    "The four `.kicad_prl` entries are generated KiCad UI-state files, not electrical-design evidence; they are listed because exact write-set accounting includes every file written during synchronization.",
     "",
     "| Action | SHA-256 after Proposal 015K | Path |",
     "|---|---|---|",

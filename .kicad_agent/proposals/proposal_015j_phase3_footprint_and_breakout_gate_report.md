@@ -160,13 +160,16 @@ The raw validator found no positive-power-like net on any breakout. Independent 
 
 The deterministic validator compares each raw PCB's used/DNC positions and local nets to the fixed Proposal 015G mapping and passes. That is useful secondary evidence, but it is not a substitute for KiCad's schematic parity gate.
 
-Each `*_schematic_parity_attempt.rpt` explicitly says:
-
-`Failed to fetch schematic netlist for parity tests.`
-
-`Schematic parity tests require a fully annotated schematic.`
-
-Per-breakout schematics and annotated netlists must be created in a future authorized continuation, then native parity must pass without that diagnostic.
+Evidence clarification added during the Proposal 015K audit: the four stored
+`*_schematic_parity_attempt.rpt` bodies contain only the generic DRC `0 / 0 / 0`
+summary and do **not** contain the netlist-fetch or annotation diagnostics quoted
+in the original Phase 3 narrative. The Phase 3 run did not preserve a separate
+command log, so those historical report bodies cannot independently prove that
+native schematic parity was available. At that checkpoint no matching breakout
+schematics existed, so parity remained unproven regardless. Proposal 015K
+supersedes this evidence gap with fully annotated schematics plus preserved
+command logs that positively report zero schematic-parity issues and contain no
+netlist-fetch or annotation diagnostic.
 
 ## Main PCB_glove and service fixture
 

@@ -80,6 +80,13 @@ Both deterministic validators pass:
 
 Independent raw-file and rendered front/back review is also PASS. The complete native evidence is under `.kicad_agent/reports/proposal_015k_breakout_closure/`.
 
+The final 2026-07-20 closure rerun refreshed all four ERC, native parity and DRC reports and reran both deterministic validators. A follow-up evidence audit also corrected two documentation gaps without changing the electrical design or gate result:
+
+- the exact changed-file manifest now accounts for all four generated `.kicad_prl` UI-state files; and
+- the historical Proposal 015J gate report now states accurately that its stored parity-attempt report bodies did not preserve the claimed failure diagnostics, so native parity remained unproven until the annotated Proposal 015K schematics and preserved command logs established it.
+
+The native KiCad schematic and PCB overview montages are the engineering visual evidence. `renders/proposal_015k_conceptual_visual.png` is an explicitly labeled explanatory graphic only; it was not used to establish mapping, parity, DRC, physical fit or fabrication readiness.
+
 ## Amphenol overlay closure
 
 The released Amphenol 77311 drawing supports 2.54 mm pitch, the nominal body envelopes and 1.02 ± 0.08 mm recommended PCB holes. The four project footprints now use exact nominal F.Fab body rectangles:

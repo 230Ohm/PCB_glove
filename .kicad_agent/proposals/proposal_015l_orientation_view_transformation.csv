@@ -1,0 +1,9 @@
+stage_or_relationship,official_anchor,required_transformation,result,reason
+Connector product view to circuit/cavity 1,"5055750002-SD Rev B labels CIRCUIT 1 and its indicator",None,KNOWN,"Circuit 1 is explicit in the product view"
+Connector mating face to product view,"No reviewed Molex panel explicitly names the controlling product view as the mating face","Mating-face rotation and handedness",UNKNOWN,"Third-angle geometry or photographs would be inference"
+Product/top view to recommended PCB pattern,"Both panels occur in 5055750002-SD Rev B","Mirror or no-mirror",UNKNOWN,"Drawing does not state the relationship"
+Recommended PCB pattern to PCB component-side view,"Panel title says RECOMMENDED PCB PATTERN LAYOUT","Identify viewed PCB side",UNKNOWN,"No component-side label"
+Recommended PCB pattern to PCB solder-side view,"Panel title says RECOMMENDED PCB PATTERN LAYOUT","Identify viewed PCB side",UNKNOWN,"No solder-side label"
+PCB component side to PCB solder side,"General geometry",Mirror,MATHEMATICALLY KNOWN BUT UNANCHORED,"Neither side is anchored to the Molex pattern"
+PCB component side to KiCad F.Cu top-side footprint,"KiCad top-side convention",No mirror within KiCad convention,KICAD CONVENTION ONLY,"A CAD convention cannot replace manufacturer evidence"
+Molex circuit/cavity 1 to project footprint pad 1,"No traceable component-side endpoint",Circuit 1 to component-side land to KiCad pad 1,BLOCKED,"Absolute handedness remains unproven"

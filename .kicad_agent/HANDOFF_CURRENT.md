@@ -1,5 +1,45 @@
 # PCB_glove Context Handoff Checkpoint
 
+## Proposal 015M in-house JST ZE harness connector replacement — 2026-07-20
+
+- Authorization: `APPROVE PROPOSAL_015M_IN_HOUSE_JST_ZE_HARNESS_CONNECTOR_REPLACEMENT`.
+- User direction permanently forbids external contact, manufacturer questions, and new inquiry drafts for this connector decision. No external message was sent. The historical Proposal 015L clarification note is closed as unsent historical evidence only.
+- Molex `5055750620` is rejected for the active design because absolute component-side cavity-1 mapping never closed. Its project-local footprint remains unplaced, retains both `VERIFY` markings, has corrected historical/provenance wording, and is visibly marked `DEPRECATED — DO NOT PLACE — REPLACED BY JST ZE` on F.SilkS and F.Fab. It was not renumbered or released.
+- The development harness system is now JST ZE: header `BM06B-ZESS-TBT`, housing `ZER-06V-S`, terminal `SZE-002T-P0.3`, Alpha Wire `422607` 26 AWG, and hand tool `YRS-1460`. Preferred harness length is 50 mm; 100 mm is the provisional maximum pending signal-integrity and physical testing. This is a design selection, not a purchase authorization.
+- A project-local `JST_ZE_BM06B_ZESS_TBT` symbol and exact project-local footprint were created. The official JST layout explicitly establishes: circuit 1 → connector-mounting-surface land 1 → PCB component-side land 1 → unrotated KiCad top-side pad 1. The footprint records the Z-axis relationship as mating face `+Z`, housing insertion travel `-Z`, and mated wire exit `+Z`; the in-plane lock-release face remains an open physical gate.
+- J14/J15/J16 now use the JST symbol/footprint fields and group labels `[I] SPI`, `[II] CS_N`, and `[III] INT1`. Their existing references, UUIDs, electrical wires, approved cavity maps, CN12 R1/R2 series boundaries, five 10 kΩ CS pull-ups, 13 DK source signals, three DK source-ground contacts, and four harness ground cavities are preserved. J14 circuit 6 remains DNC / no terminal.
+- CN8 IOREF, 3V3, 5V, and VIN remain electrically isolated. No positive DK power, signal, pull-up, test point, or harness connection was invented.
+- Native hierarchical ERC is 0 errors / 0 warnings. Exact netlist mapping, DK positive-power isolation, three-source-ground accounting, five CS pull-ups, project-footprint overlay, footprint-only native DRC, and the four closed breakout validators all pass. Footprint DRC is 0 violations / 0 unconnected pads / 0 footprint errors. The advisory kicad-happy analyzer reports 0 errors, 10 warnings, and 24 information findings; these are documented draft/process observations, not ERC warnings.
+- Official wire/terminal evidence passes the 26 AWG and insulation-OD compatibility check and maps `YRS-1460` to `SZE-002T-P0.3`. Crimp quality, insertion, retention, pull force, flex life, strain relief, latch access, cable bend, skin contact, signal integrity, backfeed, and wearable use remain unqualified.
+- All six directed wrong-port insertions are unsafe. J14/J15/J16 must use group labels, distinct harness flags, cavity-color discipline, a circuit-1 mark, no-hot-plug warnings, and an internal conceptual three-port carrier/shroud before physical use. No published mutually incompatible six-position ZE key variants were found; the carrier/shroud is conceptual only and was not built.
+- `PCB_glove/PCB_glove.kicad_pcb`, the four closed breakout schematics/boards, the root schematic/project/library tables, `reference_designs/imu_pcb/`, `kicad-happy`, and global KiCad libraries were not edited. No main-PCB placement/routing, camera circuitry, service fixture, purchasing output, or fabrication output was created.
+- Evidence package: `.kicad_agent/proposals/proposal_015m_in_house_jst_ze_harness_connector_replacement.md`, official-source matrix, exact overlay, mapping/color tables, wrong-port analysis, open-gate register, exact changed-file manifest, protected hashes, native reports, and refreshed native renders under `.kicad_agent/reports/proposal_015m/`.
+- Next safe work is a separately authorized **internal physical qualification** package for actual JST parts, crimps, harness labels/carrier, retention, bend/strain, signal integrity, asymmetric-power/backfeed, and wearable clearances. Main-PCB placement, routing, and fabrication remain unauthorized.
+
+`JST ZE DIGITAL CONNECTOR REPLACEMENT PASS — PHYSICAL QUALIFICATION OPEN`
+
+`MAIN PCB PLACEMENT, ROUTING, PURCHASING AND FABRICATION REMAIN UNAUTHORIZED`
+
+## Proposal 015L Molex cavity-1 evidence and connector escape gate — 2026-07-20
+
+- Authorization: `APPROVE PROPOSAL_015L_MOLEX_CAVITY_1_EVIDENCE_AND_CONNECTOR_ESCAPE_GATE`.
+- The controlled Molex file delivered as `5055750291_sd.pdf` is drawing `5055750002-SD`, PSD 000, Rev B, released 2023-11-06. Sheet 5 explicitly lists exact part `5055750620`, so exact-part applicability is proven; the delivery basename is not the drawing number.
+- Official evidence identifies circuit 1 in a connector product view but never identifies the recommended PCB pattern as component-side or solder-side and never states the mirror relationship. Absolute cavity-1 → component-side land → KiCad pad-1 mapping remains blocked.
+- The project-local Molex footprint remains unchanged at SHA-256 `E3763E84DDB9811F11E9EF88ED9ABDF81DECC80C6C8072C1EFE173873ADE1F52`, keeps both visible `VERIFY` markings, remains absent from all PCBs, and remains unassigned and unauthorized.
+- That unchanged footprint's legacy description still says it was generated from an official exact-part DXF. Proposal 015L found no reproducible raw asset, URL, identity or Git copy for that claim; the description is stale/unverified and must not be treated as controlled evidence. It remains untouched because the blocked-path rule forbids a footprint edit without handedness closure.
+- Proposal 015J's retained hash described as an exact official `5055750620` DXF has no raw file, URL, asset identity or Git-history copy. Proposal 015L reclassifies the bare hash as provenance-unresolved and unusable as controlled technical evidence; the existing footprint geometry was not changed.
+- A documentation-only escape study evaluated JST ZE, JST GH, TE Micro MATE-N-LOK and Hirose DF57H. Overall recommendation: `REPLACE MOLEX — ALTERNATE CONNECTOR RECOMMENDED` using JST ZE `BM06B-ZESS-TBT` / `ZER-06V-S` / `SZE-002T-P0.3`, subject to separate implementation authorization.
+- JST's official ZE catalog explicitly states that the PCB layout is viewed from the connector mounting surface and labels circuit 1. The terminal accepts AWG 28–24 and 0.76–1.20 mm insulation OD, covering the full documented Alpha Wire `422607` 26-AWG diameter tolerance of approximately 0.940–1.041 mm. The secure outer lock and current distributor active/stock snapshots support the recommendation; they do not authorize purchasing.
+- No alternate connector was implemented. The logical Molex fields, all schematics, all DK breakouts, the main PCB, and the approved electrical mapping remain unchanged. Exact footprint/body/mated/latch/cable/strain-relief/crimp controls must close under separate authorization before any schematic assignment or placement.
+- `PCB_glove/PCB_glove.kicad_pcb`, the four closed breakout schematics/boards, `reference_designs/imu_pcb/`, `kicad-happy`, and global KiCad libraries were not edited. No service fixture, camera circuitry, manufacturer contact, purchasing output or fabrication output occurred.
+- Closure package: `.kicad_agent/proposals/proposal_015l_molex_cavity_1_evidence_and_connector_escape_gate.md`, official-source matrix, view-transformation CSV/SVG, unsent controlled Molex clarification request, alternate comparison, exact changed-file manifest and protected-file verification.
+
+`MOLEX 5055750620 ABSOLUTE CAVITY-1 HANDEDNESS BLOCKED`
+
+`REPLACE MOLEX — ALTERNATE CONNECTOR RECOMMENDED: JST ZE — NOT IMPLEMENTED`
+
+`MAIN PCB, PHYSICAL QUALIFICATION, PURCHASING AND FABRICATION REMAIN UNAUTHORIZED`
+
 ## Proposal 015K breakout schematic parity and footprint closure — 2026-07-20
 
 - Authorization: `APPROVE PROPOSAL_015K_BREAKOUT_SCHEMATIC_PARITY_AND_FOOTPRINT_CLOSURE`.
@@ -12,6 +52,8 @@
 - `PCB_glove/PCB_glove.kicad_pcb` remains unchanged at SHA-256 `3E491CD8085EFF0D6C95F0A11A135421CBCFCE4C5620E6356C3896E122F1772B`. `reference_designs/imu_pcb/` remains unchanged at digest `8C1366CEA6AEFD840CA30CDF9836D7975E15D4F434CA3F201D81A4071151A07B`. `kicad-happy` remains unchanged at HEAD `839d9b03c42358ab16f2eedfdea6c4bc6469826f`.
 - No main-PCB placement/routing, service fixture, camera circuitry, global-library edit or fabrication output occurred.
 - Closure package: `.kicad_agent/proposals/proposal_015k_breakout_schematic_parity_and_footprint_closure.md`, updated overlay CSV, exact changed-file manifest, unsent Molex inquiry, native reports, analyzer triage, protected hashes and native KiCad renders under `.kicad_agent/reports/proposal_015k_breakout_closure/`.
+- Final closure rerun on 2026-07-20 reconfirmed ERC 0/0, native parity 0, DRC 0/0/0 and both deterministic validator passes for all four breakouts. The evidence audit added all four `.kicad_prl` UI-state files to the exact write-set accounting and corrected the unsupported historical description of the Proposal 015J parity-attempt report bodies; neither correction changes the electrical result.
+- Engineering visuals are the refreshed native KiCad schematic and PCB montages. `renders/proposal_015k_conceptual_visual.png` is labeled non-engineering evidence and is for status communication only.
 
 `PROPOSAL 015K DIGITAL BREAKOUT CLOSURE PASS`
 

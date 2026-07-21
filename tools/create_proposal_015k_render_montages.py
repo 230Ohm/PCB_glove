@@ -19,8 +19,16 @@ NAMES = ("CN7", "CN8", "CN11", "CN12")
 
 def crop_white_margin(image: Image.Image, margin: int = 30) -> Image.Image:
     rgb = image.convert("RGB")
-    white = Image.new("RGB", rgb.size, "white")
-    difference = ImageChops.difference(rgb, white).convert("L")
+    # KiCad/PDF renderers may emit either a white or a light theme-colored
+    # page.  Use the actual corner color as the page background so the review
+    # montage crops to the board instead of preserving a nearly blank sheet.
+    page_background = Image.new("RGB", rgb.size, rgb.getpixel((0, 0)))
+    white_background = Image.new("RGB", rgb.size, "white")
+    corner_difference = ImageChops.difference(rgb, page_background).convert("L")
+    white_difference = ImageChops.difference(rgb, white_background).convert("L")
+    # Treat both the outer renderer background and the inner white PDF page as
+    # margin.  Only pixels that differ from both are review content.
+    difference = ImageChops.darker(corner_difference, white_difference)
     mask = difference.point(lambda value: 255 if value > 5 else 0)
     box = mask.getbbox()
     if box is None:
@@ -33,9 +41,12 @@ def crop_white_margin(image: Image.Image, margin: int = 30) -> Image.Image:
 
 
 def fit_inside(image: Image.Image, width: int, height: int) -> Image.Image:
-    fitted = image.copy()
-    fitted.thumbnail((width, height), Image.Resampling.LANCZOS)
-    return fitted
+    scale = min(width / image.width, height / image.height)
+    target = (
+        max(1, round(image.width * scale)),
+        max(1, round(image.height * scale)),
+    )
+    return image.resize(target, Image.Resampling.LANCZOS)
 
 
 def make_schematic_montage() -> None:
@@ -53,7 +64,8 @@ def make_schematic_montage() -> None:
 
     for index, name in enumerate(NAMES):
         image = Image.open(source / f"{name}_schematic.png").convert("RGB")
-        fitted = fit_inside(image, cell_width - 24, cell_height - 24)
+        cropped = crop_white_margin(image, margin=50)
+        fitted = fit_inside(cropped, cell_width - 24, cell_height - 24)
         column = index % 2
         row = index // 2
         x0 = column * cell_width

@@ -1,0 +1,82 @@
+{
+  "proposal": "015M",
+  "result": "PASS",
+  "erc": {
+    "errors": 0,
+    "warnings": 0,
+    "report": ".kicad_agent/reports/proposal_015m/proposal_015m_hierarchical_erc.rpt"
+  },
+  "netlist_mapping": {
+    "approved_signals": 13,
+    "result": "PASS",
+    "report": ".kicad_agent/reports/proposal_015m/proposal_015m_mapping_validation.json"
+  },
+  "dk_source_ground_contacts": 3,
+  "harness_ground_cavities": 4,
+  "cs_pullups": 5,
+  "cn8_positive_power_isolation": "PASS",
+  "footprint_drc": {
+    "violations": 0,
+    "unconnected_pads": 0,
+    "footprint_errors": 0,
+    "report": ".kicad_agent/reports/proposal_015m/proposal_015m_jst_ze_footprint_drc.rpt"
+  },
+  "schematic_analyzer": {
+    "errors": 0,
+    "warnings": 10,
+    "info": 24,
+    "interpretation": "Advisory consistency audit, not ERC. Findings remain draft/open gates and do not override native ERC.",
+    "report": ".kicad_agent/reports/proposal_015m/proposal_015m_schematic_analyzer.json"
+  },
+  "commands": {
+    "erc": {
+      "label": "hierarchical ERC",
+      "return_code": 0,
+      "stdout": "Found 0 violations\nSaved ERC Report to C:\\Users\\ohmdd\\Downloads\\Larri\\PCB_glove\\.kicad_agent\\reports\\proposal_015m\\proposal_015m_hierarchical_erc.rpt\n",
+      "stderr": "",
+      "log": ".kicad_agent/reports/proposal_015m/proposal_015m_hierarchical_erc_command.log"
+    },
+    "netlist": {
+      "label": "hierarchical netlist export",
+      "return_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "log": ".kicad_agent/reports/proposal_015m/proposal_015m_netlist_export_command.log"
+    },
+    "mapping": {
+      "label": "Proposal 015M mapping validator",
+      "return_code": 0,
+      "stdout": "PASS: exact 13-signal connector mapping unchanged\nPASS: exactly three DK source-ground contacts; four harness ground cavities\nPASS: R1/R2 boundaries and all five CS pull-ups preserved\nPASS: CN8 IOREF/3V3/5V/VIN remain electrically absent\nPASS: J14/J15/J16 are project-local JST ZE; active BOM contains no Molex rows\n",
+      "stderr": "",
+      "log": ".kicad_agent/reports/proposal_015m/proposal_015m_mapping_validation.log"
+    },
+    "footprint_overlay": {
+      "label": "project-local footprint overlay validator",
+      "return_code": 0,
+      "stdout": "PASS Amphenol_77311-101-06LF_CN7_Breakout: 6 contacts at 2.54 mm pitch, 1.02 mm drills, used PTH=[4], manufacturer nominal F.Fab and project 0.50 mm courtyard\nPASS Amphenol_77311-101-08LF_CN8_Breakout: 8 contacts at 2.54 mm pitch, 1.02 mm drills, used PTH=[6, 7], manufacturer nominal F.Fab and project 0.50 mm courtyard\nPASS Amphenol_77311-101-08LF_CN11_Breakout: 8 contacts at 2.54 mm pitch, 1.02 mm drills, used PTH=[3, 4, 5, 6, 7, 8], manufacturer nominal F.Fab and project 0.50 mm courtyard\nPASS Amphenol_77311-101-10LF_CN12_Breakout: 10 contacts at 2.54 mm pitch, 1.02 mm drills, used PTH=[1, 2, 3, 4, 5, 6, 7], manufacturer nominal F.Fab and project 0.50 mm courtyard\nPASS DRAFT_0R_Jumper_0603_VERIFY: exact routed KiCad 9 R_0603_1608Metric pad geometry\nPASS Molex 5055750620 pads: six 1.00 x 3.00 mm lands at 2.00 mm pitch; two netless MP lands 1.80 x 4.00 mm; historical geometry remains VERIFY\nPASS JST ZE BM06B-ZESS-TBT: circuit 1 is component-side rightmost pad 1; six 0.80 x 2.40 mm lands at 1.50 mm pitch; two netless 1.80 x 3.30 mm MP lands; reference body and project courtyard match\nWROTE C:\\Users\\ohmdd\\Downloads\\Larri\\PCB_glove\\.kicad_agent\\reports\\proposal_015m\\proposal_015m_jst_ze_footprint_test.kicad_pcb\n",
+      "stderr": "",
+      "log": ".kicad_agent/reports/proposal_015m/proposal_015m_footprint_overlay_validation.log"
+    },
+    "breakout_mapping": {
+      "label": "closed breakout mapping validator",
+      "return_code": 0,
+      "stdout": "PASS CN7: one DK connector, 1 used contacts, 5 DNC NPTH contacts, 1 track segments, 0 vias, 0 zones\nPASS CN8: one DK connector, 2 used contacts, 6 DNC NPTH contacts, 8 track segments, 0 vias, 0 zones\nPASS CN11: one DK connector, 6 used contacts, 2 DNC NPTH contacts, 6 track segments, 0 vias, 0 zones\nPASS CN12: one DK connector, 7 used contacts, 3 DNC NPTH contacts, 9 track segments, 0 vias, 0 zones\nPASS architecture: four separate board files; maximum DK connector count per continuous rigid body = 1\nPASS CN8 DK positive-power isolation: pins 2/4/5/8 NPTH, netless, unrouted\n",
+      "stderr": "Adding duplicate image handler for 'PNG file'\nAdding duplicate image handler for 'JPEG file'\nAdding duplicate image handler for 'TIFF file'\nAdding duplicate image handler for 'GIF file'\nAdding duplicate image handler for 'PNM file'\nAdding duplicate image handler for 'PCX file'\nAdding duplicate image handler for 'IFF file'\nAdding duplicate image handler for 'Windows icon file'\nAdding duplicate image handler for 'Windows cursor file'\nAdding duplicate image handler for 'Windows animated cursor file'\nAdding duplicate image handler for 'TGA file'\nAdding duplicate image handler for 'XPM file'\nAdding duplicate image handler for 'PNG file'\nAdding duplicate image handler for 'JPEG file'\nAdding duplicate image handler for 'TIFF file'\nAdding duplicate image handler for 'GIF file'\nAdding duplicate image handler for 'PNM file'\nAdding duplicate image handler for 'PCX file'\nAdding duplicate image handler for 'IFF file'\nAdding duplicate image handler for 'Windows icon file'\nAdding duplicate image handler for 'Windows cursor file'\nAdding duplicate image handler for 'Windows animated cursor file'\nAdding duplicate image handler for 'TGA file'\nAdding duplicate image handler for 'XPM file'\nAdding duplicate image handler for 'PNG file'\nAdding duplicate image handler for 'JPEG file'\nAdding duplicate image handler for 'TIFF file'\nAdding duplicate image handler for 'GIF file'\nAdding duplicate image handler for 'PNM file'\nAdding duplicate image handler for 'PCX file'\nAdding duplicate image handler for 'IFF file'\nAdding duplicate image handler for 'Windows icon file'\nAdding duplicate image handler for 'Windows cursor file'\nAdding duplicate image handler for 'Windows animated cursor file'\nAdding duplicate image handler for 'TGA file'\nAdding duplicate image handler for 'XPM file'\n",
+      "log": ".kicad_agent/reports/proposal_015m/proposal_015m_closed_breakout_validation.log"
+    },
+    "footprint_drc": {
+      "label": "JST ZE footprint-only DRC",
+      "return_code": 0,
+      "stdout": "Found 0 violations\nFound 0 unconnected items\nSaved DRC Report to C:\\Users\\ohmdd\\Downloads\\Larri\\PCB_glove\\.kicad_agent\\reports\\proposal_015m\\proposal_015m_jst_ze_footprint_drc.rpt\n",
+      "stderr": "",
+      "log": ".kicad_agent/reports/proposal_015m/proposal_015m_jst_ze_footprint_drc_command.log"
+    },
+    "schematic_analyzer": {
+      "label": "kicad-happy schematic analyzer",
+      "return_code": 0,
+      "stdout": "",
+      "stderr": "Written to C:\\Users\\ohmdd\\Downloads\\Larri\\PCB_glove\\.kicad_agent\\reports\\proposal_015m\\proposal_015m_schematic_analyzer.json\n",
+      "log": ".kicad_agent/reports/proposal_015m/proposal_015m_schematic_analyzer_command.log"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-"""Validate project-local DK and Molex land patterns against documented dimensions."""
+"""Validate project-local DK, historical Molex, and selected JST land patterns."""
 
 from __future__ import annotations
 
@@ -177,7 +177,85 @@ def validate_molex() -> pcbnew.FOOTPRINT:
         assert pad.GetNetname() == ""
     print(
         "PASS Molex 5055750620 pads: six 1.00 x 3.00 mm lands at 2.00 mm pitch; "
-        "two netless MP lands 1.80 x 4.00 mm"
+        "two netless MP lands 1.80 x 4.00 mm; historical geometry remains VERIFY"
+    )
+    raw = (LIBRARY / f"{name}.kicad_mod").read_text(encoding="utf-8")
+    deprecation = "DEPRECATED — DO NOT PLACE — REPLACED BY JST ZE"
+    if raw.count(deprecation) < 3:
+        raise AssertionError("historical Molex footprint is not visibly deprecated")
+    return footprint
+
+
+def validate_jst_ze() -> pcbnew.FOOTPRINT:
+    """Validate the BM06B-ZESS-TBT catalog-view component-side land pattern."""
+
+    name = "JST_ZE_BM06B-ZESS-TBT_1x06_P1.50mm_Vertical"
+    footprint = load(name)
+    signal_pads = {
+        pad.GetNumber(): pad
+        for pad in footprint.Pads()
+        if pad.GetNumber().isdigit()
+    }
+    assert set(signal_pads) == {"1", "2", "3", "4", "5", "6"}
+    expected_x = {
+        "1": 3.75,
+        "2": 2.25,
+        "3": 0.75,
+        "4": -0.75,
+        "5": -2.25,
+        "6": -3.75,
+    }
+    for number, x_expected in expected_x.items():
+        pad = signal_pads[number]
+        assert_close(mm(pad.GetPosition().x), x_expected, f"JST ZE pad {number} X")
+        assert_close(mm(pad.GetPosition().y), -2.75, f"JST ZE pad {number} Y")
+        assert_close(mm(pad.GetSize().x), 0.8, f"JST ZE pad {number} width")
+        assert_close(mm(pad.GetSize().y), 2.4, f"JST ZE pad {number} length")
+        assert pad.GetShape() == pcbnew.PAD_SHAPE_RECT
+
+    mechanical = sorted(
+        (pad for pad in footprint.Pads() if pad.GetNumber() == "MP"),
+        key=lambda item: item.GetPosition().x,
+    )
+    assert len(mechanical) == 2
+    for pad, (x_expected, y_expected) in zip(
+        mechanical,
+        ((-6.35, 2.30), (6.35, 2.30)),
+    ):
+        assert_close(mm(pad.GetPosition().x), x_expected, "JST ZE MP X")
+        assert_close(mm(pad.GetPosition().y), y_expected, "JST ZE MP Y")
+        assert_close(mm(pad.GetSize().x), 1.8, "JST ZE MP width")
+        assert_close(mm(pad.GetSize().y), 3.3, "JST ZE MP length")
+        assert pad.GetShape() == pcbnew.PAD_SHAPE_RECT
+        assert pad.GetNetname() == ""
+
+    for layer, expected, label in (
+        (pcbnew.F_Fab, (-6.75, -2.25, 6.75, 3.55), "F.Fab reference body"),
+        (pcbnew.F_CrtYd, (-7.75, -4.45, 7.75, 4.45), "F.CrtYd project envelope"),
+    ):
+        actual = graphical_extents(footprint, layer)
+        for axis, measured, target in zip(
+            ("min X", "min Y", "max X", "max Y"),
+            actual,
+            expected,
+        ):
+            assert_close(measured, target, f"JST ZE {label} {axis}")
+
+    raw = (LIBRARY / f"{name}.kicad_mod").read_text(encoding="utf-8")
+    required_text = (
+        "C1 / PAD 1",
+        "TOP / COMPONENT SIDE",
+        "TOP ENTRY: MATING FACE +Z / INSERT HOUSING -Z / WIRE EXIT +Z",
+        '(layers "F.Cu" "F.Paste" "F.Mask")',
+    )
+    missing = [item for item in required_text if item not in raw]
+    if missing:
+        raise AssertionError(f"JST ZE footprint missing orientation/layer evidence: {missing}")
+
+    print(
+        "PASS JST ZE BM06B-ZESS-TBT: circuit 1 is component-side rightmost "
+        "pad 1; six 0.80 x 2.40 mm lands at 1.50 mm pitch; two netless "
+        "1.80 x 3.30 mm MP lands; reference body and project courtyard match"
     )
     return footprint
 
@@ -222,15 +300,45 @@ def emit_molex_test_board(footprint: pcbnew.FOOTPRINT, output: Path) -> None:
     print(f"WROTE {output}")
 
 
+def emit_jst_test_board(footprint: pcbnew.FOOTPRINT, output: Path) -> None:
+    board = pcbnew.BOARD()
+    footprint.SetReference("J1")
+    footprint.SetValue("BM06B-ZESS-TBT")
+    footprint.SetPosition(pcbnew.VECTOR2I_MM(17.5, 12.5))
+    board.Add(footprint)
+    for pad in footprint.Pads():
+        if not pad.GetNumber().isdigit():
+            continue
+        net = pcbnew.NETINFO_ITEM(board, f"TEST_{pad.GetNumber()}")
+        board.Add(net)
+        pad.SetNet(net)
+    for start, end in (
+        ((0.0, 0.0), (35.0, 0.0)),
+        ((35.0, 0.0), (35.0, 25.0)),
+        ((35.0, 25.0), (0.0, 25.0)),
+        ((0.0, 25.0), (0.0, 0.0)),
+    ):
+        add_edge(board, start, end)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    board.SetFileName(str(output))
+    if not pcbnew.SaveBoard(str(output), board):
+        raise RuntimeError(f"could not save {output}")
+    print(f"WROTE {output}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--emit-molex-test-board", type=Path)
+    parser.add_argument("--emit-jst-test-board", type=Path)
     args = parser.parse_args()
     validate_amphenol()
     validate_project_resistor()
     molex = validate_molex()
+    jst = validate_jst_ze()
     if args.emit_molex_test_board:
         emit_molex_test_board(molex, args.emit_molex_test_board.resolve())
+    if args.emit_jst_test_board:
+        emit_jst_test_board(jst, args.emit_jst_test_board.resolve())
 
 
 if __name__ == "__main__":

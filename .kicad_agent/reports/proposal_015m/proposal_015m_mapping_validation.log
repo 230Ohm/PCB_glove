@@ -1,0 +1,9 @@
+COMMAND: C:\Users\ohmdd\AppData\Local\Programs\Python\Python313\python.exe C:\Users\ohmdd\Downloads\Larri\PCB_glove\tools\validate_proposal_015m_mapping.py C:\Users\ohmdd\Downloads\Larri\PCB_glove\.kicad_agent\reports\proposal_015m\proposal_015m_hierarchical.net --json C:\Users\ohmdd\Downloads\Larri\PCB_glove\.kicad_agent\reports\proposal_015m\proposal_015m_mapping_validation.json
+RETURN_CODE: 0
+STDOUT:
+PASS: exact 13-signal connector mapping unchanged
+PASS: exactly three DK source-ground contacts; four harness ground cavities
+PASS: R1/R2 boundaries and all five CS pull-ups preserved
+PASS: CN8 IOREF/3V3/5V/VIN remain electrically absent
+PASS: J14/J15/J16 are project-local JST ZE; active BOM contains no Molex rows
+STDERR:

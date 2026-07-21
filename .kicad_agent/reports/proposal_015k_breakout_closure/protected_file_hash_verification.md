@@ -3,6 +3,8 @@
 Date: 2026-07-20  
 Result: **PASS**
 
+The final hashes below were recomputed after the 2026-07-20 validation and render refresh.
+
 | Protected target | Baseline | Final | Result |
 |---|---:|---:|---|
 | `PCB_glove/PCB_glove.kicad_pcb` SHA-256 | `3E491CD8085EFF0D6C95F0A11A135421CBCFCE4C5620E6356C3896E122F1772B` | `3E491CD8085EFF0D6C95F0A11A135421CBCFCE4C5620E6356C3896E122F1772B` | PASS — unchanged |

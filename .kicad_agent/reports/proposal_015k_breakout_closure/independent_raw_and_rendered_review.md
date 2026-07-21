@@ -27,3 +27,11 @@ Result: **PASS**
 The auxiliary `cross_verify.py` helper reports `MH_CARRIER1` as an orphan because it does not honor KiCad's `board_only` attribute. The finding remains visible in the four `*_cross_verify.json` files. Native KiCad schematic parity correctly excludes the mechanical-only footprint and passes with zero issues.
 
 No electrical, parity, routing, DNC, warning-text or rendered-view mismatch was found.
+
+## Final closure refresh
+
+- PASS — the strict native runner was rerun on 2026-07-20 and again produced ERC 0/0, native parity 0 and DRC 0/0/0 for CN7, CN8, CN11 and CN12.
+- PASS — both deterministic validators were rerun and still pass, including exact mapping and DK positive-power isolation.
+- PASS — refreshed native KiCad schematic and PCB front/back montages were inspected after rasterization; all four schematics, CN12 R1/R2 boundaries, routes, DNC contacts, warnings and mating-view markings remain legible and consistent with the raw files.
+- PASS — protected hashes were recomputed after the refresh and remain unchanged.
+- INFORMATIONAL — `renders/proposal_015k_conceptual_visual.png` is a separately labeled communication aid and is intentionally excluded from engineering evidence.

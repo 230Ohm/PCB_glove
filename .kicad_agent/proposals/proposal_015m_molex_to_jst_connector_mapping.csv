@@ -1,0 +1,11 @@
+scope_or_reference,retired_molex_identity,selected_jst_identity,electrical_mapping_effect,implementation_status,notes
+PCB header,5055750620,BM06B-ZESS-TBT,"None; connector circuits 1-6 preserve previous logical cavities 1-6","ACTIVE SCHEMATIC AND PROJECT-LOCAL FOOTPRINT","Molex rejected because absolute component-side cavity-1 mapping could not be closed internally"
+Cable housing,5055700601,ZER-06V-S,None,"ACTIVE DEVELOPMENT HARNESS BOM","Six-circuit ordinary polarized housing; does not discriminate SPI CS and INT ports"
+Crimp terminal,5055721200,SZE-002T-P0.3,None,"ACTIVE DEVELOPMENT HARNESS BOM","17 contacts total; J14 circuit 6 has no terminal and no wire"
+Hand tool,200218-4500,YRS-1460,None,"DOCUMENTED TOOLING REFERENCE","No purchase authorized; physical crimp qualification remains open"
+Wire,Alpha Wire 422607,Alpha Wire 422607 26 AWG,None,"UNCHANGED WIRE FAMILY; DIGITAL RANGE PASS","Preferred length 50 mm; provisional maximum 100 mm pending signal-integrity test"
+J14 SPI,5055750620 logical header,BM06B-ZESS-TBT,"Circuits 1 SCK; 2 GND; 3 MISO; 4 GND; 5 MOSI; 6 DNC","REPLACED IN dk_adapter_headers.kicad_sch","Reference designator and all wires/UUIDs preserved"
+J15 CS_N,5055750620 logical header,BM06B-ZESS-TBT,"Circuits 1 THUMB; 2 GND; 3 INDEX; 4 MIDDLE; 5 RING; 6 PINKY","REPLACED IN dk_adapter_headers.kicad_sch","Reference designator and all wires/UUIDs preserved"
+J16 INT1,5055750620 logical header,BM06B-ZESS-TBT,"Circuits 1 THUMB; 2 GND; 3 INDEX; 4 MIDDLE; 5 RING; 6 PINKY","REPLACED IN dk_adapter_headers.kicad_sch","Reference designator and all wires/UUIDs preserved"
+Project symbol,PCB_glove_Draft:HARNESS_1X6,PCB_glove_Draft:JST_ZE_BM06B_ZESS_TBT,"Pin numbers 1-6 unchanged; pin names now CIRCUIT_1..CIRCUIT_6","ACTIVE PROJECT-LOCAL SYMBOL","No global KiCad symbol was edited"
+Project footprint,"Molex_5055750620_Micro-Lock-Plus_1x06_P2.00mm_Vertical_SMD","JST_ZE_BM06B-ZESS-TBT_1x06_P1.50mm_Vertical","No PCB placement; schematic field assignment only","JST ACTIVE IN SCHEMATIC; MOLEX DEPRECATED UNPLACED","Historical Molex file retains VERIFY and visible DEPRECATED - DO NOT PLACE - REPLACED BY JST ZE warnings"

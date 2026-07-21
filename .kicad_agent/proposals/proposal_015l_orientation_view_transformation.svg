@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Proposal 015L Molex 5055750620 view-transformation gate</title>
+  <desc id="desc">Controlled diagram showing that circuit 1 is known in the connector product view but the component-side PCB pattern and KiCad pad 1 relationship remain blocked.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f8fa}.box{fill:#fff;stroke:#263238;stroke-width:2}.known{fill:#e7f6ec;stroke:#1b7f3a;stroke-width:3}.unknown{fill:#fff3e0;stroke:#d97706;stroke-width:3}.blocked{fill:#fdeaea;stroke:#b42318;stroke-width:4}.t{font:700 22px Arial,sans-serif;fill:#17212b}.s{font:16px Arial,sans-serif;fill:#334155}.small{font:14px Arial,sans-serif;fill:#475569}.good{stroke:#1b7f3a;stroke-width:4;fill:none;marker-end:url(#arrowGood)}.dash{stroke:#d97706;stroke-width:4;stroke-dasharray:10 8;fill:none;marker-end:url(#arrowWarn)}.bad{stroke:#b42318;stroke-width:5;stroke-dasharray:12 8;fill:none;marker-end:url(#arrowBad)}.neutral{stroke:#64748b;stroke-width:3;fill:none;marker-end:url(#arrowNeutral)}
+    </style>
+    <marker id="arrowGood" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1b7f3a"/></marker>
+    <marker id="arrowWarn" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#d97706"/></marker>
+    <marker id="arrowBad" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#b42318"/></marker>
+    <marker id="arrowNeutral" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker>
+  </defs>
+  <rect class="bg" width="1400" height="820"/>
+  <text class="t" x="60" y="55">Molex 5055750620 — controlled view-transformation gate</text>
+  <text class="s" x="60" y="85">Drawing 5055750002-SD Rev B applies to the exact part, but the highlighted transformations are not stated.</text>
+
+  <rect class="unknown" x="60" y="145" rx="14" width="250" height="140"/>
+  <text class="t" x="185" y="183" text-anchor="middle">Mating face</text>
+  <text class="s" x="185" y="216" text-anchor="middle">View relationship</text>
+  <text class="s" x="185" y="241" text-anchor="middle">not explicitly labeled</text>
+  <text class="small" x="185" y="267" text-anchor="middle">Do not infer from geometry</text>
+
+  <rect class="known" x="420" y="135" rx="14" width="300" height="160"/>
+  <text class="t" x="570" y="175" text-anchor="middle">Connector product view</text>
+  <text class="s" x="570" y="209" text-anchor="middle">CIRCUIT 1 is explicit</text>
+  <text class="s" x="570" y="235" text-anchor="middle">Indicator mark is explicit</text>
+  <text class="small" x="570" y="270" text-anchor="middle">Known official anchor</text>
+
+  <rect class="unknown" x="865" y="135" rx="14" width="330" height="160"/>
+  <text class="t" x="1030" y="175" text-anchor="middle">Recommended PCB pattern</text>
+  <text class="s" x="1030" y="209" text-anchor="middle">Land geometry is shown</text>
+  <text class="s" x="1030" y="235" text-anchor="middle">Viewed side is not named</text>
+  <text class="small" x="1030" y="270" text-anchor="middle">Mirror state is unstated</text>
+
+  <path class="dash" d="M310 215 L420 215"/>
+  <text class="small" x="365" y="198" text-anchor="middle">unknown rotation/view</text>
+  <path class="dash" d="M720 215 L865 215"/>
+  <text class="small" x="792" y="194" text-anchor="middle">mirror or no mirror?</text>
+
+  <rect class="unknown" x="750" y="410" rx="14" width="280" height="140"/>
+  <text class="t" x="890" y="450" text-anchor="middle">PCB component side</text>
+  <text class="s" x="890" y="485" text-anchor="middle">Required manufacturing view</text>
+  <text class="small" x="890" y="520" text-anchor="middle">Not anchored by Molex</text>
+
+  <rect class="unknown" x="1100" y="410" rx="14" width="240" height="140"/>
+  <text class="t" x="1220" y="450" text-anchor="middle">PCB solder side</text>
+  <text class="s" x="1220" y="485" text-anchor="middle">Mirror of component side</text>
+  <text class="small" x="1220" y="520" text-anchor="middle">Also unanchored</text>
+
+  <path class="bad" d="M1030 295 L914 410"/>
+  <text class="small" x="968" y="348" text-anchor="middle">viewed side?</text>
+  <path class="neutral" d="M1030 480 L1100 480"/>
+  <text class="small" x="1065" y="462" text-anchor="middle">mirror</text>
+
+  <rect class="box" x="420" y="630" rx="14" width="300" height="125"/>
+  <text class="t" x="570" y="670" text-anchor="middle">KiCad top-side footprint</text>
+  <text class="s" x="570" y="704" text-anchor="middle">F.Cu component-side convention</text>
+  <text class="small" x="570" y="733" text-anchor="middle">Convention is not Molex evidence</text>
+
+  <rect class="blocked" x="850" y="620" rx="14" width="400" height="145"/>
+  <text class="t" x="1050" y="661" text-anchor="middle">Circuit/cavity 1 → KiCad pad 1</text>
+  <text class="t" x="1050" y="704" text-anchor="middle" fill="#b42318">BLOCKED</text>
+  <text class="small" x="1050" y="738" text-anchor="middle">Retain VERIFY; keep unplaced and unauthorized</text>
+
+  <path class="neutral" d="M750 515 L678 630"/>
+  <text class="small" x="697" y="579" text-anchor="middle">KiCad convention</text>
+  <path class="bad" d="M720 250 C800 340 800 590 850 680"/>
+  <text class="small" x="790" y="590" text-anchor="middle">no controlled endpoint</text>
+
+  <text class="small" x="60" y="795">Not accepted as proof: symmetry, product photos, indicator position alone, third-angle convention, or ordinary PCB drafting convention.</text>
+</svg>

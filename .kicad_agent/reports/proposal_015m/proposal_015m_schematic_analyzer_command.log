@@ -1,0 +1,5 @@
+COMMAND: C:\Users\ohmdd\AppData\Local\Programs\Python\Python313\python.exe C:\Users\ohmdd\Downloads\kicad-happy\skills\kicad\scripts\analyze_schematic.py C:\Users\ohmdd\Downloads\Larri\PCB_glove\PCB_glove\PCB_glove.kicad_sch --output C:\Users\ohmdd\Downloads\Larri\PCB_glove\.kicad_agent\reports\proposal_015m\proposal_015m_schematic_analyzer.json --stage schematic --audience reviewer
+RETURN_CODE: 0
+STDOUT:
+STDERR:
+Written to C:\Users\ohmdd\Downloads\Larri\PCB_glove\.kicad_agent\reports\proposal_015m\proposal_015m_schematic_analyzer.json

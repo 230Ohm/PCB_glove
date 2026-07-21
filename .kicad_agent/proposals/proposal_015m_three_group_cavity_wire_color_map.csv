@@ -1,0 +1,19 @@
+board_reference,group,group_mark,circuit,board_net_or_source,electrical_role,harness_termination,wire_color,harness_end_label,termination_status
+J14,SPI,I,1,"IMU_SPI_SCK from CN12-6/PE15 through R1","DK output","All IMU SCK inputs",BROWN,SPI-C1-SCK,TERMINATED
+J14,SPI,I,2,"GND from CN12-7","Ground","SPI primary return",BLACK,SPI-C2-GND,TERMINATED
+J14,SPI,I,3,"IMU_SPI_MISO from CN12-5/PH8","DK input","Shared IMU MISO outputs",RED,SPI-C3-MISO,TERMINATED
+J14,SPI,I,4,"GND from CN8-6 branch A","Ground","SPI auxiliary return",BLACK,SPI-C4-GND,TERMINATED
+J14,SPI,I,5,"IMU_SPI_MOSI from CN12-4/PG2 through R2","DK output","All IMU MOSI inputs",YELLOW,SPI-C5-MOSI,TERMINATED
+J14,SPI,I,6,DNC,"No electrical connection","No remote termination",NONE,SPI-C6-DNC,"NO TERMINAL / NO WIRE"
+J15,CS_N,II,1,"IMU_THUMB_CS_N from CN12-3/PA3; R18 pull-up","DK output","Thumb IMU CS input",BROWN,CS-C1-THUMB,TERMINATED
+J15,CS_N,II,2,"GND from CN8-6 branch B","Ground","CS return",BLACK,CS-C2-GND,TERMINATED
+J15,CS_N,II,3,"IMU_INDEX_CS_N from CN12-2/PE14; R19 pull-up","DK output","Index IMU CS input",RED,CS-C3-INDEX,TERMINATED
+J15,CS_N,II,4,"IMU_MIDDLE_CS_N from CN12-1/PE7; R20 pull-up","DK output","Middle IMU CS input",ORANGE,CS-C4-MIDDLE,TERMINATED
+J15,CS_N,II,5,"IMU_RING_CS_N from CN11-8/PD6; R21 pull-up","DK output","Ring IMU CS input",YELLOW,CS-C5-RING,TERMINATED
+J15,CS_N,II,6,"IMU_PINKY_CS_N from CN11-7/PE13; R22 pull-up","DK output","Pinky IMU CS input",VIOLET,CS-C6-PINKY,TERMINATED
+J16,INT1,III,1,"IMU_THUMB_INT1 from CN11-6/PE10","DK input","Thumb IMU push-pull INT1 output",BROWN,INT-C1-THUMB,TERMINATED
+J16,INT1,III,2,"GND from CN8-7","Ground","INT return",BLACK,INT-C2-GND,TERMINATED
+J16,INT1,III,3,"IMU_INDEX_INT1 from CN11-5/PH5","DK input","Index IMU push-pull INT1 output",RED,INT-C3-INDEX,TERMINATED
+J16,INT1,III,4,"IMU_MIDDLE_INT1 from CN11-4/PE9","DK input","Middle IMU push-pull INT1 output",ORANGE,INT-C4-MIDDLE,TERMINATED
+J16,INT1,III,5,"IMU_RING_INT1 from CN11-3/PD0","DK input","Ring IMU push-pull INT1 output",YELLOW,INT-C5-RING,TERMINATED
+J16,INT1,III,6,"IMU_PINKY_INT1 from CN7-4/PD11","DK input","Pinky IMU push-pull INT1 output",VIOLET,INT-C6-PINKY,TERMINATED

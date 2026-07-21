@@ -1,0 +1,4 @@
+COMMAND: "C:\Program Files\KiCad\9.0\bin\kicad-cli.exe" sch export netlist --output C:\Users\ohmdd\Downloads\Larri\PCB_glove\.kicad_agent\reports\proposal_015m\proposal_015m_hierarchical.net C:\Users\ohmdd\Downloads\Larri\PCB_glove\PCB_glove\PCB_glove.kicad_sch
+RETURN_CODE: 0
+STDOUT:
+STDERR:
